@@ -1,5 +1,4 @@
 /bags/
+models/teatro/mesh/teatro.stlsimulation_data/ugv_data.csv
+simulation_data/uav_data_theatre.csv
 models/teatro/mesh/teatro.stl
-echo "simulation_data/ugv_data.csv" >> .gitignore
-echo "simulation_data/uav_data_theatre.csv" >> .gitignore
-echo "models/teatro/mesh/teatro.stl" >> .gitignore
