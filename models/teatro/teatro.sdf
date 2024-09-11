@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="teatro">
+    <static>true</static>
+    
+   <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://teatro/mesh/teatro.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://teatro/mesh/teatro.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.5 0.2 0.2 1</ambient>
+          <diffuse>0.8 0.1 0.2 1</diffuse>
+          <specular>0.05 0.01 0.01 0.1</specular>
+          <emissive>0.2 0.1 0.1 0.8</emissive>
+        </material>
+      </visual>
+    </link>
+
+  </model>
+</sdf>
