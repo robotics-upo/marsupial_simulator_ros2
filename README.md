@@ -4,14 +4,14 @@
 <br />
 <div align="center">
 
-  <a href="https://github.com/robotics-upo/marsupial-simulator">
+  <a href="https://github.com/robotics-upo/marsupial-simulator-ros2">
     <img src="images/logo.png" alt="Logo" width="170" height="100">
   </a>
 
 <h3 align="center">Marsupial Simulator</h3>
 
   <p align="center">
-    This is a ROS 2 marsupial system simulator for Gazebo created by the Service Robotics Lab from the Pablo de Olavide University (Spain).
+    ROS2-Based Gazebo Simulation of Marsupial UAV-UGV Systems Connected by Hanging Tether created by the Service Robotics Lab from the Pablo de Olavide University (Spain).
     <br />
   </p>
 </div>
@@ -51,7 +51,7 @@
 This project implements a marsupial robotic system (ugv + uav + tether) in the Gazebo simulation environment for ROS2. The main objective is to create a robust simulation environment to test and validate the behaviour and interaction of the marsupial UAV-UGV system under various conditions and scenarios. Leveraging the capabilities of ROS 2, the simulator facilitates the evaluation of innovative methodologies for the coordinated and autonomous operation of both robots, including the dynamics of the flexible tether that connects them.
 
 <div align="center">
-  <img src="videos/stage_1.gif" alt="stage_1 simulation" width="900" height="507">
+  <img src="images/stage_1.gif" alt="stage_1 simulation" width="900" height="507">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -202,7 +202,7 @@ By adjusting these parameters, you can simulate different types of tethers and s
 	- [X] Develop an automatic control mode to allow the system to move autonomously to predefined points using ROS 2
 - [  ] Improve winch automatic control
 
-See the [open issues](https://github.com/robotics-upo/marsupial-simulator/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/robotics-upo/marsupial-simulator-ros2/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
