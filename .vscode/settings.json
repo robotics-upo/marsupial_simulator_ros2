@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/upo/marsupial/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/upo/marsupial/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/unitree_go/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/unitree_api/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/hesai_ros_driver/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/upo/marsupial/install/sjtu_drone_bringup/lib/python3.10/site-packages",
+        "/home/upo/marsupial/install/gazebo_ros_link_attacher/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/unitree_go/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/unitree_api/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/hesai_ros_driver/local/lib/python3.10/dist-packages",
+        "/home/upo/go2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

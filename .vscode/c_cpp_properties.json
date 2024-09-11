@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/upo/marsupial/install/sjtu_drone_description/include/**",
+        "/home/upo/marsupial/install/gazebo_ros_link_attacher/include/**",
+        "/home/upo/go2_ws/install/go2_driver/include/**",
+        "/home/upo/go2_ws/install/unitree_go/include/**",
+        "/home/upo/go2_ws/install/unitree_api/include/**",
+        "/home/upo/go2_ws/install/pointcloud_to_laserscan/include/**",
+        "/home/upo/go2_ws/install/hesai_ros_driver/include/**",
+        "/home/upo/go2_ws/install/go2_interfaces/include/**",
+        "/home/upo/sky_tracker_ws/install/star_tracker/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/upo/marsupial/src/gazebo_ros_link_attacher/include/**",
+        "/home/upo/marsupial/src/marsupial_simulator/include/**",
+        "/home/upo/marsupial/src/sjtu_drone/sjtu_drone_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

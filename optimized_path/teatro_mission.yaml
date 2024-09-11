@@ -1,0 +1,8092 @@
+size: 245
+marsupial_ugv:
+  poses0:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.495000004768372
+        y: -1.520000040531158
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses1:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.490000009536743
+        y: -1.340000033378601
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses2:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.485000014305115
+        y: -1.160000026226044
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses3:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.480000019073486
+        y: -0.9800000190734863
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses4:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.470000028610229
+        y: -0.6200000092387199
+        z: -0.1992000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses5:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.465000033378601
+        y: -0.4400000065565109
+        z: -0.1994000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses6:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.460000038146973
+        y: -0.2600000038743019
+        z: -0.1996000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses7:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.455000042915344
+        y: -0.08000000119209294
+        z: -0.1998000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7068251967430115
+        w: 0.7073882818222046
+  poses8:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.350000047683716
+        y: 0.2699999988079071
+        z: -0.2098000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses9:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.250000047683716
+        y: 0.4399999961256981
+        z: -0.2196000017881393
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses10:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.150000047683716
+        y: 0.6099999934434891
+        z: -0.2294000011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses11:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.050000047683716
+        y: 0.77999999076128
+        z: -0.2392000005960465
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses12:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 1.125
+        z: -0.242750000372529
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses13:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 1.300000011920929
+        z: -0.2365000007450581
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses14:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 1.475000023841858
+        z: -0.2302500011175871
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses15:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 1.825000062584877
+        z: -0.2180000018626451
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses16:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 2.000000089406967
+        z: -0.2120000022351742
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses17:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.950000047683716
+        y: 2.175000116229057
+        z: -0.2060000026077032
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8348410725593567
+        w: 0.5504910349845886
+  poses18:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.962500035762787
+        y: 2.50000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.5504909753799438
+        w: 0.8348410725593567
+  poses19:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.975000023841858
+        y: 2.650000095367432
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.5504909753799438
+        w: 0.8348410725593567
+  poses20:
+    header: ugv20
+    seq: 20
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.987500011920929
+        y: 2.800000071525574
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.5504909753799438
+        w: 0.8348410725593567
+  poses21:
+    header: ugv21
+    seq: 21
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.100000023841858
+        y: 3.100000023841858
+        z: -0.2250000014901161
+      orientation:
+        x: 0
+        y: 0
+        z: 0.7358822822570801
+        w: 0.6771094799041748
+  poses22:
+    header: ugv22
+    seq: 22
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.25000007947286
+        y: 3.400000015894572
+        z: -0.2333333343267441
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses23:
+    header: ugv23
+    seq: 23
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.300000111262003
+        y: 3.550000031789144
+        z: -0.2166666686534882
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses24:
+    header: ugv24
+    seq: 24
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.475000143051147
+        y: 3.825000047683716
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.8112421631813049
+        w: 0.5847102999687195
+  poses25:
+    header: ugv25
+    seq: 25
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.700000127156576
+        y: 4.066666762034099
+        z: -0.2166666686534882
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9238795042037964
+        w: 0.3826834261417389
+  poses26:
+    header: ugv26
+    seq: 26
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.800000111262003
+        y: 4.18333347638448
+        z: -0.2333333343267441
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9238795042037964
+        w: 0.3826834261417389
+  poses27:
+    header: ugv27
+    seq: 27
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.050000071525574
+        y: 4.425000190734863
+        z: -0.2250000014901161
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9085128903388977
+        w: 0.4178568422794342
+  poses28:
+    header: ugv28
+    seq: 28
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.300000071525574
+        y: 4.700000047683716
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9402715563774109
+        w: 0.3404252827167511
+  poses29:
+    header: ugv29
+    seq: 29
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.411111209127638
+        y: 4.866666581895617
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses30:
+    header: ugv30
+    seq: 30
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.433333436648051
+        y: 4.899999936421713
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses31:
+    header: ugv31
+    seq: 31
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.455555664168464
+        y: 4.933333290947808
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses32:
+    header: ugv32
+    seq: 32
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.477777891688877
+        y: 4.966666645473904
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses33:
+    header: ugv33
+    seq: 33
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.50000011920929
+        y: 5
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses34:
+    header: ugv34
+    seq: 34
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.522222346729702
+        y: 5.033333354526096
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses35:
+    header: ugv35
+    seq: 35
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.544444574250115
+        y: 5.066666709052192
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses36:
+    header: ugv36
+    seq: 36
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.566666801770528
+        y: 5.100000063578287
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses37:
+    header: ugv37
+    seq: 37
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.588889029290941
+        y: 5.133333418104383
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.881674587726593
+        w: 0.4718579351902008
+  poses38:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.400000095367432
+        z: -0.1998000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses39:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.400000095367432
+        z: -0.1996000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses40:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.400000095367432
+        z: -0.1994000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses41:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.400000095367432
+        z: -0.1992000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses42:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.33215167754919
+        z: -0.1993232320776586
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses43:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.264303259730949
+        z: -0.1996464611750849
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses44:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.117583605086648
+        z: -0.199972216331488
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses45:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 5.038712368260589
+        z: -0.1999747423904648
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9570920467376709
+        w: 0.2897841334342957
+  poses46:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.912518389338895
+        z: -0.1999787840848276
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses47:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.86519564724326
+        z: -0.1999802997202136
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses48:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.817872905147624
+        z: -0.1999818153555997
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses49:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.770550163051989
+        z: -0.1999833309909857
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses50:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.644356184130295
+        z: -0.1999873726853485
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses51:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.565484947304236
+        z: -0.1999898987443253
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses52:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.407742473652118
+        z: -0.1999949508622788
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses53:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.328871236826059
+        z: -0.1999974769212555
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses54:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.300000190734863
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses55:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.300000190734863
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses56:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.300000190734863
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses57:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.50000011920929
+        y: 4.137500166893005
+        z: -0.1560000055879354
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses58:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.400000095367432
+        y: 3.975000143051147
+        z: -0.1620000052154064
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses59:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.300000071525574
+        y: 3.81250011920929
+        z: -0.1680000048428774
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses60:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.100000023841858
+        y: 3.487500071525574
+        z: -0.1802500040978193
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses61:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3
+        y: 3.325000047683716
+        z: -0.1865000037252903
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses62:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.899999976158142
+        y: 3.162500023841858
+        z: -0.1927500033527613
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses63:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.783333301544189
+        y: 2.825000007947286
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7882054448127747
+        w: 0.615412175655365
+  poses64:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.766666650772095
+        y: 2.650000015894572
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7882054448127747
+        w: 0.615412175655365
+  poses65:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.733333349227905
+        y: 2.300000031789144
+        z: -0.1993333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7882054448127747
+        w: 0.615412175655365
+  poses66:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.716666698455811
+        y: 2.12500003973643
+        z: -0.1996666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7882054448127747
+        w: 0.615412175655365
+  poses67:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.733333349227905
+        y: 1.816666722297668
+        z: -0.1666666691501935
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8506507873535156
+        w: 0.5257311463356018
+  poses68:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.766666650772095
+        y: 1.683333396911621
+        z: -0.1333333353201548
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8506507873535156
+        w: 0.5257311463356018
+  poses69:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.850000023841858
+        y: 1.375000059604645
+        z: -0.07500000111758709
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7882054448127747
+        w: 0.615412175655365
+  poses70:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.900000095367432
+        y: 1.200000047683716
+        z: -0.04975000074505806
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses71:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.900000095367432
+        y: 1.200000047683716
+        z: -0.04950000074505806
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses72:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.900000095367432
+        y: 1.200000047683716
+        z: -0.04925000074505806
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses73:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.887500077486038
+        y: 1.012500047683716
+        z: -0.07400000111758709
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses74:
+    header: ugv20
+    seq: 20
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.875000059604645
+        y: 0.8250000476837158
+        z: -0.09900000149011612
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses75:
+    header: ugv21
+    seq: 21
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.862500041723251
+        y: 0.6375000476837158
+        z: -0.1240000018626451
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses76:
+    header: ugv22
+    seq: 22
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.837500005960464
+        y: 0.2625000327825546
+        z: -0.1740000016763806
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses77:
+    header: ugv23
+    seq: 23
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.824999988079071
+        y: 0.07500001788139343
+        z: -0.1990000011175871
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses78:
+    header: ugv24
+    seq: 24
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.812499970197678
+        y: -0.1124999970197678
+        z: -0.2240000005587935
+      orientation:
+        x: 0
+        y: 0
+        z: 0.6618025302886963
+        w: 0.7496781945228577
+  poses79:
+    header: ugv25
+    seq: 25
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.87499996026357
+        y: -0.4083333412806193
+        z: -0.240666667163372
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses80:
+    header: ugv26
+    seq: 26
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.949999968210856
+        y: -0.5166666706403097
+        z: -0.2323333343267441
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses81:
+    header: ugv27
+    seq: 27
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.099999984105428
+        y: -0.7333333293596903
+        z: -0.2160000019868215
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses82:
+    header: ugv28
+    seq: 28
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.174999992052714
+        y: -0.8416666587193807
+        z: -0.2080000024835269
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses83:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -0.800000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses84:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -0.800000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses85:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -0.800000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses86:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -0.950000007947286
+        z: -0.1996666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses87:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -1.100000003973643
+        z: -0.1993333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: -0.3469462394714355
+        w: 0.9378849864006042
+  poses88:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.166666746139526
+        y: -1.308333337306976
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7071067690849304
+        w: 0.7071067690849304
+  poses89:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.183333396911621
+        y: -1.366666674613953
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7071067690849304
+        w: 0.7071067690849304
+  poses90:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.216666698455811
+        y: -1.483333349227905
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7071067690849304
+        w: 0.7071067690849304
+  poses91:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.233333349227905
+        y: -1.541666686534882
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.7071067690849304
+        w: 0.7071067690849304
+  poses92:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -1.73333336909612
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses93:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -1.866666714350383
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses94:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -2.133333404858907
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses95:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -2.266666750113169
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.798348605632782
+        w: 0.6021955609321594
+  poses96:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.260000014305115
+        y: -2.565000104904175
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses97:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.270000028610229
+        y: -2.730000114440918
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses98:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.280000042915344
+        y: -2.895000123977661
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses99:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.290000057220459
+        y: -3.060000133514404
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses100:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.310000085830688
+        y: -3.39000015258789
+        z: -0.1992000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses101:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.320000100135803
+        y: -3.555000162124634
+        z: -0.1994000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses102:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.330000114440918
+        y: -3.720000171661377
+        z: -0.1996000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses103:
+    header: ugv20
+    seq: 20
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.340000128746033
+        y: -3.88500018119812
+        z: -0.1998000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses104:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.850000143051147
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses105:
+    header: ugv1
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.850000143051147
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8219256401062012
+        w: 0.5695948600769043
+  poses106:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.900000095367432
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses107:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.900000095367432
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses108:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.900000095367432
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses109:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.299999952316284
+        y: -3.900000095367432
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses110:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.287499964237213
+        y: -3.812500059604645
+        z: -0.1625000052154064
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses111:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.274999976158142
+        y: -3.725000023841858
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses112:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.262499988079071
+        y: -3.637499988079071
+        z: -0.1875000037252903
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses113:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.259999990463257
+        y: -3.619999980926514
+        z: -0.1900000035762787
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses114:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.269999980926514
+        y: -3.690000009536743
+        z: -0.1800000041723251
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses115:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.279999971389771
+        y: -3.760000038146972
+        z: -0.1700000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses116:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.289999961853027
+        y: -3.830000066757202
+        z: -0.160000005364418
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses117:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.294999957084656
+        y: -3.865000081062317
+        z: -0.1550000056624413
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses118:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.289999961853027
+        y: -3.830000066757202
+        z: -0.160000005364418
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses119:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.284999966621399
+        y: -3.795000052452087
+        z: -0.1650000050663948
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses120:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.279999971389771
+        y: -3.760000038146972
+        z: -0.1700000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses121:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.262499988079071
+        y: -3.637499988079071
+        z: -0.1875000037252903
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414709568023682
+        w: 0.5403022766113281
+  poses122:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -3.46666677792867
+        z: -0.1666666716337204
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414710164070129
+        w: 0.5403022766113281
+  poses123:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25
+        y: -3.333333412806193
+        z: -0.1833333373069763
+      orientation:
+        x: 0
+        y: 0
+        z: -0.8414710164070129
+        w: 0.5403022766113281
+  poses124:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.200000047683716
+        y: -3.066666682561239
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses125:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -2.933333317438761
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses126:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.96666677792867
+        y: -2.783333301544189
+        z: -0.1996666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses127:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.833333412806193
+        y: -2.766666650772095
+        z: -0.1993333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses128:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.650000035762787
+        y: -2.568750008940697
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses129:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.600000023841858
+        y: -2.387500017881393
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses130:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.550000011920929
+        y: -2.20625002682209
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses131:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.449999988079071
+        y: -1.843750044703484
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses132:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.399999976158142
+        y: -1.66250005364418
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses133:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.349999964237213
+        y: -1.481250062584877
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses134:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.312499970197678
+        y: -1.137500062584877
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses135:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.324999988079071
+        y: -0.9750000536441803
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses136:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.337500005960464
+        y: -0.8125000447034836
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses137:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.362500041723251
+        y: -0.4875000268220901
+        z: -0.1992500029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses138:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.375000059604645
+        y: -0.3250000178813934
+        z: -0.1995000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses139:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.387500077486038
+        y: -0.1625000089406967
+        z: -0.1997500029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses140:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.450000047683716
+        y: 0.1500000059604645
+        z: -0.1833333373069763
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses141:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.5
+        y: 0.300000011920929
+        z: -0.1666666716337204
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses142:
+    header: ugv20
+    seq: 20
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.600000023841858
+        y: 0.5750000029802322
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses143:
+    header: ugv21
+    seq: 21
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.775000095367432
+        y: 0.800000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses144:
+    header: ugv22
+    seq: 22
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.00000011920929
+        y: 1.050000041723251
+        z: -0.2250000014901161
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses145:
+    header: ugv23
+    seq: 23
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.12500011920929
+        y: 1.225000038743019
+        z: -0.243750000372529
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses146:
+    header: ugv24
+    seq: 24
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.175000071525574
+        y: 1.275000020861626
+        z: -0.2312500011175871
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses147:
+    header: ugv25
+    seq: 25
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.225000023841858
+        y: 1.325000002980232
+        z: -0.2187500018626451
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses148:
+    header: ugv26
+    seq: 26
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.274999976158142
+        y: 1.374999985098839
+        z: -0.2062500026077032
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses149:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.274999976158142
+        y: 1.5
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses150:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.199999968210856
+        y: 1.75
+        z: -0.1333333378036817
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses151:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.099999984105428
+        y: 1.850000023841858
+        z: -0.1166666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses152:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.900000015894572
+        y: 2.050000031789144
+        z: -0.1163333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses153:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.800000031789144
+        y: 2.150000015894572
+        z: -0.132666671137015
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses154:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.700000047683716
+        y: 2.441666682561239
+        z: -0.1573333387970924
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses155:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.700000047683716
+        y: 2.633333365122477
+        z: -0.1656666716337204
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses156:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.700000047683716
+        y: 3.016666730244955
+        z: -0.1826666706403096
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses157:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.700000047683716
+        y: 3.208333412806193
+        z: -0.191333336810271
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses158:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.766666730244955
+        y: 3.516666730244955
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses159:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.833333412806193
+        y: 3.633333365122477
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses160:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.00000011920929
+        y: 3.900000095367432
+        z: -0.1995000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses161:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.158333460489909
+        y: 4.150000174840291
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses162:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.21666677792867
+        y: 4.25000015894572
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses163:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.294444534513685
+        y: 4.38333347108629
+        z: -0.1991111140913434
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses164:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.313888973659939
+        y: 4.416666799121432
+        z: -0.1992222252024544
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses165:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.352777851952447
+        y: 4.483333455191718
+        z: -0.1994444474246767
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses166:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.372222291098701
+        y: 4.516666783226861
+        z: -0.1995555585357878
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses167:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.411111169391208
+        y: 4.583333439297147
+        z: -0.19977778075801
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses168:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.430555608537462
+        y: 4.616666767332289
+        z: -0.1998888918691211
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses169:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.400000095367432
+        y: 4.599999904632568
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses170:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.400000095367432
+        y: 4.599999904632568
+        z: -0.1500000059604645
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses171:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.362500071525574
+        y: 4.512500166893005
+        z: -0.1625000052154064
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses172:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.325000047683716
+        y: 4.475000143051147
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses173:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.287500023841858
+        y: 4.43750011920929
+        z: -0.1875000037252903
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses174:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.32000002861023
+        y: 4.370000076293945
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses175:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.390000057220459
+        y: 4.340000057220459
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses176:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.460000085830688
+        y: 4.310000038146972
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses177:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.530000114440918
+        y: 4.280000019073486
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses178:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses179:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses180:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses181:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses182:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses183:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses184:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses185:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses186:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses187:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses188:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses189:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses190:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.600000143051147
+        y: 4.25
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses191:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.516666809717814
+        y: 4.233333428700765
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses192:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.433333476384481
+        y: 4.21666685740153
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses193:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.25000011920929
+        y: 4.325000286102295
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses194:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.116666714350382
+        y: 4.566666920979817
+        z: -0.1996666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses195:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.083333333333333
+        y: 4.683333555857341
+        z: -0.1993333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses196:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.98333328962326
+        y: 4.643333518505097
+        z: -0.2006666695475578
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses197:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.916666626930237
+        y: 4.486666846275329
+        z: -0.2023333361148834
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses198:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.849999964237213
+        y: 4.330000174045563
+        z: -0.204000002682209
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses199:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.783333301544189
+        y: 4.173333501815796
+        z: -0.2056666692495346
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses200:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.649999976158142
+        y: 3.860000157356262
+        z: -0.2090000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses201:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.583333313465118
+        y: 3.703333485126495
+        z: -0.2106666689515114
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses202:
+    header: ugv15
+    seq: 15
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.516666650772095
+        y: 3.546666812896729
+        z: -0.212333335518837
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses203:
+    header: ugv16
+    seq: 16
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.449999988079071
+        y: 3.390000140666962
+        z: -0.2140000020861626
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses204:
+    header: ugv17
+    seq: 17
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.316666662693024
+        y: 3.076666784286499
+        z: -0.2173333352208137
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses205:
+    header: ugv18
+    seq: 18
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.25
+        y: 2.920000100135803
+        z: -0.2190000017881393
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses206:
+    header: ugv19
+    seq: 19
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.183333337306976
+        y: 2.763333415985108
+        z: -0.2206666683554649
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses207:
+    header: ugv20
+    seq: 20
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.116666674613953
+        y: 2.606666731834411
+        z: -0.2223333349227905
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses208:
+    header: ugv21
+    seq: 21
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.983333349227905
+        y: 2.293333387374878
+        z: -0.2256666680574417
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses209:
+    header: ugv22
+    seq: 22
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.916666686534882
+        y: 2.13666672706604
+        z: -0.2273333346247673
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses210:
+    header: ugv23
+    seq: 23
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.850000023841858
+        y: 1.980000066757202
+        z: -0.2290000011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses211:
+    header: ugv24
+    seq: 24
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.783333361148834
+        y: 1.823333406448364
+        z: -0.2306666677594185
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses212:
+    header: ugv25
+    seq: 25
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.650000047683716
+        y: 1.510000085830689
+        z: -0.2340000008940697
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses213:
+    header: ugv26
+    seq: 26
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.583333396911621
+        y: 1.353333425521851
+        z: -0.2356666674613953
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses214:
+    header: ugv27
+    seq: 27
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.516666746139526
+        y: 1.196666765213013
+        z: -0.2373333340287209
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses215:
+    header: ugv28
+    seq: 28
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.450000095367432
+        y: 1.040000104904175
+        z: -0.2390000005960465
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses216:
+    header: ugv29
+    seq: 29
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.316666769981384
+        y: 0.7266667559742928
+        z: -0.2425333337306976
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses217:
+    header: ugv30
+    seq: 30
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.250000095367432
+        y: 0.5700000673532486
+        z: -0.2444000002980232
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses218:
+    header: ugv31
+    seq: 31
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.183333420753479
+        y: 0.4133333787322044
+        z: -0.2462666668653488
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses219:
+    header: ugv32
+    seq: 32
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.116666746139526
+        y: 0.2566666901111603
+        z: -0.2481333334326744
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses220:
+    header: ugv33
+    seq: 33
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.175000071525574
+        y: -0.05000000074505806
+        z: -0.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses221:
+    header: ugv34
+    seq: 34
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.383333404858907
+        y: -0.3166666726271312
+        z: -0.2333333343267441
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses222:
+    header: ugv35
+    seq: 35
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.46666673819224
+        y: -0.4333333422740301
+        z: -0.2166666686534882
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses223:
+    header: ugv36
+    seq: 36
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.675000071525574
+        y: -0.6500000059604645
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses224:
+    header: ugv37
+    seq: 37
+    frame_id: ugv
+    pose:
+      position:
+        x: -1.925000011920929
+        y: -0.9000000357627869
+        z: -0.1750000044703484
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses225:
+    header: ugv38
+    seq: 38
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.174999952316284
+        y: -1.175000071525574
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses226:
+    header: ugv39
+    seq: 39
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.400000015894572
+        y: -1.400000055631002
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses227:
+    header: ugv40
+    seq: 40
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.50000007947286
+        y: -1.50000003973643
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses228:
+    header: ugv41
+    seq: 41
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.725000143051147
+        y: -1.75
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses229:
+    header: ugv42
+    seq: 42
+    frame_id: ugv
+    pose:
+      position:
+        x: -2.975000143051147
+        y: -2.050000011920929
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses230:
+    header: ugv0
+    seq: 0
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.025000095367432
+        y: -2.200000047683716
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses231:
+    header: ugv1
+    seq: 1
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.150000095367432
+        y: -2.525000095367432
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses232:
+    header: ugv2
+    seq: 2
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.216666698455811
+        y: -2.833333412806193
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses233:
+    header: ugv3
+    seq: 3
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.233333349227905
+        y: -2.96666677792867
+        z: -0.2000000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses234:
+    header: ugv4
+    seq: 4
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.240000009536743
+        y: -3.240000104904175
+        z: -0.1998000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses235:
+    header: ugv5
+    seq: 5
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.230000019073486
+        y: -3.380000066757202
+        z: -0.1996000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses236:
+    header: ugv6
+    seq: 6
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.220000028610229
+        y: -3.520000028610229
+        z: -0.1994000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses237:
+    header: ugv7
+    seq: 7
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.210000038146973
+        y: -3.659999990463257
+        z: -0.1992000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses238:
+    header: ugv8
+    seq: 8
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.233333388964335
+        y: -3.916666626930237
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses239:
+    header: ugv9
+    seq: 9
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.266666730244955
+        y: -4.033333301544189
+        z: -0.1990000029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses240:
+    header: ugv10
+    seq: 10
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.316666742165884
+        y: -4.208333313465118
+        z: -0.1991666696468989
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses241:
+    header: ugv11
+    seq: 11
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.333333412806193
+        y: -4.266666650772095
+        z: -0.1993333363135656
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses242:
+    header: ugv12
+    seq: 12
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.362500086426735
+        y: -4.368749991059303
+        z: -0.1996250029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses243:
+    header: ugv13
+    seq: 13
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.375000089406967
+        y: -4.412499994039536
+        z: -0.1997500029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses244:
+    header: ugv14
+    seq: 14
+    frame_id: ugv
+    pose:
+      position:
+        x: -3.387500092387199
+        y: -4.456249997019768
+        z: -0.1998750029802323
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  size: 245
+marsupial_uav:
+  poses0:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: 0.01499999910593033
+        y: 0.6700000286102294
+        z: 2.294999957084656
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses1:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -0.07000000327825545
+        y: 0.7400000333786011
+        z: 2.289999961853027
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses2:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -0.1550000056624413
+        y: 0.8100000381469726
+        z: 2.284999966621399
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses3:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -0.240000008046627
+        y: 0.8800000429153443
+        z: 2.279999971389771
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses4:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -0.4100000083446503
+        y: 1.020000052452087
+        z: 2.269999980926514
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses5:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -0.4950000062584877
+        y: 1.090000057220459
+        z: 2.264999985694885
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses6:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -0.5800000041723251
+        y: 1.160000061988831
+        z: 2.259999990463257
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses7:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -0.6650000020861626
+        y: 1.230000066757202
+        z: 2.254999995231628
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses8:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -0.7899999976158142
+        y: 1.480000066757202
+        z: 2.230000019073486
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses9:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -0.8299999952316284
+        y: 1.660000061988831
+        z: 2.210000038146973
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses10:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -0.8699999928474427
+        y: 1.840000057220459
+        z: 2.190000057220459
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses11:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -0.9099999904632569
+        y: 2.020000052452088
+        z: 2.170000076293945
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses12:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -1.024999998509884
+        y: 2.300000041723251
+        z: 2.162500083446503
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses13:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -1.100000008940697
+        y: 2.400000035762787
+        z: 2.175000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses14:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -1.17500001937151
+        y: 2.500000029802322
+        z: 2.187500059604645
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses15:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -1.325000040233135
+        y: 2.700000017881393
+        z: 2.212500035762787
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses16:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -1.400000050663948
+        y: 2.800000011920929
+        z: 2.225000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses17:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -1.475000061094761
+        y: 2.900000005960464
+        z: 2.237500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses18:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -1.625000059604645
+        y: 3.050000011920929
+        z: 2.262499988079071
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses19:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -1.700000047683716
+        y: 3.100000023841858
+        z: 2.274999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses20:
+    header: uav20
+    seq: 20
+    frame_id: uav
+    pose:
+      position:
+        x: -1.775000035762787
+        y: 3.150000035762787
+        z: 2.287499964237213
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses21:
+    header: uav21
+    seq: 21
+    frame_id: uav
+    pose:
+      position:
+        x: -2.000000059604645
+        y: 3.300000071525574
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses22:
+    header: uav22
+    seq: 22
+    frame_id: uav
+    pose:
+      position:
+        x: -2.25000007947286
+        y: 3.46666677792867
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses23:
+    header: uav23
+    seq: 23
+    frame_id: uav
+    pose:
+      position:
+        x: -2.350000063578288
+        y: 3.533333460489909
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses24:
+    header: uav24
+    seq: 24
+    frame_id: uav
+    pose:
+      position:
+        x: -2.600000023841858
+        y: 3.700000047683716
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses25:
+    header: uav25
+    seq: 25
+    frame_id: uav
+    pose:
+      position:
+        x: -2.849999984105428
+        y: 3.866666634877523
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses26:
+    header: uav26
+    seq: 26
+    frame_id: uav
+    pose:
+      position:
+        x: -2.949999968210856
+        y: 3.933333317438761
+        z: 2.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses27:
+    header: uav27
+    seq: 27
+    frame_id: uav
+    pose:
+      position:
+        x: -3.200000047683716
+        y: 4.100000143051147
+        z: 2.325000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses28:
+    header: uav28
+    seq: 28
+    frame_id: uav
+    pose:
+      position:
+        x: -3.50000011920929
+        y: 4.300000190734863
+        z: 2.37500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses29:
+    header: uav29
+    seq: 29
+    frame_id: uav
+    pose:
+      position:
+        x: -3.800000071525574
+        y: 4.5
+        z: 2.425000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses30:
+    header: uav30
+    seq: 30
+    frame_id: uav
+    pose:
+      position:
+        x: -4.100000023841858
+        y: 4.700000047683716
+        z: 2.475000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses31:
+    header: uav31
+    seq: 31
+    frame_id: uav
+    pose:
+      position:
+        x: -4.400000095367432
+        y: 4.900000095367432
+        z: 2.5
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses32:
+    header: uav32
+    seq: 32
+    frame_id: uav
+    pose:
+      position:
+        x: -4.700000047683716
+        y: 5.100000143051147
+        z: 2.524999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses33:
+    header: uav33
+    seq: 33
+    frame_id: uav
+    pose:
+      position:
+        x: -5
+        y: 5.300000190734863
+        z: 2.575000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses34:
+    header: uav34
+    seq: 34
+    frame_id: uav
+    pose:
+      position:
+        x: -5.300000190734863
+        y: 5.5
+        z: 2.62500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses35:
+    header: uav35
+    seq: 35
+    frame_id: uav
+    pose:
+      position:
+        x: -5.600000143051147
+        y: 5.700000047683716
+        z: 2.675000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses36:
+    header: uav36
+    seq: 36
+    frame_id: uav
+    pose:
+      position:
+        x: -5.875
+        y: 5.925000190734863
+        z: 2.725000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses37:
+    header: uav37
+    seq: 37
+    frame_id: uav
+    pose:
+      position:
+        x: -6.100000143051147
+        y: 6.125000238418579
+        z: 2.774999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses38:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.149999904632568
+        y: 5.939999961853028
+        z: 2.75
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses39:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -6.199999904632568
+        y: 5.780000019073486
+        z: 2.75
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses40:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -6.249999904632569
+        y: 5.620000076293945
+        z: 2.75
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses41:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -6.299999904632569
+        y: 5.460000133514404
+        z: 2.75
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses42:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -6.441666603088379
+        y: 5.133333524068196
+        z: 2.748333325386047
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses43:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.533333301544189
+        y: 4.96666685740153
+        z: 2.746666650772095
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses44:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.716666698455811
+        y: 4.633333524068196
+        z: 2.753333301544189
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses45:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.808333396911621
+        y: 4.46666685740153
+        z: 2.751666626930237
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses46:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.940000057220459
+        y: 4.14000015258789
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses47:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.980000019073486
+        y: 3.980000114440918
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses48:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -7.019999980926514
+        y: 3.820000076293945
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses49:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -7.059999942779541
+        y: 3.660000038146973
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses50:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -7.166666587193807
+        y: 3.333333333333333
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses51:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -7.233333269755046
+        y: 3.166666666666667
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses52:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -7.366666634877522
+        y: 2.833333333333333
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses53:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -7.433333317438762
+        y: 2.666666666666667
+        z: 2.749999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses54:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.31250011920929
+        y: 2.487500071525574
+        z: 2.752499988079071
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses55:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.225000143051147
+        y: 2.325000047683716
+        z: 2.744999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses56:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.137500166893005
+        y: 2.162500023841858
+        z: 2.747499964237213
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses57:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -6.987500190734863
+        y: 1.90625
+        z: 2.737499976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses58:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -6.925000190734863
+        y: 1.8125
+        z: 2.7475
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses59:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.862500190734863
+        y: 1.71875
+        z: 2.712500023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses60:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.737500190734863
+        y: 1.53125
+        z: 2.687500071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses61:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.675000190734863
+        y: 1.4375
+        z: 2.725000095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses62:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.612500190734863
+        y: 1.34375
+        z: 2.76250011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses63:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.458333492279053
+        y: 1.100000003973643
+        z: 2.750000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses64:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.366666793823242
+        y: 0.9500000079472859
+        z: 2.750000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses65:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.183333396911621
+        y: 0.6500000059604645
+        z: 2.750000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses66:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.091666698455811
+        y: 0.5
+        z: 2.750000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses67:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.050000031789144
+        y: 0.2333333293596904
+        z: 2.683333412806193
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses68:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.100000063578288
+        y: 0.1166666646798452
+        z: 2.766666682561239
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses69:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -6.225000143051147
+        y: -0.1749999970197678
+        z: 2.754999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses70:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -6.387500166893005
+        y: -0.4750000014901161
+        z: 2.757500023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses71:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -6.475000143051147
+        y: -0.6000000089406967
+        z: 2.675000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses72:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -6.56250011920929
+        y: -0.7250000163912773
+        z: 2.752500071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses73:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -6.700000107288361
+        y: -0.9312500208616257
+        z: 2.758750095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses74:
+    header: uav20
+    seq: 20
+    frame_id: uav
+    pose:
+      position:
+        x: -6.75000011920929
+        y: -1.012500017881393
+        z: 2.687500095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses75:
+    header: uav21
+    seq: 21
+    frame_id: uav
+    pose:
+      position:
+        x: -6.800000131130219
+        y: -1.093750014901161
+        z: 2.756250095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses76:
+    header: uav22
+    seq: 22
+    frame_id: uav
+    pose:
+      position:
+        x: -6.900000154972076
+        y: -1.256250008940697
+        z: 2.693750095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses77:
+    header: uav23
+    seq: 23
+    frame_id: uav
+    pose:
+      position:
+        x: -6.950000166893005
+        y: -1.337500005960464
+        z: 2.762500095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses78:
+    header: uav24
+    seq: 24
+    frame_id: uav
+    pose:
+      position:
+        x: -7.000000178813934
+        y: -1.418750002980232
+        z: 2.731250095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses79:
+    header: uav25
+    seq: 25
+    frame_id: uav
+    pose:
+      position:
+        x: -7.12500015894572
+        y: -1.666666666666667
+        z: 2.783333404858907
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses80:
+    header: uav26
+    seq: 26
+    frame_id: uav
+    pose:
+      position:
+        x: -7.200000127156575
+        y: -1.833333333333333
+        z: 2.766666714350382
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses81:
+    header: uav27
+    seq: 27
+    frame_id: uav
+    pose:
+      position:
+        x: -7.350000063578288
+        y: -2.166666666666667
+        z: 2.733333333333333
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses82:
+    header: uav28
+    seq: 28
+    frame_id: uav
+    pose:
+      position:
+        x: -7.425000031789144
+        y: -2.333333333333333
+        z: 2.716666642824809
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses83:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.350000143051147
+        y: -2.474999964237213
+        z: 2.699999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses84:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.300000190734863
+        y: -2.649999976158142
+        z: 2.699999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses85:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.250000238418579
+        y: -2.824999988079071
+        z: 2.699999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses86:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -7.233333587646484
+        y: -3.099999984105428
+        z: 2.749999984105428
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses87:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -7.266666889190674
+        y: -3.199999968210856
+        z: 2.700000015894572
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses88:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -7.233333508173625
+        y: -3.474999944368998
+        z: 2.725000031789144
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses89:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -7.166666825612386
+        y: -3.649999936421712
+        z: 2.700000015894572
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses90:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -7.033333460489909
+        y: -3.99999992052714
+        z: 2.749999984105428
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses91:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.96666677792867
+        y: -4.174999912579854
+        z: 2.724999968210856
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses92:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.791666746139526
+        y: -4.483333269755046
+        z: 2.716666642824809
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses93:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.683333396911621
+        y: -4.616666634877522
+        z: 2.733333333333333
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses94:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.466666698455811
+        y: -4.883333365122478
+        z: 2.716666714350382
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses95:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.358333349227905
+        y: -5.016666730244954
+        z: 2.643333404858907
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses96:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.270000028610229
+        y: -5.230000114440918
+        z: 2.690000081062317
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses97:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.290000057220459
+        y: -5.310000133514404
+        z: 2.748000066757202
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses98:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -6.310000085830689
+        y: -5.39000015258789
+        z: 2.740000052452087
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses99:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -6.330000114440918
+        y: -5.470000171661377
+        z: 2.760000038146973
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses100:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -6.370000171661377
+        y: -5.630000209808349
+        z: 2.740000009536743
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses101:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -6.390000200271606
+        y: -5.710000228881836
+        z: 2.729999995231629
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses102:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -6.410000228881836
+        y: -5.790000247955322
+        z: 2.719999980926513
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses103:
+    header: uav20
+    seq: 20
+    frame_id: uav
+    pose:
+      position:
+        x: -6.430000257492066
+        y: -5.870000267028809
+        z: 2.709999966621399
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses104:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.425000190734863
+        y: -5.900000095367432
+        z: 2.975000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses105:
+    header: uav1
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.425000190734863
+        y: -5.900000095367432
+        z: 3.205000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses106:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.440000057220459
+        y: -5.740000057220459
+        z: 3.200000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9999997019767761
+        w: 0.0007963267271406949
+  poses107:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -6.480000019073486
+        y: -5.580000019073486
+        z: 3.200000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9999997019767761
+        w: 0.0007963267271406949
+  poses108:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -6.519999980926514
+        y: -5.419999980926514
+        z: 3.200000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9999997019767761
+        w: 0.0007963267271406949
+  poses109:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -6.559999942779541
+        y: -5.259999942779541
+        z: 3.200000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 0.9999997019767761
+        w: 0.0007963267271406949
+  poses110:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -6.662499904632568
+        y: -4.912499904632568
+        z: 3.212500035762787
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses111:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.724999904632568
+        y: -4.724999904632568
+        z: 3.225000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses112:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.787499904632568
+        y: -4.537499904632568
+        z: 3.237500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses113:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.879999923706055
+        y: -4.189999914169311
+        z: 3.259999990463257
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses114:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.909999942779541
+        y: -4.029999923706055
+        z: 3.269999980926514
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses115:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.939999961853028
+        y: -3.869999933242798
+        z: 3.279999971389771
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses116:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.969999980926514
+        y: -3.709999942779541
+        z: 3.289999961853027
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses117:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -7.060000038146972
+        y: -3.389999961853027
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses118:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -7.120000076293945
+        y: -3.229999971389771
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses119:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -7.180000114440918
+        y: -3.069999980926513
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses120:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -7.240000152587891
+        y: -2.909999990463257
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses121:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -7.400000095367432
+        y: -2.625
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses122:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.400000095367432
+        y: -2.46666677792867
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses123:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.400000095367432
+        y: -2.333333412806193
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses124:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.366666793823242
+        y: -2.066666722297668
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses125:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -7.333333492279053
+        y: -1.933333396911621
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses126:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -7.166666825612386
+        y: -1.800000071525574
+        z: 3.233333349227905
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses127:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -7.033333460489909
+        y: -1.800000071525574
+        z: 3.216666698455811
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses128:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.825000107288361
+        y: -1.725000068545341
+        z: 3.231250047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses129:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.75000011920929
+        y: -1.650000065565109
+        z: 3.262500047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses130:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.675000131130219
+        y: -1.575000062584877
+        z: 3.293750047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses131:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.525000154972076
+        y: -1.425000056624413
+        z: 3.356250047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses132:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.450000166893005
+        y: -1.35000005364418
+        z: 3.387500047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses133:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.375000178813934
+        y: -1.275000050663948
+        z: 3.418750047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses134:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.306250154972076
+        y: -1.062500044703484
+        z: 3.456250041723251
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses135:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.31250011920929
+        y: -0.9250000417232513
+        z: 3.462500035762787
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses136:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.318750083446503
+        y: -0.7875000387430191
+        z: 3.468750029802322
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses137:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -6.331250011920929
+        y: -0.5125000271946192
+        z: 3.481250017881393
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses138:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -6.337499976158142
+        y: -0.3750000186264515
+        z: 3.487500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses139:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -6.343749940395355
+        y: -0.2375000100582838
+        z: 3.493750005960464
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses140:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -6.399999936421712
+        y: 0.01666666567325592
+        z: 3.483333349227905
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses141:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -6.449999968210856
+        y: 0.133333332836628
+        z: 3.466666698455811
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses142:
+    header: uav20
+    seq: 20
+    frame_id: uav
+    pose:
+      position:
+        x: -6.424999952316284
+        y: 0.425000011920929
+        z: 3.400000095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses143:
+    header: uav21
+    seq: 21
+    frame_id: uav
+    pose:
+      position:
+        x: -6.450000047683716
+        y: 0.7500000298023224
+        z: 3.325000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses144:
+    header: uav22
+    seq: 22
+    frame_id: uav
+    pose:
+      position:
+        x: -6.650000095367432
+        y: 1.050000041723251
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses145:
+    header: uav23
+    seq: 23
+    frame_id: uav
+    pose:
+      position:
+        x: -6.825000047683716
+        y: 1.350000023841858
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses146:
+    header: uav24
+    seq: 24
+    frame_id: uav
+    pose:
+      position:
+        x: -7
+        y: 1.650000035762787
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses147:
+    header: uav25
+    seq: 25
+    frame_id: uav
+    pose:
+      position:
+        x: -7.174999952316284
+        y: 1.950000107288361
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses148:
+    header: uav26
+    seq: 26
+    frame_id: uav
+    pose:
+      position:
+        x: -7.350000143051147
+        y: 2.25000011920929
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses149:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.275000095367432
+        y: 2.425000071525574
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses150:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.116666952768962
+        y: 2.700000127156576
+        z: 3.216666698455811
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses151:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.033333619435628
+        y: 2.800000111262003
+        z: 3.183333396911621
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses152:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -6.816666920979817
+        y: 2.883333444595337
+        z: 3.150000095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses153:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -6.683333555857341
+        y: 2.866666793823242
+        z: 3.150000095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses154:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.43333347638448
+        y: 2.96666677792867
+        z: 3.175000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses155:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.316666762034099
+        y: 3.083333412806193
+        z: 3.200000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses156:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.083333333333333
+        y: 3.316666682561239
+        z: 3.25
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses157:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -5.966666618982951
+        y: 3.433333317438761
+        z: 3.274999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses158:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -5.866666634877522
+        y: 3.666666666666667
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses159:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -5.883333365122478
+        y: 3.783333381017049
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses160:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -5.925000190734863
+        y: 4.075000047683716
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses161:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -5.96666693687439
+        y: 4.425000031789144
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses162:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -5.983333587646484
+        y: 4.600000063578288
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses163:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.016666889190674
+        y: 4.950000127156575
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses164:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -6.033333539962769
+        y: 5.12500015894572
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses165:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -6.075000206629436
+        y: 5.450000206629436
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses166:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -6.100000222524007
+        y: 5.600000222524007
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses167:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -6.150000254313151
+        y: 5.900000254313151
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses168:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -6.175000270207723
+        y: 6.050000270207723
+        z: 3.299999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses169:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.150000095367432
+        y: 6.100000143051147
+        z: 3.525000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses170:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -6.175000190734863
+        y: 6.175000190734863
+        z: 3.800000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses171:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -6.100000143051147
+        y: 5.975000143051147
+        z: 3.675000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses172:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -6.050000190734863
+        y: 5.800000190734863
+        z: 3.650000095367432
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses173:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -6.000000238418579
+        y: 5.625000238418579
+        z: 3.80500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses174:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -5.960000228881836
+        y: 5.260000228881836
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses175:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -5.970000171661377
+        y: 5.070000171661377
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses176:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -5.980000114440918
+        y: 4.880000114440918
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses177:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -5.990000057220459
+        y: 4.690000057220459
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses178:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.066666762034099
+        y: 4.383333365122478
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses179:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.133333524068196
+        y: 4.266666730244954
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses180:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.266666889190674
+        y: 4.033333381017049
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses181:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.333333492279053
+        y: 3.916666666666667
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses182:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.483333428700765
+        y: 3.683333317438761
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses183:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.566666762034099
+        y: 3.566666682561239
+        z: 3.800000143051147
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses184:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.775000095367432
+        y: 3.300000071525574
+        z: 3.82500011920929
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses185:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -7.025000095367432
+        y: 3.00000011920929
+        z: 3.775000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses186:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -7.275000095367432
+        y: 2.700000047683716
+        z: 3.825000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses187:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.25
+        y: 2.566666682561239
+        z: 3.700000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses188:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.25
+        y: 2.433333317438761
+        z: 3.800000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses189:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.191666682561238
+        y: 2.116666634877523
+        z: 3.808333373069763
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses190:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -7.133333365122478
+        y: 1.933333317438761
+        z: 3.716666698455811
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses191:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -7.016666730244954
+        y: 1.566666682561239
+        z: 3.833333349227905
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses192:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.958333412806193
+        y: 1.383333365122477
+        z: 3.841666674613953
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses193:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.725000143051147
+        y: 1.125000059604645
+        z: 3.800000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses194:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.416666825612386
+        y: 1.000000059604645
+        z: 3.816666762034098
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses195:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.283333460489909
+        y: 0.9500000476837158
+        z: 3.783333381017049
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses196:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.133333428204059
+        y: 0.8683333665132522
+        z: 3.838333336263895
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses197:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.116666761040688
+        y: 0.8366666972637177
+        z: 3.72666667252779
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses198:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.100000093877315
+        y: 0.805000028014183
+        z: 3.815000008791685
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses199:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.083333426713944
+        y: 0.7733333587646485
+        z: 3.70333334505558
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses200:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.050000092387199
+        y: 0.7100000202655792
+        z: 3.78000001758337
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses201:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.033333425223828
+        y: 0.6783333510160446
+        z: 3.808333353847265
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses202:
+    header: uav15
+    seq: 15
+    frame_id: uav
+    pose:
+      position:
+        x: -6.016666758060455
+        y: 0.64666668176651
+        z: 3.80666669011116
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses203:
+    header: uav16
+    seq: 16
+    frame_id: uav
+    pose:
+      position:
+        x: -6.000000090897084
+        y: 0.6150000125169754
+        z: 3.805000026375055
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses204:
+    header: uav17
+    seq: 17
+    frame_id: uav
+    pose:
+      position:
+        x: -5.966666758060455
+        y: 0.5516666769981384
+        z: 3.801666699647903
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses205:
+    header: uav18
+    seq: 18
+    frame_id: uav
+    pose:
+      position:
+        x: -5.950000092387199
+        y: 0.5200000107288361
+        z: 3.610000036656857
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses206:
+    header: uav19
+    seq: 19
+    frame_id: uav
+    pose:
+      position:
+        x: -5.933333426713943
+        y: 0.4883333444595337
+        z: 3.80833337366581
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses207:
+    header: uav20
+    seq: 20
+    frame_id: uav
+    pose:
+      position:
+        x: -5.916666761040688
+        y: 0.4566666781902313
+        z: 3.806666710674763
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses208:
+    header: uav21
+    seq: 21
+    frame_id: uav
+    pose:
+      position:
+        x: -5.883333426713944
+        y: 0.3933333396911621
+        z: 3.803333383202553
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses209:
+    header: uav22
+    seq: 22
+    frame_id: uav
+    pose:
+      position:
+        x: -5.866666758060456
+        y: 0.3616666674613953
+        z: 3.80166671872139
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses210:
+    header: uav23
+    seq: 23
+    frame_id: uav
+    pose:
+      position:
+        x: -5.850000089406967
+        y: 0.3299999952316284
+        z: 3.800000054240227
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses211:
+    header: uav24
+    seq: 24
+    frame_id: uav
+    pose:
+      position:
+        x: -5.833333420753479
+        y: 0.2983333230018616
+        z: 3.828333389759064
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses212:
+    header: uav25
+    seq: 25
+    frame_id: uav
+    pose:
+      position:
+        x: -5.800000083446503
+        y: 0.2349999785423279
+        z: 3.805000060796738
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses213:
+    header: uav26
+    seq: 26
+    frame_id: uav
+    pose:
+      position:
+        x: -5.783333414793015
+        y: 0.203333306312561
+        z: 3.793333396315575
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses214:
+    header: uav27
+    seq: 27
+    frame_id: uav
+    pose:
+      position:
+        x: -5.766666746139526
+        y: 0.1716666340827942
+        z: 3.781666731834411
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses215:
+    header: uav28
+    seq: 28
+    frame_id: uav
+    pose:
+      position:
+        x: -5.750000077486038
+        y: 0.1399999618530273
+        z: 3.770000067353249
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses216:
+    header: uav29
+    seq: 29
+    frame_id: uav
+    pose:
+      position:
+        x: -5.716666746139526
+        y: 0.07666663154959678
+        z: 3.806666741371155
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses217:
+    header: uav30
+    seq: 30
+    frame_id: uav
+    pose:
+      position:
+        x: -5.700000083446502
+        y: 0.04499997347593307
+        z: 3.805000079870224
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses218:
+    header: uav31
+    seq: 31
+    frame_id: uav
+    pose:
+      position:
+        x: -5.683333420753479
+        y: 0.01333331540226937
+        z: 3.803333418369293
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses219:
+    header: uav32
+    seq: 32
+    frame_id: uav
+    pose:
+      position:
+        x: -5.666666758060455
+        y: -0.01833334267139436
+        z: 3.801666756868363
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses220:
+    header: uav33
+    seq: 33
+    frame_id: uav
+    pose:
+      position:
+        x: -5.75
+        y: -0.1999999973922968
+        z: 3.425000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses221:
+    header: uav34
+    seq: 34
+    frame_id: uav
+    pose:
+      position:
+        x: -5.916666666666667
+        y: -0.450000007947286
+        z: 3.806666698455811
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses222:
+    header: uav35
+    seq: 35
+    frame_id: uav
+    pose:
+      position:
+        x: -5.983333428700765
+        y: -0.5500000218550364
+        z: 3.783333349227905
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses223:
+    header: uav36
+    seq: 36
+    frame_id: uav
+    pose:
+      position:
+        x: -6.150000095367432
+        y: -0.800000011920929
+        z: 3.804999976158142
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses224:
+    header: uav37
+    seq: 37
+    frame_id: uav
+    pose:
+      position:
+        x: -6.350000143051147
+        y: -1.099999994039536
+        z: 3.809999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses225:
+    header: uav38
+    seq: 38
+    frame_id: uav
+    pose:
+      position:
+        x: -6.575000286102295
+        y: -1.400000035762787
+        z: 3.775000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses226:
+    header: uav39
+    seq: 39
+    frame_id: uav
+    pose:
+      position:
+        x: -6.783333619435628
+        y: -1.650000055631002
+        z: 3.816666793823242
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses227:
+    header: uav40
+    seq: 40
+    frame_id: uav
+    pose:
+      position:
+        x: -6.866666952768962
+        y: -1.75000003973643
+        z: 3.833333444595337
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses228:
+    header: uav41
+    seq: 41
+    frame_id: uav
+    pose:
+      position:
+        x: -7.075000286102295
+        y: -2.000000059604645
+        z: 3.775000071525574
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses229:
+    header: uav42
+    seq: 42
+    frame_id: uav
+    pose:
+      position:
+        x: -7.325000286102295
+        y: -2.275000095367432
+        z: 3.825000023841858
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses230:
+    header: uav0
+    seq: 0
+    frame_id: uav
+    pose:
+      position:
+        x: -7.250000238418579
+        y: -2.425000071525574
+        z: 3.700000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses231:
+    header: uav1
+    seq: 1
+    frame_id: uav
+    pose:
+      position:
+        x: -7.150000095367432
+        y: -2.775000095367432
+        z: 3.800000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses232:
+    header: uav2
+    seq: 2
+    frame_id: uav
+    pose:
+      position:
+        x: -7.066666603088379
+        y: -3.066666682561239
+        z: 3.800000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses233:
+    header: uav3
+    seq: 3
+    frame_id: uav
+    pose:
+      position:
+        x: -7.033333301544189
+        y: -3.183333317438761
+        z: 3.800000047683716
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses234:
+    header: uav4
+    seq: 4
+    frame_id: uav
+    pose:
+      position:
+        x: -6.980000019073486
+        y: -3.489999961853028
+        z: 3.830000066757202
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses235:
+    header: uav5
+    seq: 5
+    frame_id: uav
+    pose:
+      position:
+        x: -6.960000038146973
+        y: -3.67999997138977
+        z: 3.790000085830689
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses236:
+    header: uav6
+    seq: 6
+    frame_id: uav
+    pose:
+      position:
+        x: -6.940000057220459
+        y: -3.869999980926514
+        z: 3.790000104904175
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses237:
+    header: uav7
+    seq: 7
+    frame_id: uav
+    pose:
+      position:
+        x: -6.920000076293945
+        y: -4.059999990463257
+        z: 3.820000123977661
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses238:
+    header: uav8
+    seq: 8
+    frame_id: uav
+    pose:
+      position:
+        x: -6.850000063578288
+        y: -4.425000031789144
+        z: 3.80166677792867
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses239:
+    header: uav9
+    seq: 9
+    frame_id: uav
+    pose:
+      position:
+        x: -6.800000031789144
+        y: -4.600000063578288
+        z: 3.803333412806193
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses240:
+    header: uav10
+    seq: 10
+    frame_id: uav
+    pose:
+      position:
+        x: -6.699999968210856
+        y: -4.950000127156575
+        z: 3.816666682561239
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses241:
+    header: uav11
+    seq: 11
+    frame_id: uav
+    pose:
+      position:
+        x: -6.649999936421712
+        y: -5.12500015894572
+        z: 3.808333317438761
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses242:
+    header: uav12
+    seq: 12
+    frame_id: uav
+    pose:
+      position:
+        x: -6.574999928474426
+        y: -5.475000143051147
+        z: 3.799999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses243:
+    header: uav13
+    seq: 13
+    frame_id: uav
+    pose:
+      position:
+        x: -6.549999952316284
+        y: -5.650000095367432
+        z: 3.799999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  poses244:
+    header: uav14
+    seq: 14
+    frame_id: uav
+    pose:
+      position:
+        x: -6.524999976158142
+        y: -5.825000047683716
+        z: 3.799999952316284
+      orientation:
+        x: 0
+        y: 0
+        z: 1
+        w: 0
+  size: 245
+tether:
+  length0:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 3.758564
+  length1:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 3.632573
+  length2:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 3.506581
+  length3:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 3.38059
+  length4:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 3.137465
+  length5:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 3.020332
+  length6:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 2.903199
+  length7:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 2.786066
+  length8:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 2.590068
+  length9:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 2.511204
+  length10:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 2.432339
+  length11:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 2.353475
+  length12:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 2.210331
+  length13:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 2.146052
+  length14:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 2.081772
+  length15:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 1.969883
+  length16:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 1.922274
+  length17:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 1.874665
+  length18:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 1.803653
+  length19:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 1.780249
+  length20:
+    header: tether20
+    seq: 20
+    frame_id: tether_length
+    length: 1.756846
+  length21:
+    header: tether21
+    seq: 21
+    frame_id: tether_length
+    length: 1.749678
+  length22:
+    header: tether22
+    seq: 22
+    frame_id: tether_length
+    length: 1.748743
+  length23:
+    header: tether23
+    seq: 23
+    frame_id: tether_length
+    length: 1.731572
+  length24:
+    header: tether24
+    seq: 24
+    frame_id: tether_length
+    length: 1.718076
+  length25:
+    header: tether25
+    seq: 25
+    frame_id: tether_length
+    length: 1.744754
+  length26:
+    header: tether26
+    seq: 26
+    frame_id: tether_length
+    length: 1.767758
+  length27:
+    header: tether27
+    seq: 27
+    frame_id: tether_length
+    length: 1.795333
+  length28:
+    header: tether28
+    seq: 28
+    frame_id: tether_length
+    length: 1.840715
+  length29:
+    header: tether29
+    seq: 29
+    frame_id: tether_length
+    length: 1.922767
+  length30:
+    header: tether30
+    seq: 30
+    frame_id: tether_length
+    length: 2.025845
+  length31:
+    header: tether31
+    seq: 31
+    frame_id: tether_length
+    length: 2.148638
+  length32:
+    header: tether32
+    seq: 32
+    frame_id: tether_length
+    length: 2.310687
+  length33:
+    header: tether33
+    seq: 33
+    frame_id: tether_length
+    length: 2.52595
+  length34:
+    header: tether34
+    seq: 34
+    frame_id: tether_length
+    length: 2.764274
+  length35:
+    header: tether35
+    seq: 35
+    frame_id: tether_length
+    length: 3.020201
+  length36:
+    header: tether36
+    seq: 36
+    frame_id: tether_length
+    length: 3.278128
+  length37:
+    header: tether37
+    seq: 37
+    frame_id: tether_length
+    length: 3.493079
+  length38:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 3.412066
+  length39:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 3.436449
+  length40:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 3.46083
+  length41:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 3.485213
+  length42:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 3.594898
+  length43:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 3.680201
+  length44:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 3.85724
+  length45:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 3.948976
+  length46:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.099114
+  length47:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.157518
+  length48:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.215922
+  length49:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.274326
+  length50:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.414115
+  length51:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.495502
+  length52:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.661787
+  length53:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 4.746686
+  length54:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.674385
+  length55:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 4.680925
+  length56:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 4.687466
+  length57:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 4.711271
+  length58:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 4.728536
+  length59:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 4.7458
+  length60:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 4.787034
+  length61:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 4.811004
+  length62:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.834974
+  length63:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.791769
+  length64:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.724594
+  length65:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.591833
+  length66:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.526247
+  length67:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.439662
+  length68:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.418663
+  length69:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 4.390619
+  length70:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 4.51919
+  length71:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 4.654806
+  length72:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 4.790422
+  length73:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 4.932467
+  length74:
+    header: tether20
+    seq: 20
+    frame_id: tether_length
+    length: 4.938896
+  length75:
+    header: tether21
+    seq: 21
+    frame_id: tether_length
+    length: 4.945325
+  length76:
+    header: tether22
+    seq: 22
+    frame_id: tether_length
+    length: 4.970694
+  length77:
+    header: tether23
+    seq: 23
+    frame_id: tether_length
+    length: 4.989634
+  length78:
+    header: tether24
+    seq: 24
+    frame_id: tether_length
+    length: 5.008573
+  length79:
+    header: tether25
+    seq: 25
+    frame_id: tether_length
+    length: 5.03083
+  length80:
+    header: tether26
+    seq: 26
+    frame_id: tether_length
+    length: 5.034149
+  length81:
+    header: tether27
+    seq: 27
+    frame_id: tether_length
+    length: 5.043498
+  length82:
+    header: tether28
+    seq: 28
+    frame_id: tether_length
+    length: 5.049529
+  length83:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 5.063387
+  length84:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 5.086471
+  length85:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 5.109554
+  length86:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 5.160777
+  length87:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 5.188915
+  length88:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 5.190835
+  length89:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 5.164617
+  length90:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 5.124713
+  length91:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 5.111027
+  length92:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 5.028275
+  length93:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.959208
+  length94:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.826107
+  length95:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.762073
+  length96:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.65206
+  length97:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.60608
+  length98:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 4.5601
+  length99:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 4.51412
+  length100:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 4.428703
+  length101:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 4.389266
+  length102:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 4.349829
+  length103:
+    header: tether20
+    seq: 20
+    frame_id: tether_length
+    length: 4.310392
+  length104:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.42539
+  length105:
+    header: tether1
+    seq: 0
+    frame_id: tether_length
+    length: 4.75539
+  length106:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.477964
+  length107:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 4.448808
+  length108:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 4.419652
+  length109:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 4.390497
+  length110:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 4.411983
+  length111:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 4.462624
+  length112:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 4.513265
+  length113:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 4.568597
+  length114:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.573287
+  length115:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.577979
+  length116:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.582669
+  length117:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.660858
+  length118:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.734356
+  length119:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.807855
+  length120:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.881353
+  length121:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 5.062005
+  length122:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 5.032015
+  length123:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 5.040789
+  length124:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 5.063424
+  length125:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 5.077285
+  length126:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 5.079201
+  length127:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 5.067255
+  length128:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 5.035254
+  length129:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 5.015198
+  length130:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.995142
+  length131:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.965576
+  length132:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.956066
+  length133:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.946556
+  length134:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.935204
+  length135:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.933361
+  length136:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.931519
+  length137:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 4.928702
+  length138:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 4.927729
+  length139:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 4.926755
+  length140:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 4.907222
+  length141:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 4.888663
+  length142:
+    header: tether20
+    seq: 20
+    frame_id: tether_length
+    length: 4.752144
+  length143:
+    header: tether21
+    seq: 21
+    frame_id: tether_length
+    length: 4.598492
+  length144:
+    header: tether22
+    seq: 22
+    frame_id: tether_length
+    length: 4.57783
+  length145:
+    header: tether23
+    seq: 23
+    frame_id: tether_length
+    length: 4.632861
+  length146:
+    header: tether24
+    seq: 24
+    frame_id: tether_length
+    length: 4.740336
+  length147:
+    header: tether25
+    seq: 25
+    frame_id: tether_length
+    length: 4.861545
+  length148:
+    header: tether26
+    seq: 26
+    frame_id: tether_length
+    length: 4.995762
+  length149:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.897687
+  length150:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 4.793598
+  length151:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 4.780763
+  length152:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 4.72951
+  length153:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 4.691091
+  length154:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 4.567591
+  length155:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 4.482509
+  length156:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 4.322372
+  length157:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.247318
+  length158:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.134531
+  length159:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.096799
+  length160:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.004845
+  length161:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 3.926468
+  length162:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 3.902314
+  length163:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 3.906152
+  length164:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 3.934143
+  length165:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 3.989743
+  length166:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 4.017352
+  length167:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 4.088202
+  length168:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 4.131443
+  length169:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.207617
+  length170:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 4.436391
+  length171:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 4.369884
+  length172:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 4.31035
+  length173:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 4.250817
+  length174:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 4.126877
+  length175:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 4.06247
+  length176:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 3.998064
+  length177:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 3.933657
+  length178:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 3.916453
+  length179:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 3.963655
+  length180:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.056871
+  length181:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.102884
+  length182:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.223952
+  length183:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.299006
+  length184:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.511737
+  length185:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.795276
+  length186:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 5.093816
+  length187:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 5.104518
+  length188:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 5.15048
+  length189:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 5.239835
+  length190:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 5.283226
+  length191:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 5.432008
+  length192:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 5.537397
+  length193:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 5.737734
+  length194:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 5.863037
+  length195:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 5.893393
+  length196:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 5.868038
+  length197:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 5.812327
+  length198:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 5.756617
+  length199:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 5.700906
+  length200:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 5.603767
+  length201:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 5.562339
+  length202:
+    header: tether15
+    seq: 15
+    frame_id: tether_length
+    length: 5.52091
+  length203:
+    header: tether16
+    seq: 16
+    frame_id: tether_length
+    length: 5.479482
+  length204:
+    header: tether17
+    seq: 17
+    frame_id: tether_length
+    length: 5.412459
+  length205:
+    header: tether18
+    seq: 18
+    frame_id: tether_length
+    length: 5.386866
+  length206:
+    header: tether19
+    seq: 19
+    frame_id: tether_length
+    length: 5.361272
+  length207:
+    header: tether20
+    seq: 20
+    frame_id: tether_length
+    length: 5.335678
+  length208:
+    header: tether21
+    seq: 21
+    frame_id: tether_length
+    length: 5.30148
+  length209:
+    header: tether22
+    seq: 22
+    frame_id: tether_length
+    length: 5.292876
+  length210:
+    header: tether23
+    seq: 23
+    frame_id: tether_length
+    length: 5.284272
+  length211:
+    header: tether24
+    seq: 24
+    frame_id: tether_length
+    length: 5.275667
+  length212:
+    header: tether25
+    seq: 25
+    frame_id: tether_length
+    length: 5.275861
+  length213:
+    header: tether26
+    seq: 26
+    frame_id: tether_length
+    length: 5.284659
+  length214:
+    header: tether27
+    seq: 27
+    frame_id: tether_length
+    length: 5.293458
+  length215:
+    header: tether28
+    seq: 28
+    frame_id: tether_length
+    length: 5.302256
+  length216:
+    header: tether29
+    seq: 29
+    frame_id: tether_length
+    length: 5.336939
+  length217:
+    header: tether30
+    seq: 30
+    frame_id: tether_length
+    length: 5.362823
+  length218:
+    header: tether31
+    seq: 31
+    frame_id: tether_length
+    length: 5.388708
+  length219:
+    header: tether32
+    seq: 32
+    frame_id: tether_length
+    length: 5.414592
+  length220:
+    header: tether33
+    seq: 33
+    frame_id: tether_length
+    length: 5.432575
+  length221:
+    header: tether34
+    seq: 34
+    frame_id: tether_length
+    length: 5.410185
+  length222:
+    header: tether35
+    seq: 35
+    frame_id: tether_length
+    length: 5.395698
+  length223:
+    header: tether36
+    seq: 36
+    frame_id: tether_length
+    length: 5.361547
+  length224:
+    header: tether37
+    seq: 37
+    frame_id: tether_length
+    length: 5.334785
+  length225:
+    header: tether38
+    seq: 38
+    frame_id: tether_length
+    length: 5.342809
+  length226:
+    header: tether39
+    seq: 39
+    frame_id: tether_length
+    length: 5.353686
+  length227:
+    header: tether40
+    seq: 40
+    frame_id: tether_length
+    length: 5.349439
+  length228:
+    header: tether41
+    seq: 41
+    frame_id: tether_length
+    length: 5.359679
+  length229:
+    header: tether42
+    seq: 42
+    frame_id: tether_length
+    length: 5.387758
+  length230:
+    header: tether0
+    seq: 0
+    frame_id: tether_length
+    length: 5.271949
+  length231:
+    header: tether1
+    seq: 1
+    frame_id: tether_length
+    length: 5.092512
+  length232:
+    header: tether2
+    seq: 2
+    frame_id: tether_length
+    length: 4.973417
+  length233:
+    header: tether3
+    seq: 3
+    frame_id: tether_length
+    length: 4.933657
+  length234:
+    header: tether4
+    seq: 4
+    frame_id: tether_length
+    length: 4.909102
+  length235:
+    header: tether5
+    seq: 5
+    frame_id: tether_length
+    length: 4.924308
+  length236:
+    header: tether6
+    seq: 6
+    frame_id: tether_length
+    length: 4.939514
+  length237:
+    header: tether7
+    seq: 7
+    frame_id: tether_length
+    length: 4.95472
+  length238:
+    header: tether8
+    seq: 8
+    frame_id: tether_length
+    length: 4.908929
+  length239:
+    header: tether9
+    seq: 9
+    frame_id: tether_length
+    length: 4.847931
+  length240:
+    header: tether10
+    seq: 10
+    frame_id: tether_length
+    length: 4.753623
+  length241:
+    header: tether11
+    seq: 11
+    frame_id: tether_length
+    length: 4.720311
+  length242:
+    header: tether12
+    seq: 12
+    frame_id: tether_length
+    length: 4.696392
+  length243:
+    header: tether13
+    seq: 13
+    frame_id: tether_length
+    length: 4.705784
+  length244:
+    header: tether14
+    seq: 14
+    frame_id: tether_length
+    length: 4.715177
+  size: 245

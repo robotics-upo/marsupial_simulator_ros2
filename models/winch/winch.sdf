@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="winch">
+    <static>false</static>
+    
+    <!-- Box alargado en horizontal -->
+    <link name="box_central">
+      <pose>0 0 0 0 0 1.5708</pose> 
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.2 0.125 0.125</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.2 0.125 0.125</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0.2 0.2 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Box plano vertical izquierdo -->
+    <link name="box_plano_izquierdo">
+      <pose>0 -0.1 0 0 0 1.5708</pose> 
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.025 0.25 0.25</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.025 0.25 0.25</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0.2 0.2 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Box plano vertical derecho -->
+    <link name="box_plano_derecho">
+      <pose>0 0.1 0 0 0 1.5708</pose> 
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.025 0.25 0.25</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.025 0.25 0.25</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0.2 0.2 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Unión revoluta izquierda -->
+    <joint name="joint_izquierdo" type="revolute">
+      <parent>box_plano_izquierdo</parent>
+      <child>box_central</child>
+      <pose>0 0 0 0 0 1.5708</pose> 
+      <axis>
+        <xyz>0 1 0</xyz> 
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.05</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <!-- Unión revoluta derecha -->
+    <joint name="joint_derecho" type="revolute">
+      <parent>box_plano_derecho</parent>
+      <child>box_central</child>
+      <pose>0 0 0 0 0 1.5708</pose> 
+      <axis>
+        <xyz>0 1 0</xyz> 
+        <limit>
+          <lower>-1e16</lower>
+          <upper>1e16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.05</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+      </axis>
+    </joint>
+    
+  </model>
+</sdf>
