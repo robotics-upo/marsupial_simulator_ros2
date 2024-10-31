@@ -1906,6 +1906,7 @@
 
     <plugin name='gazebo_octomap' filename='libBuildOctomapPlugin.so'/>
     <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher_plugin.so"/>
+    <plugin name="gazebo_ros_factory" filename="libgazebo_ros_factory.so"/>
 
   </world>
 </sdf>

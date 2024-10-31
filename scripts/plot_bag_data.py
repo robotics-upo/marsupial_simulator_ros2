@@ -13,7 +13,7 @@ os.makedirs(plot_dir, exist_ok=True)
 drone_data = pd.read_csv('src/marsupial_simulator_ros2/simulation_data/drone_data.csv')
 ugv_data = pd.read_csv('src/marsupial_simulator_ros2/simulation_data/ugv_data.csv')
 
-time_scale = 6.25
+time_scale = 1/1  #/0.66      /1.1
 
 ugv_time = ugv_data['time'].to_numpy() / time_scale
 ugv_cable_length = ugv_data['cable_length'].to_numpy()
@@ -42,7 +42,7 @@ drone_target_z = drone_data['target_position_z'].to_numpy()
 
 # Graficar tether_distance
 plt.figure(figsize=(10, 8))
-plt.plot(ugv_time, ugv_cable_length, label='Cable Length')
+plt.plot(ugv_time, ugv_cable_length, label='Tether Length')
 plt.plot(ugv_time, ugv_target_length, 'r--', label='Target Length')  
 plt.plot(ugv_time, ugv_uav_distance, label='Distance')  
 # plt.plot(ugv_time, (ugv_target_length - 0.3)/1.0, label='Distance')  
@@ -57,14 +57,14 @@ plt.savefig(os.path.join(plot_dir, 'tether_distance.png'))
 plt.close()
 
 # Graficar tether_distance_filtered
-start_time = 120
-end_time = 130
+start_time = 185
+end_time = 215
 ugv_time_filtered = ugv_time[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_cable_length_filtered = ugv_cable_length[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_target_length_filtered = ugv_target_length[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_uav_distance_filtered = ugv_uav_distance[(ugv_time >= start_time) & (ugv_time <= end_time)]
 plt.figure(figsize=(10, 8))
-plt.plot(ugv_time_filtered, ugv_cable_length_filtered, label='Cable Length')
+plt.plot(ugv_time_filtered, ugv_cable_length_filtered, label='Tether Length')
 plt.plot(ugv_time_filtered, ugv_target_length_filtered, 'r--', label='Target Length')  
 plt.plot(ugv_time_filtered, ugv_uav_distance_filtered, label='Distance')  
 plt.xlabel('Time (s)')
@@ -247,8 +247,8 @@ def plot_3d(ugv_position_x, ugv_position_y, ugv_position_z, drone_position_x, dr
             z = [ugv_position_z[i], drone_position_z[i]]
         color = plt.cm.plasma(i / num_points)  
         # ax.plot(x, y, z, color=color)
-        ax.scatter(x[0], y[0], z[0], color='blue', s=5) 
-        ax.scatter(x[-1], y[-1], z[-1], color=color, s=5)   
+        # ax.scatter(x[0], y[0], z[0], color='blue', s=5) 
+        # ax.scatter(x[-1], y[-1], z[-1], color=color, s=5)   
 
     ax.set_xlabel('Position X (m)')
     ax.set_ylabel('Position Y (m)')

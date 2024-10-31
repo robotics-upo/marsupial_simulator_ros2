@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -33,6 +34,10 @@ def generate_launch_description():
     tether_pos_x = PythonExpression([init_pos_x, ' - 0.25'])
     tether_pos_y = PythonExpression([init_pos_y, ' - 0.0'])
     tether_pos_z = PythonExpression([init_pos_z, ' + 0.325'])
+
+    theatre_pos_x = PythonExpression([init_pos_x, ' + 0.0'])
+    theatre_pos_y = PythonExpression([init_pos_y, ' - 0.0'])
+    theatre_pos_z = PythonExpression([init_pos_z, ' - 0.3'])
 
     gzserver = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -104,7 +109,7 @@ def generate_launch_description():
             package='gazebo_ros',
             executable='spawn_entity.py',
             arguments=['-entity', 'teatro', '-file', os.path.join(get_package_share_directory('marsupial_simulator_ros2'), 'models', 'teatro/teatro.sdf'), 
-                       '-x', init_pos_x, '-y', init_pos_y, '-z', init_pos_z],
+                       '-x', theatre_pos_x, '-y', theatre_pos_y, '-z', theatre_pos_z],
             output='screen',
         ) 
 
@@ -121,6 +126,11 @@ def generate_launch_description():
     delayed_attach_links = TimerAction(
         period=0.5,  
         actions=[attach_tether_node]
+    )
+
+    delayed_spawn_theatre = TimerAction(
+        period=0.5,  
+        actions=[spawn_theatre]
     )
 
     nodes = [
@@ -150,7 +160,12 @@ def generate_launch_description():
                 on_exit=[delayed_attach_links],
             )
         ),
-        # spawn_theatre,
+        # RegisterEventHandler(
+        #     OnProcessExit(
+        #         target_action=attach_tether_node,
+        #         on_exit=[delayed_spawn_theatre],
+        #     )
+        # ),
     ]
 
     return LaunchDescription(nodes)

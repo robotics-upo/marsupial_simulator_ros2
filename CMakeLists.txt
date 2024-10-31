@@ -82,10 +82,12 @@ install(
   scripts/plot_bag_data.py
   scripts/plot_bag_data_theatre.py
   scripts/get_bag_data.py
+  scripts/get_bag_trajectory.py
   scripts/get_bag_data_theatre.py
   scripts/trajectory_follower.py
   scripts/uav_trajectory_follower.py
   scripts/tether_comparison.py
+  scripts/min_distance_calculator.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

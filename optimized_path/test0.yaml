@@ -6,7 +6,7 @@ marsupial_ugv:
     frame_id: ugv
     pose:
       position:
-        x: 1.0
+        x: 0.001
         y: 0.0
         z: 0.0
       orientation:
@@ -20,7 +20,7 @@ marsupial_ugv:
     frame_id: ugv
     pose:
       position:
-        x: 1.0
+        x: 0.001
         y: 0.0
         z: 0.0
       orientation:
@@ -38,7 +38,7 @@ marsupial_uav:
       position:
         x: 0.0
         y: 0.0
-        z: 3.0
+        z: 15.625
       orientation:
         x: 0
         y: 0

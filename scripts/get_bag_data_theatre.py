@@ -29,10 +29,13 @@ class DataLoggerNode(Node):
             'time': [], 'imu_orientation_x': [], 'imu_orientation_y': [], 'imu_orientation_z': [], 'imu_orientation_w': [],
             'imu_angular_velocity_x': [], 'imu_angular_velocity_y': [], 'imu_angular_velocity_z': [],
             'imu_linear_acceleration_x': [], 'imu_linear_acceleration_y': [], 'imu_linear_acceleration_z': [],
-            'battery': [], 'gps_latitude': [], 'gps_longitude': []
+            'battery': [], 'gps_latitude': [], 'gps_longitude': [],
+            'velocity_x': [], 'velocity_y': [], 'velocity_z': [],  
+            'position_x': [], 'position_y': [], 'position_z': []  
         }
 
         self.start_time = None
+        self.last_timestamp = None
         self.reader = SequentialReader()
         storage_options = StorageOptions(uri=bag_path, storage_id='sqlite3')
         converter_options = ConverterOptions('', '')
@@ -58,7 +61,7 @@ class DataLoggerNode(Node):
                 if len(data_dict[key]) == 0:
                     data_dict[key].append(0)  
                 else:
-                    data_dict[key].append(data_dict[key][-1])  
+                    data_dict[key].append(data_dict[key][-1])
 
     def process_messages(self):
         while self.reader.has_next():
@@ -104,6 +107,35 @@ class DataLoggerNode(Node):
                 self.uav_data['gps_longitude'].append(msg.longitude)
                 self.ensure_length(self.uav_data)  
 
+            elif topic == '/dji_sdk/velocity':
+                msg = deserialize_message(data, Vector3Stamped)
+                self.uav_data['time'].append(timestamp)
+
+                self.uav_data['velocity_x'].append(msg.vector.x)
+                self.uav_data['velocity_y'].append(msg.vector.y)
+                self.uav_data['velocity_z'].append(msg.vector.z)
+
+                if self.last_timestamp is not None:
+                    delta_time = timestamp - self.last_timestamp
+                    if len(self.uav_data['position_x']) == 0:
+                        self.uav_data['position_x'].append(0)
+                        self.uav_data['position_y'].append(0)
+                        self.uav_data['position_z'].append(0)
+                    else:
+                        new_position_x = self.uav_data['position_x'][-1] + msg.vector.x * delta_time
+                        new_position_y = self.uav_data['position_y'][-1] + msg.vector.y * delta_time
+                        new_position_z = self.uav_data['position_z'][-1] + msg.vector.z * delta_time
+                        self.uav_data['position_x'].append(new_position_x)
+                        self.uav_data['position_y'].append(new_position_y)
+                        self.uav_data['position_z'].append(new_position_z)
+                else:
+                    self.uav_data['position_x'].append(0)
+                    self.uav_data['position_y'].append(0)
+                    self.uav_data['position_z'].append(0)
+
+                self.last_timestamp = timestamp
+                self.ensure_length(self.uav_data)  
+
         self.save_data()
 
     def save_data(self):
@@ -122,7 +154,7 @@ class DataLoggerNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     # bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/theatre_ros2/theatre_ros2.db3'  
-    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/test0/bags_nov_2023/2023-11-03-13-30-54/2023-11-03-13-30-54.db3'  
+    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/theatre_ros2/refinitiva.db3'  
     data_logger_node = DataLoggerNode(bag_path)
 
     try:

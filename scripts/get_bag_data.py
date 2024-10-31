@@ -6,47 +6,100 @@ import pandas as pd
 from rclpy.node import Node
 from rclpy.serialization import deserialize_message
 from rosbag2_py import SequentialReader, StorageOptions, ConverterOptions
-from geometry_msgs.msg import Pose, Twist
+from geometry_msgs.msg import Pose, Twist, PoseStamped
 from std_msgs.msg import Float64MultiArray, Float64
-from geometry_msgs.msg import PoseStamped
 
 class DataLoggerNode(Node):
+    """
+    DataLoggerNode is a ROS 2 node that reads messages from a rosbag2 database,
+    processes various topics related to UAV and UGV states, and logs the data
+    into CSV files for further analysis.
+    """
 
     def __init__(self, bag_path):
+        """
+        Initializes the DataLoggerNode.
+
+        Args:
+            bag_path (str): The file path to the rosbag2 database.
+        """
         super().__init__('data_logger_node')
         self.dir_simulation_data = '/home/upo/marsupial/src/marsupial_simulator_ros2/simulation_data'
         
+        # Ensure the simulation data directory exists
         os.makedirs(self.dir_simulation_data, exist_ok=True)
 
-        self.drone_data = {'time': [], 'position_x': [], 'position_y': [], 'position_z': [], 'velocity_x': [], 'velocity_y': [], 'velocity_z': [], 'target_position_x': [], 'target_position_y': [], 'target_position_z': []}
-        self.ugv_data = {'time': [], 'position_x': [], 'position_y': [], 'position_z': [], 'velocity_x': [], 'velocity_y': [], 'velocity_z': [], 'winch_velocity': [], 'cable_length': [], 'target_length': [], 'distance': [], 'target_position_x': [], 'target_position_y': [], 'target_position_z': []}
+        # Initialize data structures for logging
+        self.drone_data = {
+            'time': [],
+            'position_x': [],
+            'position_y': [],
+            'position_z': [],
+            'velocity_x': [],
+            'velocity_y': [],
+            'velocity_z': [],
+            'target_position_x': [],
+            'target_position_y': [],
+            'target_position_z': []
+        }
+        self.ugv_data = {
+            'time': [],
+            'position_x': [],
+            'position_y': [],
+            'position_z': [],
+            'velocity_x': [],
+            'velocity_y': [],
+            'velocity_z': [],
+            'winch_velocity': [],
+            'cable_length': [],
+            'target_length': [],
+            'distance': [],
+            'target_position_x': [],
+            'target_position_y': [],
+            'target_position_z': []
+        }
         self.tether_data = {'time': []}
         self.current_row_index = -1
         self.current_valid_timestamp = None
 
         self.start_time = None
-
         self.collecting_data = True
 
+        # Initialize the rosbag2 SequentialReader
         self.reader = SequentialReader()
         storage_options = StorageOptions(uri=bag_path, storage_id='sqlite3')
-        converter_options = ConverterOptions('', '')
+        converter_options = ConverterOptions(input_serialization_format='cdr', output_serialization_format='cdr')
         
+        # Check if the bag file exists
         if not os.path.exists(bag_path):
-            raise FileNotFoundError(f"El archivo .bag no se encuentra en la ruta especificada: {bag_path}")
+            raise FileNotFoundError(f"The bag file was not found at the specified path: {bag_path}")
         
+        # Open the rosbag2 database for reading
         self.reader.open(storage_options, converter_options)
 
     def get_current_time(self, timestamp):
+        """
+        Converts ROS 2 nanosecond timestamp to elapsed seconds since the start.
+
+        Args:
+            timestamp (int): Timestamp in nanoseconds.
+
+        Returns:
+            float: Elapsed time in seconds.
+        """
         if self.start_time is None:
             self.start_time = timestamp / 1e9
         return (timestamp / 1e9) - self.start_time
 
     def process_messages(self):
+        """
+        Processes all messages in the rosbag2 database and logs data to CSV files.
+        """
         while self.reader.has_next():
             (topic, data, t) = self.reader.read_next()
             timestamp = self.get_current_time(t)
 
+            # Process messages based on their topic
             if topic == '/sjtu_drone/gt_pose':
                 msg = deserialize_message(data, Pose)
                 self.drone_data['time'].append(timestamp)
@@ -78,13 +131,18 @@ class DataLoggerNode(Node):
                     self.ugv_data['velocity_z'].append(msg.data[2])
                     self.ugv_data['winch_velocity'].append(msg.data[4])
                     self.ensure_length(self.ugv_data)
+                else:
+                    self.get_logger().warn("Received /forward_velocity_controller/commands with insufficient data.")
 
             elif topic == '/cable_length':
                 msg = deserialize_message(data, Float64MultiArray)
-                self.ugv_data['cable_length'].append(msg.data[0])
-                self.ugv_data['target_length'].append(msg.data[1])
-                self.ugv_data['distance'].append(msg.data[2])
-                self.ensure_length(self.ugv_data)
+                if len(msg.data) >= 3:
+                    self.ugv_data['cable_length'].append(msg.data[0])
+                    self.ugv_data['target_length'].append(msg.data[1])
+                    self.ugv_data['distance'].append(msg.data[2])
+                    self.ensure_length(self.ugv_data)
+                else:
+                    self.get_logger().warn("Received /cable_length with insufficient data.")
 
             elif topic == '/target_position_uav':
                 msg = deserialize_message(data, Pose)
@@ -107,27 +165,54 @@ class DataLoggerNode(Node):
                 position_y = msg.pose.position.y
                 position_z = msg.pose.position.z
 
+                # Check if the frame_id is 'link_0' to signify a new tether row
                 if frame_id == "link_0":
                     self.current_valid_timestamp = timestamp
                     self.tether_data['time'].append(self.current_valid_timestamp)
                     self.current_row_index += 1
 
+                    # Initialize tether data entries for the new row
                     for key in self.tether_data.keys():
                         if key != 'time':
                             self.tether_data[key].append(None)
 
+                # Ensure that a valid row index exists before assignment
+                if self.current_row_index < 0:
+                    self.get_logger().warn("Received tether data before any 'link_0' message. Skipping this entry.")
+                    continue
+
+                # Dynamically create keys for new frame_ids and ensure list lengths
                 if f'{frame_id}_x' not in self.tether_data:
                     self.tether_data[f'{frame_id}_x'] = [None] * (self.current_row_index + 1)
                     self.tether_data[f'{frame_id}_y'] = [None] * (self.current_row_index + 1)
                     self.tether_data[f'{frame_id}_z'] = [None] * (self.current_row_index + 1)
 
-                self.tether_data[f'{frame_id}_x'][self.current_row_index] = position_x
-                self.tether_data[f'{frame_id}_y'][self.current_row_index] = position_y
-                self.tether_data[f'{frame_id}_z'][self.current_row_index] = position_z
+                # Ensure the lists are long enough
+                if len(self.tether_data[f'{frame_id}_x']) <= self.current_row_index:
+                    self.tether_data[f'{frame_id}_x'].append(None)
+                    self.tether_data[f'{frame_id}_y'].append(None)
+                    self.tether_data[f'{frame_id}_z'].append(None)
 
+                # Assign the position data
+                try:
+                    self.tether_data[f'{frame_id}_x'][self.current_row_index] = position_x
+                    self.tether_data[f'{frame_id}_y'][self.current_row_index] = position_y
+                    self.tether_data[f'{frame_id}_z'][self.current_row_index] = position_z
+                except IndexError as e:
+                    self.get_logger().error(f"IndexError when assigning tether data: {e}")
+                    continue
+
+        # Save data after processing all messages
         self.save_data()
 
     def ensure_length(self, data_dict):
+        """
+        Ensures that all lists within a data dictionary are of equal length by appending the last
+        known value if necessary. This maintains synchronization across different data fields.
+
+        Args:
+            data_dict (dict): Dictionary containing lists of data points.
+        """
         max_len = max(len(lst) for lst in data_dict.values())
         for key in data_dict:
             while len(data_dict[key]) < max_len:
@@ -137,25 +222,46 @@ class DataLoggerNode(Node):
                     data_dict[key].append(data_dict[key][-1])
 
     def save_data(self):
+        """
+        Saves the collected data to CSV files within the simulation data directory.
+        """
+        # Convert dictionaries to pandas DataFrames
         drone_df = pd.DataFrame(self.drone_data)
         ugv_df = pd.DataFrame(self.ugv_data)
         tether_df = pd.DataFrame(self.tether_data)
 
-        drone_df.to_csv(os.path.join(self.dir_simulation_data, 'drone_data.csv'), index=False)
-        ugv_df.to_csv(os.path.join(self.dir_simulation_data, 'ugv_data.csv'), index=False)
-        tether_df.to_csv(os.path.join(self.dir_simulation_data, 'tether_data.csv'), index=False)
-        
-        self.get_logger().info('Data has been saved to CSV files.')
+        # Define file paths
+        drone_file = os.path.join(self.dir_simulation_data, 'drone_data.csv')
+        ugv_file = os.path.join(self.dir_simulation_data, 'ugv_data.csv')
+        tether_file = os.path.join(self.dir_simulation_data, 'tether_data.csv')
 
+        # Save DataFrames to CSV
+        drone_df.to_csv(drone_file, index=False)
+        ugv_df.to_csv(ugv_file, index=False)
+        tether_df.to_csv(tether_file, index=False)
+        
+        self.get_logger().info('Data has been successfully saved to CSV files.')
+    
 def main(args=None):
+    """
+    Main function to initialize and execute the DataLoggerNode.
+
+    Args:
+        args: Command-line arguments.
+    """
     rclpy.init(args=args)
-    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/test5/test5.db3'  
+    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/test3/test3/test3.db3'  
     data_logger_node = DataLoggerNode(bag_path)
 
     try:
         data_logger_node.process_messages()
     except KeyboardInterrupt:
         data_logger_node.get_logger().info('Keyboard interrupt detected, saving data...')
+        data_logger_node.save_data()
+        data_logger_node.destroy_node()
+        rclpy.shutdown()
+    except Exception as e:
+        data_logger_node.get_logger().error(f"An unexpected error occurred: {e}")
         data_logger_node.save_data()
         data_logger_node.destroy_node()
         rclpy.shutdown()

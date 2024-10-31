@@ -100,7 +100,7 @@ class TrajectoryPublisher(Node):
         return distance < distance_threshold
 
     def is_near_target_ugv(self, current_pose, target_pose):
-        distance_threshold = 0.3        
+        distance_threshold = 0.5    # 0.3        
         current_position = current_pose.position
         target_position = target_pose['position']
         distance = math.sqrt(
@@ -110,7 +110,7 @@ class TrajectoryPublisher(Node):
         return distance < distance_threshold
 
     def is_near_target_tether(self, current_length, target_length):
-        tether_length_error_threshold = 0.3         
+        tether_length_error_threshold = 0.5         
         length_error = abs(target_length - current_length)
         # self.get_logger().info(f'Tether length error: {length_error}, threshold: {tether_length_error_threshold}')
         return True # length_error < tether_length_error_threshold

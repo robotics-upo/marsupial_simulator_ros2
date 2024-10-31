@@ -88,7 +88,10 @@ def generate_launch_description():
                  '/cable_length', 
                  '/target_position_uav', 
                  '/target_position_ugv',
-                 '/tether_positions'],
+                 '/tether_positions',
+                 '/rs_robot/velodyne_plugin/out',
+                 '/sjtu_drone/velodyne_plugin/out'],
             output='screen'
         ),
     ])
+

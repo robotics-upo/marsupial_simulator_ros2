@@ -12,9 +12,9 @@ class DroneController(Node):
         self.target_position = Pose()
         self.current_position = None
         
-        self.max_speed = 0.15
+        self.max_speed = 0.1      
         self.acceleration = 0.2 
-        self.deceleration_distance = 0.5
+        self.deceleration_distance = 0.5        
         self.tolerance = 0.1  
         timer_period = 0.02
 

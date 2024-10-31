@@ -6,28 +6,29 @@ import numpy as np
 from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Float64MultiArray, Float64
-import time
+from rclpy.clock import Clock, ClockType
 
 class UGVController(Node):
 
     def __init__(self):
         super().__init__('ugv_controller')
+        
         self.target_position = Pose()
         self.current_position = Pose()
         self.uav_position = Pose()
         self.target_length = 0.0
-        self.use_tether_trayectory = False
+        self.use_tether_trayectory = True
         self.distance = 0.6
-        self.radius = 0.1
-        self.effective_radius = 0.02       
+        self.radius = 0.1494115                  
+        self.effective_radius = 0.1494115          
 
-        self.tether_length = 0.5  
+        self.tether_length = 0.5
         self.tether_coef = 1.05
-        self.safety_margin = 0.05        
+        self.safety_margin = 0.0           
 
-        self.kp_winch = 10.0
+        self.kp_winch = 2.5
         self.ki_winch = 0.0
-        self.kd_winch = 0.0
+        self.kd_winch = 0.1
         self.winch_position_x = -0.25
         self.winch_position_z = 0.35
 
@@ -36,13 +37,14 @@ class UGVController(Node):
 
         timer_period = 0.02
 
-        self.constant_speed = 0.5
+        self.constant_speed = 0.5       
         self.tolerance = 0.1
 
         self.pos = np.array([0, 0, 0, 0], float)
         self.vel = np.array([0, 0, 0, 0, 0], float)
 
-        self.last_time = time.time()
+        self.clock = self.get_clock()
+        self.last_time = self.clock.now().seconds_nanoseconds()[0] + self.clock.now().seconds_nanoseconds()[1] * 1e-9
 
         self.pose_subscriber = self.create_subscription(Pose, '/ugv_gt_pose', self.pose_callback, 10)
         self.uav_pose_subscriber = self.create_subscription(Pose, '/sjtu_drone/gt_pose', self.uav_pose_callback, 10)
@@ -71,14 +73,19 @@ class UGVController(Node):
 
     def target_length_callback(self, msg):
         if self.use_tether_trayectory:
+            # self.effective_radius = 0.07
+            self.safety_margin = 0.0
             offset_ugv_z = 0.9
+            offset_ugv_x = - 0.5
             distance = math.sqrt(
-                (self.target_uav_position.position.x - self.target_position.position.x) ** 2 +
+                (self.target_uav_position.position.x - (self.target_position.position.x + self.winch_position_x + offset_ugv_x)) ** 2 +
                 (self.target_uav_position.position.y - self.target_position.position.y) ** 2 +
-                (self.target_uav_position.position.z - (self.target_position.position.z + offset_ugv_z)) ** 2
+                (self.target_uav_position.position.z - (self.target_position.position.z + self.winch_position_z + offset_ugv_z)) ** 2
             )
             target_length_info = msg.data
-            self.tether_coef = target_length_info / distance
+            self.tether_coef = target_length_info / distance 
+            # if self.tether_coef < 1.05:
+            #     self.tether_coef = 1.05
             # self.get_logger().info(f'Distance: {distance:.5f}, coeficiente: {self.tether_coef:.5f}')
 
     def calculate_winch_velocity(self):
@@ -90,8 +97,9 @@ class UGVController(Node):
         self.target_length = self.distance * self.tether_coef + self.safety_margin
         length_error = self.target_length - self.tether_length
 
-        dt = time.time() - self.last_time 
-        self.last_time = time.time()
+        current_time = self.clock.now().seconds_nanoseconds()[0] + self.clock.now().seconds_nanoseconds()[1] * 1e-9
+        dt = current_time - self.last_time
+        self.last_time = current_time
 
         self.integral_error += length_error * dt
         derivative_error = (length_error - self.previous_error) / dt
@@ -102,15 +110,6 @@ class UGVController(Node):
                       self.kd_winch * derivative_error)
 
         winch_velocity_angular = winch_velocity_linear / self.radius
-        winch_velocity_angular = max(min(winch_velocity_angular, 3.14), -3.14)  
-
-        if self.use_tether_trayectory:
-            min_velocity_threshold = 0.3
-        else: 
-            min_velocity_threshold = 0.3
-            
-        if abs(winch_velocity_angular) < min_velocity_threshold:
-            winch_velocity_angular = 0.0     
 
         self.tether_length += winch_velocity_angular * self.effective_radius * dt
 
@@ -153,7 +152,7 @@ class UGVController(Node):
 
         self.pub_cable_length.publish(cable_length_msg)
 
-        # self.get_logger().info(f'Distance: {self.target_length:.3f}, Tether length: L={self.cable_length:.3f}, Error={length_error:.3f}, Winch velocity: {winch_velocity:.3f}')
+        # self.get_logger().info(f'Distance: {self.target_length:.3f}, Tether length: L={self.tether_length:.3f}, Error={length_error:.3f}, Winch velocity: {winch_velocity:.3f}')
 
 def main(args=None):
     rclpy.init(args=args)

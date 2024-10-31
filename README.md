@@ -184,7 +184,7 @@ By adjusting these parameters, you can simulate different types of tethers and s
 
 5. To implement the changes run:
     ```
-    python3  ~/marsupial_simulator_ros2/scripts/jinja_gen.py   ~/marsupial_simulator_ros2/models/tether/tether.sdf.jinja ~/marsupial_simulator_ros2/models/tether 
+    python3  ~/marsupial/src/marsupial_simulator_ros2/scripts/jinja_gen.py   ~/marsupial/src/marsupial_simulator_ros2/models/tether/tether.sdf.jinja ~/marsupial/src/marsupial_simulator_ros2/models/tether 
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
