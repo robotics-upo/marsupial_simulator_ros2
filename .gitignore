@@ -1,4 +1,5 @@
 /bags/
-models/teatro/mesh/teatro.stlsimulation_data/ugv_data.csv
+models/teatro/mesh/teatro.stl
+simulation_data/ugv_data.csv
 simulation_data/uav_data_theatre.csv
 models/teatro/mesh/teatro.stl
