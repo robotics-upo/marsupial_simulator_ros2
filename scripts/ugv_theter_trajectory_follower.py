@@ -17,13 +17,13 @@ class UGVController(Node):
         self.current_position = Pose()
         self.uav_position = Pose()
         self.target_length = 0.0
-        self.use_tether_trayectory = True
+        self.use_tether_trayectory = False
         self.distance = 0.6
         self.radius = 0.1494115                  
         self.effective_radius = 0.1494115          
 
         self.tether_length = 0.5
-        self.tether_coef = 1.05
+        self.tether_coef = 1.40
         self.safety_margin = 0.0           
 
         self.kp_winch = 2.5

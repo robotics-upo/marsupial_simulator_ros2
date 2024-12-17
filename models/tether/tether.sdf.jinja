@@ -1,9 +1,9 @@
 {#-------------------SDF generator for Tether Gazebo model--------------------#}
 {#--------------The parameters bellow are the ones to be tweaked--------------#}
 {#--------------------------:Tweakable parameters:----------------------------#}
-{%- set number_elements = 123 -%}    {#- set at 203 for 20 m tether, 101 for 10 m -#}
+{%- set number_elements = 203 -%}    {#- set at 203 for 20 m tether, 101 for 10 m -#}
 {%- set last_elem = number_elements |int - 1 -%}
-{%- set cl = 0.15 -%}    {#- cl: length of the element (meters) -#}
+{%- set cl = 0.1 -%}    {#- cl: length of the element (meters) -#}
 {%- set cr = 0.001 * 4 -%}    {#- cr: radius of the element (meters) -#}
 {%- set sr = 0.009 * 1 -%}    {#- sr: element joint radius (sphere) (meters) -#}
 {%- set cr_visual = cr * 1 -%}    {#- cr: visual radius of the element (meters) -#}

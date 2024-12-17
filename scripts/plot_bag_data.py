@@ -41,7 +41,7 @@ drone_target_y = drone_data['target_position_y'].to_numpy()
 drone_target_z = drone_data['target_position_z'].to_numpy()
 
 # Graficar tether_distance
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(10, 4))
 plt.plot(ugv_time, ugv_cable_length, label='Tether Length')
 plt.plot(ugv_time, ugv_target_length, 'r--', label='Target Length')  
 plt.plot(ugv_time, ugv_uav_distance, label='Distance')  
@@ -63,7 +63,7 @@ ugv_time_filtered = ugv_time[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_cable_length_filtered = ugv_cable_length[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_target_length_filtered = ugv_target_length[(ugv_time >= start_time) & (ugv_time <= end_time)]
 ugv_uav_distance_filtered = ugv_uav_distance[(ugv_time >= start_time) & (ugv_time <= end_time)]
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(10, 4))
 plt.plot(ugv_time_filtered, ugv_cable_length_filtered, label='Tether Length')
 plt.plot(ugv_time_filtered, ugv_target_length_filtered, 'r--', label='Target Length')  
 plt.plot(ugv_time_filtered, ugv_uav_distance_filtered, label='Distance')  
@@ -230,6 +230,7 @@ def set_axes_equal(ax):
 
 # Graficar posición 3D del UGV y del dron
 def plot_3d(ugv_position_x, ugv_position_y, ugv_position_z, drone_position_x, drone_position_y, drone_position_z, step, use_catenary):
+
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111, projection='3d')
 
@@ -250,11 +251,13 @@ def plot_3d(ugv_position_x, ugv_position_y, ugv_position_z, drone_position_x, dr
         # ax.scatter(x[0], y[0], z[0], color='blue', s=5) 
         # ax.scatter(x[-1], y[-1], z[-1], color=color, s=5)   
 
-    ax.set_xlabel('Position X (m)')
-    ax.set_ylabel('Position Y (m)')
-    ax.set_zlabel('Position Z (m)')
-    ax.set_title('3D Position of UGV and Drone')
-    ax.legend()
+    ax.set_xlabel('Position X (m)', fontsize=14)
+    ax.set_ylabel('Position Y (m)', fontsize=14)
+    ax.set_zlabel('Position Z (m)', fontsize=14)
+    # ax.set_title('3D Position of UGV and Drone')
+    ax.legend(fontsize=20)
+    ax.tick_params(axis='both', which='major', labelsize=12)
+    ax.zaxis.set_tick_params(labelsize=12)
     ax.grid(True)
     set_axes_equal(ax)
     plt.tight_layout()

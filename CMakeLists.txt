@@ -72,6 +72,7 @@ install(
 install(
   PROGRAMS
   scripts/attach_tether.py
+  scripts/attach_tether_lineal.py
   scripts/jinja_gen.py
   scripts/ugv_control_keyboard.py
   scripts/ugv_control_controller.py

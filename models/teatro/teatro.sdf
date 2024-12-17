@@ -3,7 +3,8 @@
   <model name="teatro">
     <static>true</static>
     
-   <link name="link">
+    <link name="link">
+      <!-- Collision and visual for the original model -->
       <collision name="collision">
         <geometry>
           <mesh>
@@ -18,13 +19,31 @@
           </mesh>
         </geometry>
         <material>
+          <!-- Tus propiedades de material existentes -->
           <ambient>0.5 0.2 0.2 1</ambient>
           <diffuse>0.8 0.1 0.2 1</diffuse>
           <specular>0.05 0.01 0.01 0.1</specular>
           <emissive>0.2 0.1 0.1 0.8</emissive>
         </material>
       </visual>
-    </link>
 
+      <!-- Visual element acting as a mask -->
+      <visual name="mask_visual">
+        <geometry>
+          <box>
+            <size>X Y Z</size>
+          </box>
+        </geometry>
+        <pose>0 0 3.0 0 0 0</pose>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <!-- Opcionalmente, puedes agregar esta etiqueta para asegurarte de que la máscara no cause conflictos -->
+        <transparency>0</transparency>
+      </visual>
+    </link>
   </model>
 </sdf>

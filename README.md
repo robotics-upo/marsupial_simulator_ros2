@@ -1,74 +1,86 @@
-<a id="readme-top"></a>
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
 
   <a href="https://github.com/robotics-upo/marsupial-simulator-ros2">
     <img src="images/logo.png" alt="Logo" width="170" height="100">
   </a>
 
-<h3 align="center">Marsupial Simulator</h3>
-
-  <p align="center">
-    ROS2-Based Gazebo Simulation of Marsupial UAV-UGV Systems Connected by Hanging Tether created by the Service Robotics Lab from the Pablo de Olavide University (Spain).
-    <br />
-  </p>
+<h3 align="center">Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo</h3>
 </div>
 
+For a detailed explanation of the system's architecture and experiments, refer to the full paper available on arXiv.
 
-<!-- TABLE OF CONTENTS -->
+## Table of Contents
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <ul>
-        <li><a href="#manual-control">Manual control</a></li>
-        <li><a href="#automatic-control">Automatic control</a></li>
-      </ul>
-    <li><a href="#experiments">Experiments</a></li>
-    <li><a href="#modifying the Tether">Modifying the Tether</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-  </ol>
+
+1. [Introduction](#introduction)
+2. [System Overview](#system-overview)
+   - [Architecture](#architecture)
+   - [Models](#models)
+3. [Installation](#installation)
+   - [Dependencies](#dependencies)
+   - [Build Instructions](#build-instructions)
+4. [Usage](#usage)
+   - [Manual Control](#manual-control)
+   - [Automatic Control](#automatic-control)
+   - [Experiments](#experiments)
+5. [Modifying the Tether](#modifying-the-tether)
+   - [How to modify](#how-to-modify)
+6. [References](#references)
+
 </details>
 
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-This project implements a marsupial robotic system (ugv + uav + tether) in the Gazebo simulation environment for ROS2. The main objective is to create a robust simulation environment to test and validate the behaviour and interaction of the marsupial UAV-UGV system under various conditions and scenarios. Leveraging the capabilities of ROS 2, the simulator facilitates the evaluation of innovative methodologies for the coordinated and autonomous operation of both robots, including the dynamics of the flexible tether that connects them.
+## Introduction
+This project presents a ROS 2-based simulator framework for tethered UAV-UGV marsupial systems in Gazebo. The framework models interactions among a UAV, a UGV, and a winch with dynamically adjustable length and slack of the tether. It supports both manual control and automated trajectory tracking, with the winch adjusting the length of the tether based on the relative distance between the robots. The simulator's performance is demonstrated through experiments, including comparisons with real-world data, showcasing its capability to simulate tethered robotic systems. The framework offers a flexible tool for researchers exploring tethered robot dynamics.
 
 <div align="center">
-  <img src="images/stage_1.gif" alt="stage_1 simulation" width="900" height="507">
+  <img src="images/real_test_gif.gif" alt="stage_1 simulation" width="900">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## System Overview
 
-### Prerequisites
+### Architecture
+The architecture of the marsupial UAV-UGV simulator is composed of key components that interact to replicate the behavior of the tethered robotic system. Built using ROS 2 and Gazebo, the simulator supports both manual and autonomous operations.
+
+- **Model Initialization**: The UGV, UAV, and tether are spawned in Gazebo, with the UAV placed on a platform atop the UGV and the tether initialized in a coiled configuration around the winch.
+
+- **Trajectory Tracking**: A flexible tracking module accepts waypoints (YAML files) or dynamic ROS messages to guide the UAV and UGV. The winch adjusts the tether length in real time based on relative positions to maintain proper slack.
+
+- **Controllers**: Independent controllers manage the UAV and UGV movements, enabling customizable dynamics and the integration of new control strategies.
+
+- **Evaluation and Data Recording**: An evaluation module logs key metrics, such as ground-truth poses, tether behavior, and trajectory accuracy, facilitating performance analysis and validation.
+
+<div align="center">
+  <img src="images/simulator_structure_v2.png" alt="Architecture Diagram" width="900">
+</div>
+
+This modular architecture allows researchers to customize and test various algorithms and components within a controlled simulation environment. For a detailed explanation, refer to the accompanying paper.
+
+
+
+### Models
+- **UAV**: Quadrotor with ROS2-compatible position and velocity control.
+- **UGV**: Holonomic ground vehicle with integrated winch.
+- **Tether**: Flexible, multi-segmented tether with dynamic length adjustment. Configurable length, mass, and stiffness.
+
+Default parameters (e.g., spring stiffness, damping) can be modified as described [here](#modifying-the-tether).
+
+<div align="center">
+  <img src="images/marsupial_models.png" alt="Architecture Diagram" width="400">
+</div>
+
+
+## Installation
+
+### Dependencies
 
 This package has been designed and tested in an x86_64 machine under a Ubuntu 22.04 operating system and ROS2 Humble distribution. The following repositories are required for the implementation of the project:
   - sjtu_drone: (https://github.com/noshluk2/sjtu_drone/tree/ros2, branch: ros2)
   - gazebo_ros_link_attacher: (https://github.com/davidorchansky/gazebo_ros_link_attacher, branch: humble-devel)
 
-### Installation
+### Build Instructions
 
 
 1. Clone this repository into the `src` directory of your `colcon` workspace. 
@@ -79,19 +91,18 @@ This package has been designed and tested in an x86_64 machine under a Ubuntu 22
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 Six scenarios with different features can be set to use the optimizer. S1: Open environment, S2: Narrow/constrained environment, S3: Confined environment, S5: Open environment, S6: Confined environment, S7: Open environment, as shown in the next figure.
 
 <div align="center">
-  <img src="images/all_scenaries.png" alt="scenaries simulation" width="874" height="463">
+  <img src="images/all_scenaries.png" alt="scenaries simulation" width="900">
 </div>
 
 An extra scenario has been included to replicate the trajectory tracking experiment in a theatre conducted for the Path and Trajectory paper. Uncomment the ```spawn theatre``` line in the ```marsupial_simulation.launch.py``` file to see the theatre model (This can noticeably slow down the simulation on older hardware.). 
 
 <div align="center">
-  <img src="images/theatre.png" alt="theatre simulation" width="795" height="401">
+  <img src="images/theatre.png" alt="theatre simulation" width="900">
 </div>
 
 The package has a set of predefined configurations (and completely extendable according to the user's need) that relate to the stage number and initial position number. 
@@ -100,59 +111,55 @@ The package has a set of predefined configurations (and completely extendable ac
 ### Manual control
 To launch the marsupial system in manual mode just launch the file `launch/marsupial_manual_simulation.launch.py`. The control of the ugv can be done using a remote control (default option) or the keyboard. The uav is controlled by the teleop option. To manage the scenario and initial position predefined is recommended to use the parameters for this launch, `world` and `pos_x`, `pos_y`, `pos_z`. Thus, for example, to use S5 and initial position (3, 1, 0):
 1. Launch of the gazebo environment:
-	```
-	ros2 launch marsupial_simulator marsupial_manual_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
-	```
+    ```bash
+    ros2 launch marsupial_simulator marsupial_manual_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
+    ```
 2. In order to control the drone it is necessary to send a message for take-off:
-	```
-	ros2 topic pub /sjtu_drone/takeoff std_msgs/msg/Empty {} --once
-	```
+    ```bash
+    ros2 topic pub /sjtu_drone/takeoff std_msgs/msg/Empty {} --once
+    ```
 3. Landing message:
-	```
-	ros2 topic pub /sjtu_drone/land std_msgs/msg/Empty {} --once
-	```
+    ```bash
+    ros2 topic pub /sjtu_drone/land std_msgs/msg/Empty {} --once
+    ```
 
 ### Automatic control
 To launch the marsupial system in automatic mode just launch the file `launch/marsupial_simulation.launch.py`. To manage the scenario and initial position predefined is recommended to use the parameters for this launch, `world` and `pos_x`, `pos_y`, `pos_z`. Thus, for example, to use S5 and initial position (3, 1, 0):
 1. Launch of the gazebo environment:
-	```
-	ros2 launch marsupial_simulator_ros2 marsupial_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
-	```
+    ```bash
+    ros2 launch marsupial_simulator_ros2 marsupial_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
+    ```
 2. To start the movement to the defined point:
-	```
-	ros2 launch marsupial_simulator_ros2 marsupial_to_point.launch.py uav_x:=1.0 uav_y:=2.0 uav_z:=7.0 ugv_x:=5.0 ugv_y:=3.0
-	```
+    ```bash
+    ros2 launch marsupial_simulator_ros2 marsupial_to_point.launch.py uav_x:=1.0 uav_y:=2.0 uav_z:=7.0 ugv_x:=5.0 ugv_y:=3.0
+    ```
 3. To change the destination point during simulation:
     - UGV
+      ```bash
+      ros2 topic pub /target_position_ugv geometry_msgs/msg/Pose '{position: {x: 3.0, y: 2.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}' --once
       ```
-	  ros2 topic pub /target_position_ugv geometry_msgs/msg/Pose '{position: {x: 3.0, y: 2.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}' --once
-	    ```
     - UAV
+      ```bash
+      ros2 topic pub /target_position_uav geometry_msgs/msg/Pose '{position: {x: 3.0, y: 2.0, z: 7.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}' --once
       ```
-	  ros2 topic pub /target_position_uav geometry_msgs/msg/Pose '{position: {x: 3.0, y: 2.0, z: 7.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}' --once
-	    ```
 4. To record a bag:
-    ```
+    ```bash
     ros2 bag record /sjtu_drone/gt_pose /sjtu_drone/cmd_vel /ugv_gt_pose /forward_velocity_controller/commands /cable_length /target_position_uav /target_position_ugv /tether_positions
     ```
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Experiments
 To replicate the experiments conducted just launch the file `launch/marsupial_simulation.launch.py` and `launch/marsupial_experiment.launch.py`. It is recommended to perform the experiments in the predefined scenario to increase the efficiency of the simulator.
 
 1. Launch of the gazebo environment:
-	```
-	ros2 launch marsupial_simulator_ros2 marsupial_simulation.launch.py
-	```
+    ```bash
+    ros2 launch marsupial_simulator_ros2 marsupial_simulation.launch.py
+    ```
 2. To start the experiment:
-	```
-	ros2 launch marsupial_simulator_ros2 marsupial_experiment.launch.py mission:=test1
-	```
-4. To record a bag: the bag is recorded automatically
+    ```bash
+    ros2 launch marsupial_simulator_ros2 marsupial_experiment.launch.py mission:=test1
+    ```
+3. To record a bag: the bag is recorded automatically
 
 The tests carried out are as follows:
 
@@ -161,6 +168,10 @@ The tests carried out are as follows:
 - Test 3. UAV and UGV move in opposite directions N times.
 - Test 4. The test performed inside a theatre mentioned in "Path and Trajectory Planning of a Tethered UAV-UGV Marsupial Robotic System" (https://ieeexplore.ieee.org/document/10207830) is replicated. The length of the tether is calculated as a function of the relative distance between the UAV and the UGV. The test is maintained up to the target point 100.
 - Test 5. The test performed inside a theatre is replicated again. In this case, the length of the tether is provided by the test trajectory. The test is maintained up to the target point 100. 
+
+<div align="center">
+  <img src="images/tests_examples_v3.png" alt="theatre simulation" width="795">
+</div>
 
 It is possible to modify the `self.tether_coef` value of the `ugv_theter_trajectory_follower.py` script to adjust the behaviour of the tether. The test0 is included for this purpose. This parameter should be changed between 0 and 1 until a realistic result is achieved. 
 
@@ -183,29 +194,17 @@ By adjusting these parameters, you can simulate different types of tethers and s
 4. Recompile your workspace if necessary to apply the changes to the simulation.
 
 5. To implement the changes run:
-    ```
+    ```bash
     python3  ~/marsupial/src/marsupial_simulator_ros2/scripts/jinja_gen.py   ~/marsupial/src/marsupial_simulator_ros2/models/tether/tether.sdf.jinja ~/marsupial/src/marsupial_simulator_ros2/models/tether 
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## References
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [X] Create initial marsupial model (uav + ugv+ tether)
-- [X] Develop customizable tether model
-- [X] Implement control modes
-	- [X] Enable manual control mode for direct operation of the marsupial system using remote control or keyboard inputs
-	- [X] Develop an automatic control mode to allow the system to move autonomously to predefined points using ROS 2
-- [  ] Improve winch automatic control
-
-See the [open issues](https://github.com/robotics-upo/marsupial-simulator-ros2/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+J. E. Maese, F. Caballero, and L. Merino, *"Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo"*
+<!-- , available on [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX). -->
 
 
 

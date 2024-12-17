@@ -271,7 +271,7 @@
       <positionZDifferentialGain>0.2</positionZDifferentialGain>
       <positionZIntegralGain>0.0</positionZIntegralGain>
       <positionZLimit>-1</positionZLimit>
-      <maxForce>700</maxForce>
+      <maxForce>1800</maxForce>
       <motionSmallNoise>0.0</motionSmallNoise>
       <motionDriftNoise>0.0</motionDriftNoise>
       <motionDriftNoiseTime>0.0</motionDriftNoiseTime>

@@ -1,0 +1,4187 @@
+<?xml version="1.0" ?>
+<!-- DO NOT EDIT: Generated from tether.sdf.jinja -->
+<sdf version="1.5">
+  <model name="tether">
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    <link name="link_0">
+      <gravity>true</gravity>
+      <pose>-0.05 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_0_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_0</link_name>
+    </plugin>
+    <link name="link_1">
+      <gravity>true</gravity>
+      <pose>0.05 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_1_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_1</link_name>
+    </plugin>
+    <link name="link_2">
+      <gravity>true</gravity>
+      <pose>0.15000000000000002 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_2_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_2</link_name>
+    </plugin>
+    <link name="link_3">
+      <gravity>true</gravity>
+      <pose>0.25 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_3_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_3</link_name>
+    </plugin>
+    <link name="link_4">
+      <gravity>true</gravity>
+      <pose>0.35000000000000003 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_4_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_4</link_name>
+    </plugin>
+    <link name="link_5">
+      <gravity>true</gravity>
+      <pose>0.45 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_5_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_5</link_name>
+    </plugin>
+    <link name="link_6">
+      <gravity>true</gravity>
+      <pose>0.55 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_6_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_6</link_name>
+    </plugin>
+    <link name="link_7">
+      <gravity>true</gravity>
+      <pose>0.6500000000000001 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_7_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_7</link_name>
+    </plugin>
+    <link name="link_8">
+      <gravity>true</gravity>
+      <pose>0.75 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_8_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_8</link_name>
+    </plugin>
+    <link name="link_9">
+      <gravity>true</gravity>
+      <pose>0.8500000000000001 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_9_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_9</link_name>
+    </plugin>
+    <link name="link_10">
+      <gravity>true</gravity>
+      <pose>0.95 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_10_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_10</link_name>
+    </plugin>
+    <link name="link_11">
+      <gravity>true</gravity>
+      <pose>1.05 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_11_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_11</link_name>
+    </plugin>
+    <link name="link_12">
+      <gravity>true</gravity>
+      <pose>1.1500000000000001 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_12_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_12</link_name>
+    </plugin>
+    <link name="link_13">
+      <gravity>true</gravity>
+      <pose>1.25 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_13_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_13</link_name>
+    </plugin>
+    <link name="link_14">
+      <gravity>true</gravity>
+      <pose>1.35 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_14_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_14</link_name>
+    </plugin>
+    <link name="link_15">
+      <gravity>true</gravity>
+      <pose>1.4500000000000002 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_15_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_15</link_name>
+    </plugin>
+    <link name="link_16">
+      <gravity>true</gravity>
+      <pose>1.55 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_16_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_16</link_name>
+    </plugin>
+    <link name="link_17">
+      <gravity>true</gravity>
+      <pose>1.6500000000000001 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_17_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_17</link_name>
+    </plugin>
+    <link name="link_18">
+      <gravity>true</gravity>
+      <pose>1.75 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_18_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_18</link_name>
+    </plugin>
+    <link name="link_19">
+      <gravity>true</gravity>
+      <pose>1.85 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_19_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_19</link_name>
+    </plugin>
+    <link name="link_20">
+      <gravity>true</gravity>
+      <pose>1.9500000000000002 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_20_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_20</link_name>
+    </plugin>
+    <link name="link_21">
+      <gravity>true</gravity>
+      <pose>2.05 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_21_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_21</link_name>
+    </plugin>
+    <link name="link_22">
+      <gravity>true</gravity>
+      <pose>2.1500000000000004 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_22_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_22</link_name>
+    </plugin>
+    <link name="link_23">
+      <gravity>true</gravity>
+      <pose>2.25 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_23_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_23</link_name>
+    </plugin>
+    <link name="link_24">
+      <gravity>true</gravity>
+      <pose>2.3500000000000005 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_24_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_24</link_name>
+    </plugin>
+    <link name="link_25">
+      <gravity>true</gravity>
+      <pose>2.45 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_25_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_25</link_name>
+    </plugin>
+    <link name="link_26">
+      <gravity>true</gravity>
+      <pose>2.55 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_26_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_26</link_name>
+    </plugin>
+    <link name="link_27">
+      <gravity>true</gravity>
+      <pose>2.6500000000000004 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_27_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_27</link_name>
+    </plugin>
+    <link name="link_28">
+      <gravity>true</gravity>
+      <pose>2.75 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_28_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_28</link_name>
+    </plugin>
+    <link name="link_29">
+      <gravity>true</gravity>
+      <pose>2.8500000000000005 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_29_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_29</link_name>
+    </plugin>
+    <link name="link_30">
+      <gravity>true</gravity>
+      <pose>2.95 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_30_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_30</link_name>
+    </plugin>
+    <link name="link_31">
+      <gravity>true</gravity>
+      <pose>3.05 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_31_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_31</link_name>
+    </plugin>
+    <link name="link_32">
+      <gravity>true</gravity>
+      <pose>3.1500000000000004 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_32_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_32</link_name>
+    </plugin>
+    <link name="link_33">
+      <gravity>true</gravity>
+      <pose>3.25 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_33_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_33</link_name>
+    </plugin>
+    <link name="link_34">
+      <gravity>true</gravity>
+      <pose>3.3500000000000005 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_34_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_34</link_name>
+    </plugin>
+    <link name="link_35">
+      <gravity>true</gravity>
+      <pose>3.45 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_35_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_35</link_name>
+    </plugin>
+    <link name="link_36">
+      <gravity>true</gravity>
+      <pose>3.55 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_36_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_36</link_name>
+    </plugin>
+    <link name="link_37">
+      <gravity>true</gravity>
+      <pose>3.6500000000000004 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_37_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_37</link_name>
+    </plugin>
+    <link name="link_38">
+      <gravity>true</gravity>
+      <pose>3.75 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><collision name="collision">
+        <pose>0.1 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+	      <min_depth>0.00005</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+	      <mu>1.0</mu>
+	      <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="element_visual">
+        <pose>0.05 0 0 0 1.570790 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Red</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_38_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_38</link_name>
+    </plugin>
+    <link name="link_39">
+      <gravity>true</gravity>
+      <pose>3.8500000000000005 0.0 0.0 0.0 0.0 0.0</pose>
+      <inertial>
+        <mass>0.009</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial><visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.009</radius>
+          </sphere>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+    <plugin name="link_39_drag" filename="libLiftDragPlugin.so">
+      <robotNamespace></robotNamespace>
+      <a0>0</a0>
+      <cla>0</cla>
+      <cda>1.2535816618911175</cda>
+      <alpha_stall>0</alpha_stall>
+      <cda_stall>1.4326647564469914</cda_stall>
+      <cp>0 0 0</cp>
+      <area>0.0008</area>
+      <air_density>1.2041</air_density>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>link_39</link_name>
+    </plugin>
+    
+    <joint name="joint_1" type="universal">
+      <child>link_1</child>
+      <parent>link_0</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_2" type="universal">
+      <child>link_2</child>
+      <parent>link_1</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_3" type="universal">
+      <child>link_3</child>
+      <parent>link_2</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_4" type="universal">
+      <child>link_4</child>
+      <parent>link_3</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_5" type="universal">
+      <child>link_5</child>
+      <parent>link_4</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_6" type="universal">
+      <child>link_6</child>
+      <parent>link_5</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_7" type="universal">
+      <child>link_7</child>
+      <parent>link_6</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_8" type="universal">
+      <child>link_8</child>
+      <parent>link_7</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_9" type="universal">
+      <child>link_9</child>
+      <parent>link_8</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_10" type="universal">
+      <child>link_10</child>
+      <parent>link_9</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_11" type="universal">
+      <child>link_11</child>
+      <parent>link_10</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_12" type="universal">
+      <child>link_12</child>
+      <parent>link_11</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_13" type="universal">
+      <child>link_13</child>
+      <parent>link_12</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_14" type="universal">
+      <child>link_14</child>
+      <parent>link_13</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_15" type="universal">
+      <child>link_15</child>
+      <parent>link_14</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_16" type="universal">
+      <child>link_16</child>
+      <parent>link_15</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_17" type="universal">
+      <child>link_17</child>
+      <parent>link_16</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_18" type="universal">
+      <child>link_18</child>
+      <parent>link_17</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_19" type="universal">
+      <child>link_19</child>
+      <parent>link_18</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_20" type="universal">
+      <child>link_20</child>
+      <parent>link_19</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_21" type="universal">
+      <child>link_21</child>
+      <parent>link_20</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_22" type="universal">
+      <child>link_22</child>
+      <parent>link_21</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_23" type="universal">
+      <child>link_23</child>
+      <parent>link_22</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_24" type="universal">
+      <child>link_24</child>
+      <parent>link_23</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_25" type="universal">
+      <child>link_25</child>
+      <parent>link_24</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_26" type="universal">
+      <child>link_26</child>
+      <parent>link_25</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_27" type="universal">
+      <child>link_27</child>
+      <parent>link_26</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_28" type="universal">
+      <child>link_28</child>
+      <parent>link_27</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_29" type="universal">
+      <child>link_29</child>
+      <parent>link_28</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_30" type="universal">
+      <child>link_30</child>
+      <parent>link_29</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_31" type="universal">
+      <child>link_31</child>
+      <parent>link_30</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_32" type="universal">
+      <child>link_32</child>
+      <parent>link_31</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_33" type="universal">
+      <child>link_33</child>
+      <parent>link_32</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_34" type="universal">
+      <child>link_34</child>
+      <parent>link_33</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_35" type="universal">
+      <child>link_35</child>
+      <parent>link_34</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_36" type="universal">
+      <child>link_36</child>
+      <parent>link_35</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_37" type="universal">
+      <child>link_37</child>
+      <parent>link_36</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_38" type="universal">
+      <child>link_38</child>
+      <parent>link_37</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <joint name="joint_39" type="universal">
+      <child>link_39</child>
+      <parent>link_38</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+      <axis2>
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
+          <spring_stiffness>0.01</spring_stiffness>
+          <spring_reference>0.0</spring_reference>
+        </dynamics>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis2>
+      <physics>
+        <ode>
+          <cfm_damping>1</cfm_damping>
+        </ode>
+      </physics>
+    </joint>
+    <!--joint name="fixed_to_world" type="fixed">
+      <child>link_39</child>
+      <parent>world</parent>
+    </joint-->
+  </model>
+</sdf>

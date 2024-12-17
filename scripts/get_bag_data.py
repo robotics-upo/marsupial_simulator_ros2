@@ -250,7 +250,7 @@ def main(args=None):
         args: Command-line arguments.
     """
     rclpy.init(args=args)
-    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/test3/test3/test3.db3'  
+    bag_path = '/home/upo/marsupial/src/marsupial_simulator_ros2/bags/test0/test_01/test_01.db3'  
     data_logger_node = DataLoggerNode(bag_path)
 
     try:

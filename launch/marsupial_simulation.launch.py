@@ -28,15 +28,15 @@ def generate_launch_description():
     init_pos_z = PythonExpression([init_pos_z, ' + 0.3'])
 
     uav_pos_x = PythonExpression([init_pos_x, ' + 0.2'])
-    uav_pos_y = PythonExpression([init_pos_y, ' + 0.0'])
+    uav_pos_y = PythonExpression([init_pos_y, ' + 0.01'])
     uav_pos_z = PythonExpression([init_pos_z, ' + 0.4'])
 
     tether_pos_x = PythonExpression([init_pos_x, ' - 0.25'])
     tether_pos_y = PythonExpression([init_pos_y, ' - 0.0'])
     tether_pos_z = PythonExpression([init_pos_z, ' + 0.325'])
 
-    theatre_pos_x = PythonExpression([init_pos_x, ' + 0.0'])
-    theatre_pos_y = PythonExpression([init_pos_y, ' - 0.0'])
+    theatre_pos_x = PythonExpression([init_pos_x, ' - 0.0'])
+    theatre_pos_y = PythonExpression([init_pos_y, ' - 3.0'])
     theatre_pos_z = PythonExpression([init_pos_z, ' - 0.3'])
 
     gzserver = IncludeLaunchDescription(
@@ -160,12 +160,12 @@ def generate_launch_description():
                 on_exit=[delayed_attach_links],
             )
         ),
-        # RegisterEventHandler(
-        #     OnProcessExit(
-        #         target_action=attach_tether_node,
-        #         on_exit=[delayed_spawn_theatre],
-        #     )
-        # ),
+        RegisterEventHandler(
+            OnProcessExit(
+                target_action=attach_tether_node,
+                on_exit=[delayed_spawn_theatre],
+            )
+        ),
     ]
 
     return LaunchDescription(nodes)
