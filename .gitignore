@@ -1,6 +1,7 @@
 # Ignore Visual Studio Code Folder
 .devcontainer/
 .vscode/
+
 # Ignore data and heavy model folder
 /bags/
 models/teatro/mesh/teatro.stl

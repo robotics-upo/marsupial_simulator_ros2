@@ -63,7 +63,6 @@ install(
     urdf
     worlds
     simulation_data
-    plots
     optimized_path
   DESTINATION
     share/${PROJECT_NAME}/
