@@ -4,10 +4,30 @@
     <img src="images/logo.png" alt="Logo" width="170" height="100">
   </a>
 
-<h3 align="center">Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo</h3>
+  <h3 align="center">
+    <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;">
+      Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo
+    </a>
+  </h3>
 </div>
 
-For a detailed explanation of the system's architecture and experiments, refer to the full paper available on arXiv.
+<div align="center">
+  José E. Maese, Fernando Caballero, and Luis Merino  
+</div>
+
+<br>
+
+<div align="center">
+  <a href="https://youtu.be/ZLLDROIaHV0" 
+     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
+    <img src="https://img.shields.io/badge/YouTube-Video-red?logo=youtube" alt="YouTube Video">
+  </a>
+  <a href="https://arxiv.org/abs/2412.12776" 
+     style="display: inline-block; text-decoration: none; vertical-align: middle;">
+    <img src="https://img.shields.io/badge/arXiv-Paper-blue?logo=arxiv" alt="arXiv Paper">
+  </a>
+</div>
+
 
 ## Table of Contents
 <details>
@@ -23,9 +43,10 @@ For a detailed explanation of the system's architecture and experiments, refer t
    - [Manual Control](#manual-control)
    - [Automatic Control](#automatic-control)
    - [Experiments](#experiments)
-5. [Modifying the Tether](#modifying-the-tether)
-   - [How to modify](#how-to-modify)
-6. [References](#references)
+5. [Customization](#customization)
+   - [How to modify tether model](#how-to-modify-tether-model)
+   - [How to include new scenarios](#how-to-include-new-scenarios)
+6. [Cite this work](#Cite-this-work)
 
 </details>
 
@@ -33,7 +54,7 @@ For a detailed explanation of the system's architecture and experiments, refer t
 This project presents a ROS 2-based simulator framework for tethered UAV-UGV marsupial systems in Gazebo. The framework models interactions among a UAV, a UGV, and a winch with dynamically adjustable length and slack of the tether. It supports both manual control and automated trajectory tracking, with the winch adjusting the length of the tether based on the relative distance between the robots. The simulator's performance is demonstrated through experiments, including comparisons with real-world data, showcasing its capability to simulate tethered robotic systems. The framework offers a flexible tool for researchers exploring tethered robot dynamics.
 
 <div align="center">
-  <img src="images/real_test_gif.gif" alt="stage_1 simulation" width="900">
+  <img src="images/real_test_gif_2.gif" alt="stage_1 simulation" width="900">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -71,6 +92,7 @@ Default parameters (e.g., spring stiffness, damping) can be modified as describe
   <img src="images/marsupial_models.png" alt="Architecture Diagram" width="400">
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation
 
@@ -112,7 +134,7 @@ The package has a set of predefined configurations (and completely extendable ac
 To launch the marsupial system in manual mode just launch the file `launch/marsupial_manual_simulation.launch.py`. The control of the ugv can be done using a remote control (default option) or the keyboard. The uav is controlled by the teleop option. To manage the scenario and initial position predefined is recommended to use the parameters for this launch, `world` and `pos_x`, `pos_y`, `pos_z`. Thus, for example, to use S5 and initial position (3, 1, 0):
 1. Launch of the gazebo environment:
     ```bash
-    ros2 launch marsupial_simulator marsupial_manual_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
+    ros2 launch marsupial_simulator_ros2 marsupial_manual_simulation.launch.py world:=stage_5.world pos_x:=3 pos_y:=1 pos_z:=0
     ```
 2. In order to control the drone it is necessary to send a message for take-off:
     ```bash
@@ -178,12 +200,12 @@ It is possible to modify the `self.tether_coef` value of the `ugv_theter_traject
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- Modifying the Tether -->
-## Modifying the Tether
+<!-- Customization -->
+## Customization
+
+### How to modify tether model
 
 By adjusting these parameters, you can simulate different types of tethers and study their behavior under various conditions. The parameters of the tether connecting the UAV and UGV can be customized through a Jinja file. This file allows you to adjust various physical properties of the tether elements to better suit your simulation needs. 
-
-### How to modify
 
 1. Open the Jinja file located at `models > tether > tether.sdf.jinja`.
 
@@ -198,14 +220,44 @@ By adjusting these parameters, you can simulate different types of tethers and s
     python3  ~/marsupial/src/marsupial_simulator_ros2/scripts/jinja_gen.py   ~/marsupial/src/marsupial_simulator_ros2/models/tether/tether.sdf.jinja ~/marsupial/src/marsupial_simulator_ros2/models/tether 
     ```
 
+### How to include new scenarios
+
+You can easily introduce additional scenarios in the simulator by creating or copying a Gazebo `.world` file and placing it in the appropriate directory. This allows you to customize the environment layout (e.g., obstacles, buildings) while preserving the marsupial UAV-UGV simulation functionalities. Follow these steps:
+
+1. Copy the `.world` file into the `worlds` directory
+    ```
+    ~/marsupial/src/marsupial_simulator_ros2/worlds
+    ```
+    
+2. Add required plugins
+    In your .world file, make sure to include the essential plugins for octomap construction and link attachment, as shown below. Insert these lines inside the <world> tag:
+    ```xml
+    <world name="new:_world">
+
+    <!-- World elements  -->
+
+    <plugin name="gazebo_octomap" filename="libBuildOctomapPlugin.so"/>
+    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher_plugin.so"/>
+
+    </world>
+    ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## References
+## Cite this work
 
-J. E. Maese, F. Caballero, and L. Merino, *"Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo"*
-<!-- , available on [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX). -->
+This simulator has been submitted to a journal and is currently under review. You can see the details in the following arXiv repository.
 
+> J. E. Maese, F. Caballero, and L. Merino. "Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo", available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776).
+
+<br>
+
+<sub>This work was partially supported by the INSERTION PID2021-127648OB-C31 and NORDIC TED2021-132476B-I00 projects, funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.</sub>
+
+<div align="center">
+  <img src="images/fondos.png" alt="foundings">
+</div>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -221,4 +273,4 @@ J. E. Maese, F. Caballero, and L. Merino, *"Physical simulation of Marsupial UAV
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

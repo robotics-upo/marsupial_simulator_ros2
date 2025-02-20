@@ -23,8 +23,8 @@ class UGVController(Node):
         self.effective_radius = 0.1494115          
 
         self.tether_length = 0.5
-        self.tether_coef = 1.40
-        self.safety_margin = 0.0           
+        self.tether_coef = 1.05      
+        self.safety_margin = -0.3           
 
         self.kp_winch = 2.5
         self.ki_winch = 0.0
@@ -49,7 +49,7 @@ class UGVController(Node):
         self.pose_subscriber = self.create_subscription(Pose, '/ugv_gt_pose', self.pose_callback, 10)
         self.uav_pose_subscriber = self.create_subscription(Pose, '/sjtu_drone/gt_pose', self.uav_pose_callback, 10)
         self.target_subscriber = self.create_subscription(Pose, '/target_position_ugv', self.target_callback, 10)
-        self.target_subscriber = self.create_subscription(Pose, '/target_position_uav', self.target_uav_callback, 10)
+        self.target_uav_subscriber = self.create_subscription(Pose, '/target_position_uav', self.target_uav_callback, 10)
         self.target_length_subscriber = self.create_subscription(Float64, '/target_length_tether', self.target_length_callback, 10)
 
         self.pub_pos = self.create_publisher(Float64MultiArray, '/forward_position_controller/commands', 10)

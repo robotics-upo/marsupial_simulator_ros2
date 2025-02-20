@@ -34,7 +34,7 @@ def generate_launch_description():
     ns_drone = "sjtu_drone"
 
     # Initial position
-    init_pos_x = LaunchConfiguration('pos_x', default='0.0')
+    init_pos_x = LaunchConfiguration('pos_x', default='-3.0')
     init_pos_y = LaunchConfiguration('pos_y', default='0.0')
     init_pos_z = LaunchConfiguration('pos_z', default='0.3')
 
@@ -45,6 +45,10 @@ def generate_launch_description():
     tether_pos_x = PythonExpression([init_pos_x, ' - 0.25'])
     tether_pos_y = PythonExpression([init_pos_y, ' - 0.00'])
     tether_pos_z = PythonExpression([init_pos_z, ' + 0.325'])
+
+    theatre_pos_x = PythonExpression([init_pos_x, ' - 0.0'])
+    theatre_pos_y = PythonExpression([init_pos_y, ' + 0.0'])
+    theatre_pos_z = PythonExpression([init_pos_z, ' - 0.3'])
 
     gzserver = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -112,6 +116,14 @@ def generate_launch_description():
                        '-x', tether_pos_x, '-y', tether_pos_y, '-z', tether_pos_z],
             output='screen',
         ) 
+    
+    spawn_theatre = Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=['-entity', 'teatro', '-file', os.path.join(get_package_share_directory('marsupial_simulator_ros2'), 'models', 'teatro/teatro.sdf'), 
+                       '-x', theatre_pos_x, '-y', theatre_pos_y, '-z', theatre_pos_z],
+            output='screen',
+        ) 
 
     spawn_person_node = Node(
             package='gazebo_ros',
@@ -164,7 +176,7 @@ def generate_launch_description():
         # Spawn models
         spawn_ugv_node,
         spawn_uav_node,
-        spawn_person_node,
+        # spawn_person_node,
         RegisterEventHandler(
             OnProcessExit(
                 target_action=spawn_ugv_node,
@@ -177,6 +189,7 @@ def generate_launch_description():
                 on_exit=[delayed_attach_links],
             )
         ),
+        spawn_theatre,
 
         # Manual Control
         teleop_drone_node,
