@@ -93,7 +93,7 @@ The simulation environment includes models for the UAV, UGV, winch, and tether, 
 - **UGV**: Holonomic ground vehicle with integrated winch.
 - **Tether**: Flexible, multi-segmented tether with dynamic length adjustment. Configurable length, mass, and stiffness.
 
-<table id="tether-parameters" style="width:60%; margin: auto; border-collapse: collapse;">
+<table id="tether-parameters" style="width:100%; margin: auto; border-collapse: collapse;">
   <thead>
     <tr>
       <th style="text-align: center;">Parameters</th>
@@ -188,7 +188,7 @@ To validate the accuracy of the simulated tether against a real catenary, we des
 
 We simulate the tether using four different lengths of elements: 0.05 m, 0.10 m, 0.15 m and 0.20 m. For each simulation, we recorded the length of each tether element and calculated the averaged error between the positions of the simulated tether elements and those of the theoretical catenary curve under the same conditions. This error measurement provides insights into how the granularity of the tether model influences the simulation's ability to accurately replicate real-world tether dynamics.
 
-<table id="tether-error-table" style="width:80%; margin: auto; border-collapse: collapse;">
+<table id="tether-error-table" style="width:100%; margin: auto; border-collapse: collapse;">
   <thead>
     <tr>
       <th style="text-align: center;">Element Length (m)</th>
