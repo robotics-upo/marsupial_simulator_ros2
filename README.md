@@ -188,7 +188,7 @@ To validate the accuracy of the simulated tether against a real catenary, we des
 
 We simulate the tether using four different lengths of elements: 0.05 m, 0.10 m, 0.15 m and 0.20 m. For each simulation, we recorded the length of each tether element and calculated the averaged error between the positions of the simulated tether elements and those of the theoretical catenary curve under the same conditions. This error measurement provides insights into how the granularity of the tether model influences the simulation's ability to accurately replicate real-world tether dynamics.
 
-<table id="tether-error-table" style="width:100%; border-collapse: collapse;">
+<table id="tether-error-table" style="width:80%; margin: auto; border-collapse: collapse;">
   <thead>
     <tr>
       <th style="text-align: center;">Element Length (m)</th>
@@ -274,7 +274,7 @@ In contrast, the UAV experienced minor perturbations in its flight path, particu
 
 Notably, Scenario 3 resulted in the UAV traveling the greatest distance among the scenarios, covering 65.21 meters. The discrepancies between the UAV's actual path and the reference trajectory are further illustrated in Fig.~\ref{figure:test_position_ugv_uav}, which displays the UAV's and UGV's positions relative to their targets over time, highlighting slight oscillations due to the tether's influence.
 
-<table id="simulated-test-metrics" style="width:100%; border-collapse: collapse;">
+<table id="simulated-test-metrics" style="width:80%; margin: auto; border-collapse: collapse;">
   <thead>
     <tr>
       <th style="text-align: center;">Scenario</th>
@@ -355,7 +355,7 @@ Overall, the simulated scenarios confirm that while the tether introduces additi
 The computational performance of the simulator was evaluated to assess its real-time capabilities and scalability. All experiments were conducted on a laptop with 32 GB of RAM, a 13th Gen Intel Core i7-13620H (10 cores, 16 threads), and an NVIDIA GeForce RTX 4060 Laptop GPU. To analyze the impact of system components on simulation efficiency, a comparison was made with a more powerful desktop PC (64 GB RAM, 12th Gen Intel Core i9-12900F, and an NVIDIA GeForce RTX 3060 GPU). Each experiment was repeated 10 times, and since the mean deviation was negligible, the values correspond to the calculated averages.
 
 <div id="performance-evaluation" align="center">
-    <img src="images/performance_evaluation.png" alt="Performance evaluation" width="100%">
+    <img src="images/performance_evaluation.png" alt="Performance evaluation" width="80%">
     <p><strong>Figure 8:</strong> Performance comparison between the laptop and desktop configurations. The real-time factor (RTF) is shown for tether element counts ranging from 100 to 700.</p>
 </div>
 
