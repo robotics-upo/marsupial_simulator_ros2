@@ -18,7 +18,10 @@
   <depend>sensor_msgs</depend>
   <depend>tf2</depend>
   <depend>scipy</depend>
-
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
+  <depend>controller_manager</depend>
+  
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

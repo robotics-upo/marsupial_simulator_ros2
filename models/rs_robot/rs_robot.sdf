@@ -974,7 +974,7 @@
       <ros>
         <namespace>/</namespace>
       </ros>
-        <parameters>/home/marsupial_ws/src/marsupial_simulator_ros2/models/rs_robot/config/controllers.yaml</parameters>
+        <parameters>/home/upo/marsupial/src/marsupial_simulator_ros2/models/rs_robot/config/controllers.yaml</parameters>
     </plugin>
 
     <plugin name="ugv_plugin" filename="libplugin_ugv.so">

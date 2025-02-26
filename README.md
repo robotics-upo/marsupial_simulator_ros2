@@ -372,15 +372,38 @@ These results highlight the simulator's ability to run on mid-tier hardware whil
 This package has been designed and tested in an x86_64 machine under a Ubuntu 22.04 operating system and ROS2 Humble distribution. The following repositories are required for the implementation of the project:
   - sjtu_drone: (https://github.com/noshluk2/sjtu_drone/tree/ros2, branch: ros2)
   - gazebo_ros_link_attacher: (https://github.com/davidorchansky/gazebo_ros_link_attacher, branch: humble-devel)
+  - gazebo_ros2_control: (https://github.com/ros-controls/gazebo_ros2_control/tree/master, branch: humble)
 
 ### Build Instructions
 
+It is recommended to use the provided Docker image to ensure a consistent environment. Follow these steps:
 
-1. Clone this repository into the `src` directory of your `colcon` workspace. 
+1. Navigate to the folder where the Dockerfile is located.
 
-2. Clones the required dependencies into the `src` directory.
+2. Build the Docker image with the following command:
+    ```bash
+    docker build -t marsupial_image .
+    ```
 
-3. Finally compile your workspace using ```colcon build``` 
+3. Enable X11 forwarding (for GUI support, e.g., Gazebo) by running:
+    ```bash
+    xhost +local:docker
+    ```
+4. Run the Docker container with the necessary permissions:
+    ```bash
+    docker run -it --env DISPLAY=$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix marsupial_image
+    ```
+5. After creating the container, simply source the workspace environment by executing:
+    ```bash
+    source install/setup.bash
+    ```
+    Once sourced, you can use all the commands described in the following section.
+
+5. Open additional terminal windows in the running container (if needed) using:
+    ```bash
+    docker run -it --env DISPLAY=$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix marsupial_image
+    ```
+    Replace ```<container_id>``` with the actual container ID or name.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
