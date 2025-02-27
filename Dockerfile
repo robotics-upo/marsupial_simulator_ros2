@@ -36,26 +36,30 @@ RUN apt-get update && apt-get install -y \
 # Set display environment variable for GUI support.
 ENV DISPLAY=:0
 
-# Set the working directory to the ROS2 workspace.
+# Set the workspace root directory.
 WORKDIR /home/upo/marsupial
 
-# Copy the entire workspace content into the container.
-COPY . /home/upo/marsupial
+# Create the src directory inside the workspace.
+RUN mkdir -p src
 
-# Clone gazebo_ros2_control from GitHub using the "humble" branch in the src folder.
-RUN if [ ! -d "src/gazebo_ros2_control" ]; then \
-      mkdir -p src && cd src && \
-      git clone -b humble https://github.com/ros-simulation/gazebo_ros2_control.git; \
-    fi
+# Set working directory to src and clone each repository from GitHub.
+WORKDIR /home/upo/marsupial/src
+RUN git clone -b master https://github.com/robotics-upo/marsupial_simulator_ros2.git && \
+    git clone -b ros2 https://github.com/noshluk2/sjtu_drone.git && \
+    git clone -b humble-devel https://github.com/davidorchansky/gazebo_ros_link_attacher.git && \
+    git clone -b humble https://github.com/ros-simulation/gazebo_ros2_control.git
+
+# Go back to the workspace root.
+WORKDIR /home/upo/marsupial
 
 # Initialize rosdep and install dependencies declared in package.xml files.
-# The default rosdep source file is removed to avoid re-initialization conflicts.
+# Removing the default rosdep source file to avoid re-initialization conflicts.
 RUN rm -f /etc/ros/rosdep/sources.list.d/20-default.list && \
     rosdep init && \
     rosdep update && \
     rosdep install --from-paths /home/upo/marsupial --ignore-src -r -y
 
-# Build the entire ROS2 workspace (including the cloned gazebo_ros2_control package) using colcon.
+# Build the entire ROS2 workspace using colcon from the workspace root.
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build"
 
 # Create an entrypoint script to automatically source the workspace environment.
@@ -63,6 +67,5 @@ RUN echo '#!/bin/bash\nsource /home/upo/marsupial/install/setup.bash\nexec "$@"'
 
 # Set the entrypoint so that the workspace environment is loaded on container start.
 ENTRYPOINT ["/entrypoint.sh"]
-
 # Default command: start an interactive bash shell.
 CMD ["/bin/bash"]
