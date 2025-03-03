@@ -1,6 +1,6 @@
 # Ignore Visual Studio Code Folder
 .devcontainer/
-# .vscode/
+.vscode/
 
 # Ignore data and heavy model folder
 /bags/
