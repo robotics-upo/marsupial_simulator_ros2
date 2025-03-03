@@ -1,20 +1,6 @@
 FROM osrf/ros:humble-desktop
 
-# Install required system packages:
-# - build-essential: basic build tools.
-# - python3-colcon-common-extensions: build system for ROS2 workspaces.
-# - libgazebo-dev: development libraries for Gazebo.
-# - python3-rosdep: tool for dependency management in ROS.
-# - python3-pip: Python package installer.
-# - python3-scipy: scientific computing library.
-# - ros-humble-gazebo-ros-pkgs: meta-package for Gazebo ROS integration.
-# - ros-humble-xacro: XML macro language for ROS.
-# - xterm: terminal emulator.
-# - ros-humble-imu-tools: IMU tools for ROS.
-# - ros-humble-joint-state-publisher: publishes joint states for robot models.
-# - ros-humble-ros2-control: ROS2 control framework.
-# - ros-humble-ros2-controllers: common controllers for ROS2 Control.
-# - libgl1-mesa-glx, libx11-6: libraries for OpenGL and X11 support.
+# Install required system packages and Git LFS:
 RUN apt-get update && apt-get install -y \
     build-essential \
     python3-colcon-common-extensions \
@@ -31,10 +17,17 @@ RUN apt-get update && apt-get install -y \
     ros-humble-ros2-controllers \
     libgl1-mesa-glx \
     libx11-6 \
+    git-lfs \
     && rm -rf /var/lib/apt/lists/*
+
+# Initialize Git LFS
+RUN git lfs install
 
 # Set display environment variable for GUI support.
 ENV DISPLAY=:0
+
+# (Opcional) Define GAZEBO_MODEL_PATH para que Gazebo encuentre los modelos
+ENV GAZEBO_MODEL_PATH=/home/upo/marsupial/src/marsupial_simulator_ros2/models
 
 # Set the workspace root directory.
 WORKDIR /home/upo/marsupial
@@ -47,13 +40,16 @@ WORKDIR /home/upo/marsupial/src
 RUN git clone -b master https://github.com/robotics-upo/marsupial_simulator_ros2.git && \
     git clone -b ros2 https://github.com/noshluk2/sjtu_drone.git && \
     git clone -b humble-devel https://github.com/davidorchansky/gazebo_ros_link_attacher.git && \
-    git clone -b humble https://github.com/ros-simulation/gazebo_ros2_control.git
+    git clone -b humble https://github.com/ros-simulation/gazebo_ros2_control.git && \
+    cd marsupial_simulator_ros2 && git lfs pull && cd .. && \
+    cd sjtu_drone && git lfs pull && cd .. && \
+    cd gazebo_ros_link_attacher && git lfs pull && cd .. && \
+    cd gazebo_ros2_control && git lfs pull && cd ..
 
 # Go back to the workspace root.
 WORKDIR /home/upo/marsupial
 
 # Initialize rosdep and install dependencies declared in package.xml files.
-# Removing the default rosdep source file to avoid re-initialization conflicts.
 RUN rm -f /etc/ros/rosdep/sources.list.d/20-default.list && \
     rosdep init && \
     rosdep update && \
