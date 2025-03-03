@@ -236,7 +236,6 @@
         <plugin name="velodyne_plugin" filename="libgazebo_ros_velodyne_laser.so">
           <ros>
             <namespace>sjtu_drone</namespace>
-            <!-- <remapping>output:=velodyne_scan</remapping> -->
           </ros>
           <frameName>velodyne_link</frameName>
           <outputType>sensor_msgs/PointCloud2</outputType>
@@ -250,7 +249,6 @@
       <bodyName>base_link</bodyName>
       <ros>
             <namespace>sjtu_drone</namespace>
-            <!-- <remapping>output:=velodyne_scan</remapping> -->
           </ros>
       <imuTopic>imu</imuTopic>
       <rollpitchProportionalGain>10.0</rollpitchProportionalGain>
