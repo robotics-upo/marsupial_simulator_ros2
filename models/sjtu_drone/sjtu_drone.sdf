@@ -248,7 +248,10 @@
     <static>0</static>
     <plugin name='simple_drone' filename='libplugin_drone.so'>
       <bodyName>base_link</bodyName>
-      <rosNamespace>drone</rosNamespace>
+      <ros>
+            <namespace>sjtu_drone</namespace>
+            <!-- <remapping>output:=velodyne_scan</remapping> -->
+          </ros>
       <imuTopic>imu</imuTopic>
       <rollpitchProportionalGain>10.0</rollpitchProportionalGain>
       <rollpitchDifferentialGain>5.0</rollpitchDifferentialGain>
