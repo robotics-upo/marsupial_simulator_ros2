@@ -1,8 +1,8 @@
 <div align="center">
 
-  <a href="https://github.com/robotics-upo/marsupial-simulator-ros2">
+  <!-- <a href="https://github.com/robotics-upo/marsupial-simulator-ros2">
     <img src="images/logo.png" alt="Logo" width="170" height="100">
-  </a>
+  </a> -->
 
   <h3 align="center">
     <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;">
@@ -11,9 +11,9 @@
   </h3>
 </div>
 
-<div align="center">
+<!-- <div align="center">
   José E. Maese, Fernando Caballero, and Luis Merino  
-</div>
+</div> -->
 
 <br>
 
@@ -482,7 +482,7 @@ The tests carried out are as follows:
 - Test 1. The UGV is kept static. UAV ascends and descends N times.
 - Test 2. The UAV is kept static. The UGV moves between two points N times.
 - Test 3. UAV and UGV move in opposite directions N times.
-- Test 4. The test performed inside a theatre mentioned in "Path and Trajectory Planning of a Tethered UAV-UGV Marsupial Robotic System" (https://ieeexplore.ieee.org/document/10207830) is replicated. The length of the tether is calculated as a function of the relative distance between the UAV and the UGV. The test is maintained up to the target point 100.
+- Test 4. The test performed inside a theatre is replicated. The length of the tether is calculated as a function of the relative distance between the UAV and the UGV. The test is maintained up to the target point 100.
 - Test 5. The test performed inside a theatre is replicated again. In this case, the length of the tether is provided by the test trajectory. The test is maintained up to the target point 100. 
 
 <div align="center">
@@ -543,7 +543,7 @@ You can easily introduce additional scenarios in the simulator by creating or co
 
 This simulator has been submitted to a journal and is currently under review. You can see the details in the following arXiv repository.
 
-> J. E. Maese, F. Caballero, and L. Merino. "Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo", available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776).
+<!-- > J. E. Maese, F. Caballero, and L. Merino. "Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo", available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776). -->
 
 <br>
 
