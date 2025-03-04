@@ -57,9 +57,9 @@
 ## Introduction
 This paper presents a simulation framework able of modeling the dynamics of a hanging tether with adjustable length, connecting a UAV to a UGV. The model incorporates the interaction between the UAV, UGV, and a winch, allowing for dynamic tether adjustments based on the relative motion of the robots. The accuracy and reliability of the simulator are assessed through extensive experiments, including comparisons with real-world experiment, to evaluate its ability to reproduce the complex tether dynamics observed in physical deployments. The results demonstrate that the simulation closely aligns with real-world behavior, particularly in constrained environments where tether effects are significant. This work provides a validated tool for studying tethered robotic systems, offering valuable insights into their motion dynamics and control strategies.
 
-<div align="center">
+<!-- <div align="center">
   <img src="images/real_test_gif.gif" alt="stage_1 simulation" width="900">
-</div>
+</div> -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
