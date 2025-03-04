@@ -37,7 +37,7 @@ RUN mkdir -p src
 
 # Set working directory to src and clone each repository from GitHub.
 WORKDIR /home/upo/marsupial/src
-RUN git clone -b master https://github.com/robotics-upo/marsupial_simulator_ros2.git && \
+RUN git clone -b main https://github.com/robotics-upo/marsupial_simulator_ros2.git && \
     git clone -b ros2 https://github.com/noshluk2/sjtu_drone.git && \
     git clone -b humble-devel https://github.com/davidorchansky/gazebo_ros_link_attacher.git && \
     git clone -b humble https://github.com/ros-simulation/gazebo_ros2_control.git && \
