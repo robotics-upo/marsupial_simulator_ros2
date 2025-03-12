@@ -22,10 +22,10 @@
      style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
     <img src="https://img.shields.io/badge/YouTube-Video-red?logo=youtube" alt="YouTube Video">
   </a>
-  <a href="https://arxiv.org/abs/2412.12776" 
+  <!-- <a href="https://arxiv.org/abs/2412.12776" 
      style="display: inline-block; text-decoration: none; vertical-align: middle;">
     <img src="https://img.shields.io/badge/arXiv-Paper-blue?logo=arxiv" alt="arXiv Paper">
-  </a>
+  </a> -->
 </div>
 
 
