@@ -548,11 +548,11 @@ This simulator has been submitted to a journal and is currently under review.
 
 <br>
 
-<sub>This work was partially supported by the INSERTION PID2021-127648OB-C31 and NORDIC TED2021-132476B-I00 projects, funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.</sub>
+<!-- <sub>This work was partially supported by the INSERTION PID2021-127648OB-C31 and NORDIC TED2021-132476B-I00 projects, funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.</sub>
 
 <div align="center">
   <img src="images/fondos.png" alt="foundings">
-</div>
+</div> -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
