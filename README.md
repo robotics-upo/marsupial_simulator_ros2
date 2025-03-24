@@ -5,9 +5,8 @@
   </a> -->
 
   <h3 align="center">
-    <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;">
+    <!-- <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;"> -->
       Physical simulation of Marsupial UAV-UGV Systems Connected by a Variable-Length Hanging Tether
-    </a>
   </h3>
 </div>
 
