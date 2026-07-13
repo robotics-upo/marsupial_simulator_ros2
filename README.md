@@ -12,7 +12,7 @@
 </div>
 
 <div align="center">
-  José E. Maese - Fernando Caballero - Luis Merino 
+  <h4>Accepted at <a href="https://www.ieee-ras.org/publications/ra-p">IEEE Robotics and Automation Practice (RA-P)</a></h4>
 </div>
 
 <br>
