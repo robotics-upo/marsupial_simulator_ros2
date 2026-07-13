@@ -142,12 +142,13 @@ for i, time in tqdm(enumerate(times), total=len(times), desc="Generando frames")
         first_link = valid_links[0]  # Extremo del UAV
         last_link = valid_links[-1]  # Extremo del UGV
 
-        # Calcular la longitud total considerando las longitudes diferentes de los elementos
-        num_links = len(valid_links)
-        if num_links <= 10:
-            total_length = num_links * 0.045
-        else:
-            total_length = 10 * 0.045 + (num_links - 10) * 0.05
+        # Calcular la longitud total sumando distancias entre eslabones consecutivos.
+        # Los últimos uav_tether eslabones tienen cl distinto al resto, por eso
+        # no se usa cl uniforme sino la distancia real entre posiciones simuladas.
+        total_length = sum(
+            np.linalg.norm(link_positions[valid_links[j]][i] - link_positions[valid_links[j + 1]][i])
+            for j in range(len(valid_links) - 1)
+        )
 
         # Calcular la catenaria teórica
         x_cat, y_cat, z_cat = calculate_catenary(

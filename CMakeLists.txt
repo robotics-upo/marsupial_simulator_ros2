@@ -40,7 +40,7 @@ include_directories(
 
 # Build the plugins
 add_library(plugin_ugv SHARED src/plugin_ugv.cpp)
-ament_target_dependencies(plugin_ugv rclcpp geometry_msgs)
+ament_target_dependencies(plugin_ugv rclcpp geometry_msgs gazebo_ros)
 target_link_libraries(plugin_ugv ${GAZEBO_LIBRARIES})
 
 add_library(tether_position_publisher SHARED src/tether_position_publisher.cpp)

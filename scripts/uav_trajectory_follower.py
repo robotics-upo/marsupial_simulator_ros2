@@ -2,14 +2,21 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, DurabilityPolicy, HistoryPolicy
 from geometry_msgs.msg import Pose, Twist
 import math
+
+_LATCH_QOS = QoSProfile(
+    depth=1,
+    durability=DurabilityPolicy.TRANSIENT_LOCAL,
+    history=HistoryPolicy.KEEP_LAST,
+)
 
 class DroneController(Node):
 
     def __init__(self):
         super().__init__('drone_controller')
-        self.target_position = Pose()
+        self.target_position = None
         self.current_position = None
         
         self.max_speed = 0.1      
@@ -19,7 +26,8 @@ class DroneController(Node):
         timer_period = 0.02
 
         self.pose_subscriber = self.create_subscription(Pose, '/sjtu_drone/gt_pose', self.pose_callback, 10)
-        self.target_subscriber = self.create_subscription(Pose, '/target_position_uav', self.target_callback, 10)
+        # TRANSIENT_LOCAL: recibe el último waypoint aunque el nodo arranque tarde
+        self.target_subscriber = self.create_subscription(Pose, '/target_position_uav', self.target_callback, _LATCH_QOS)
         
         self.velocity_publisher = self.create_publisher(Twist, '/sjtu_drone/cmd_vel', 10)
         
@@ -68,7 +76,10 @@ class DroneController(Node):
 def main(args=None):
     rclpy.init(args=args)
     drone_controller = DroneController()
-    rclpy.spin(drone_controller)
+    try:
+        rclpy.spin(drone_controller)
+    except (KeyboardInterrupt, rclpy.executors.ExternalShutdownException):
+        pass
     drone_controller.destroy_node()
     rclpy.shutdown()
 

@@ -5,26 +5,31 @@
   </a> -->
 
   <h3 align="center">
-    <!-- <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;"> -->
-      Physical simulation of Marsupial UAV-UGV Systems Connected by a Variable-Length Hanging Tether
+    <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;">
+      Physical Simulation of Marsupial UAV-UGV Systems Connected by a Variable-Length Hanging Tether
+    </a>
   </h3>
 </div>
 
-<!-- <div align="center">
-  José E. Maese, Fernando Caballero, and Luis Merino  
-</div> -->
+<div align="center">
+  José E. Maese - Fernando Caballero - Luis Merino 
+</div>
 
 <br>
 
 <div align="center">
-  <a href="https://youtu.be/umG616y1fJ4" 
+  <a href="https://youtu.be/F91HsqlOhNE"
      style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/YouTube-Video-red?logo=youtube" alt="YouTube Video">
+    <img src="https://img.shields.io/badge/YouTube-Experiments-red?logo=youtube" alt="YouTube Experiments">
   </a>
-  <!-- <a href="https://arxiv.org/abs/2412.12776" 
+  <a href="https://youtu.be/6LlnhbU-0xM"
+     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
+    <img src="https://img.shields.io/badge/YouTube-Collisions-red?logo=youtube" alt="YouTube Collisions">
+  </a>
+  <a href="https://arxiv.org/abs/2412.12776"
      style="display: inline-block; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/arXiv-Paper-blue?logo=arxiv" alt="arXiv Paper">
-  </a> -->
+    <img src="https://img.shields.io/badge/arXiv-2412.12776-blue?logo=arxiv" alt="arXiv Paper">
+  </a>
 </div>
 
 
@@ -50,11 +55,12 @@
    - [How to modify tether model](#how-to-modify-tether-model)
    - [How to include new scenarios](#how-to-include-new-scenarios)
 7. [Cite this work](#Cite-this-work)
+8. [Acknowledgements](#acknowledgements)
 
 </details>
 
 ## Introduction
-This paper presents a simulation framework able of modeling the dynamics of a hanging tether with adjustable length, connecting a UAV to a UGV. The model incorporates the interaction between the UAV, UGV, and a winch, allowing for dynamic tether adjustments based on the relative motion of the robots. The accuracy and reliability of the simulator are assessed through extensive experiments, including comparisons with real-world experiment, to evaluate its ability to reproduce the complex tether dynamics observed in physical deployments. The results demonstrate that the simulation closely aligns with real-world behavior, particularly in constrained environments where tether effects are significant. This work provides a validated tool for studying tethered robotic systems, offering valuable insights into their motion dynamics and control strategies.
+This paper presents a simulation framework capable of modeling the dynamics of a hanging tether with adjustable length, connecting a UAV to a UGV. The model incorporates the interaction between the UAV, UGV, and a winch, allowing for dynamic tether adjustments based on the relative motion of the robots. The accuracy and reliability of the simulator are assessed through extensive experiments, including comparisons with real-world experiment, to evaluate its ability to reproduce the complex tether dynamics observed in physical deployments. The results demonstrate that the simulation closely aligns with real-world behavior, particularly in constrained environments where tether effects are significant. This work provides a validated tool for studying tethered robotic systems, offering valuable insights into their motion dynamics and control strategies.
 
 <div align="center">
   <img src="images/real_test_gif.gif" alt="stage_1 simulation" width="900">
@@ -69,13 +75,13 @@ This paper presents a simulation framework able of modeling the dynamics of a ha
 The marsupial UAV-UGV simulator is built using ROS 2 and Gazebo, integrating multiple core components to simulate tethered robot behavior <a href="#simulator-structure">Fig. 2</a>. Each module plays a specific role, and the system supports both manual and autonomous operation. The main steps are:
 
 
-- **Model Initialization**: The simulation initializes in Gazebo by spawning the UGV, UAV, and a coiled tether around the winch. The UAV starts on a platform atop the UGV, and the tether is connected to both. ROS~2 modules manage the system’s operation.
+- **Model Initialization**: The simulation initializes in Gazebo by spawning the UGV, UAV, and a coiled tether around the winch. The UAV starts on a platform atop the UGV, and the tether is connected to both. ROS 2 modules manage the system’s operation.
 
 - **Trajectory Tracking**: This module enables interaction with the system via two methods: (1) YAML files containing waypoints and reference tether lengths, or (2) real-time ROS messages specifying destinations. The UAV, UGV, and winch adjust dynamically to maintain proper tether slack. The framework supports custom trajectory tracking algorithms and control modules.
 
 - **Controllers**: Each robot has a dedicated controller that executes assigned movements. The UGV controller also manages tether control, adjusting its length as needed. The controllers closely replicate real-world robot behavior but can be modified to accommodate different dynamics. 
 
-- **Evaluation and Data Recording**: An Evaluation Module collects and processes ROS~2 topic data, including UAV/UGV poses and tether length variations. The system compiles key performance metrics such as trajectory accuracy, tether behavior, and system stability, storing the results for further analysis.
+- **Evaluation and Data Recording**: An Evaluation Module collects and processes ROS 2 topic data, including UAV/UGV poses and tether length variations. The system compiles key performance metrics such as trajectory accuracy, tether behavior, and system stability, storing the results for further analysis.
 
 <div id="simulator-structure" align="center">
   <img src="images/simulator_structure_v2.png" alt="Architecture Diagram" width="900">
@@ -134,7 +140,7 @@ The simulation environment includes models for the UAV, UGV, winch, and tether, 
     </tr>
     <tr>
       <td>Number of elements</td>
-      <td style="text-align: center;">123</td>
+      <td style="text-align: center;">125</td>
       <td style="text-align: center;">-</td>
     </tr>
     <tr>
@@ -229,9 +235,9 @@ We simulate the tether using four different lengths of elements: 0.05 m, 0.10 m,
   </tbody>
 </table>
 
-As shown in <a href="#tether-error-table">Table II</a>, the results indicate that the performance is realistic across all tested cases, with averaged errors below 1\% of the tether length. We can see how, in general, as the length of the element increases, the simulation error with respect to the theoretical model also increases, as expected. However, this effect does not hold when the element length is 0.05 m. We think this behaviour is related with the increase of the simulation complexity, setting Gazebo's solver close to its limits. This is due to the reduced computational load when simulating fewer (longer) elements. 
+As shown in <a href="#tether-error-table">Table II</a>, the results indicate that the performance is realistic across all tested cases, with averaged errors below 1% of the tether length. We can see how, in general, as the length of the element increases, the simulation error with respect to the theoretical model also increases, as expected. However, this effect does not hold when the element length is 0.05 m. We think this behaviour is related with the increase of the simulation complexity, setting Gazebo's solver close to its limits. This is due to the reduced computational load when simulating fewer (longer) elements. 
 
-It is important to note that the region around the winch (highlighted in yellow in <a href="#marsupial-models">Fig. 3</a>) exhibits more chaotical tether dynamics due to the high concentration of elements in a small area. This effect is inherent to the discrete nature of the simulation and cannot be directly controlled, leading to small fluctuations in the tether's appearance near the winch. However, this is purely a visual artifact and does not impact the overall behaviour of the catenary, which remains accurately modeled and is the primary focus of our simulation. Additionally, the winch model used in our simulation does not support tether element lengths greater than 0.2 m due to mechanical constraints. Despite varying the element lengths up to this limit, the precision of the simulation was not affected significantly. This suggests that even with larger element lengths within the supported range, the simulation can maintain a high degree of accuracy in approximating the real catenary curve.
+It is important to note that the region around the winch (highlighted in yellow in <a href="#marsupial-models">Fig. 3</a>) exhibits more chaotic tether dynamics due to the high concentration of elements in a small area. This effect is inherent to the discrete nature of the simulation and cannot be directly controlled, leading to small fluctuations in the tether's appearance near the winch. However, this is purely a visual artifact and does not impact the overall behaviour of the catenary, which remains accurately modeled and is the primary focus of our simulation. Additionally, the winch model used in our simulation does not support tether element lengths greater than 0.2 m due to mechanical constraints. Despite varying the element lengths up to this limit, the precision of the simulation was not affected significantly. This suggests that even with larger element lengths within the supported range, the simulation can maintain a high degree of accuracy in approximating the real catenary curve.
 
 
 <div id="tether-collision-images" align="center">
@@ -248,7 +254,7 @@ It is important to note that the region around the winch (highlighted in yellow 
   <p><strong>Figure 5:</strong> Examples of tether-obstacle collisions with varying degrees of tension.</p>
 </div>
 
-Beyond comparing the simulated tether to a theoretical catenary, we also conducted experiments to examine how it interacts with the environment. These tests were designed to confirm the simulator's ability to capture contact dynamics, including collisions with obstacles, wrapping around structures, and adjusting the tether's tension in response. Thus, <a href="#tether-collision-images">Figure 5a</a> illustrates a scenario where the tether remains slack while suspended between two obstacles. In contrast, <a href="#tether-collision-images">Figure 5b</a> shows the tether becoming entangled around both obstacles due to the UAV's trajectory, significantly increasing tension. These interactions influence the overall system behavior, affecting both the UAV's stability and the UGV's traction due to the dynamic forces exerted by the tether. This behavior can be better appreciated in the <a href="https://youtu.be/_j3KnPfFLBQ" target="_blank">accompanying video</a>.
+Beyond comparing the simulated tether to a theoretical catenary, we also conducted experiments to examine how it interacts with the environment. These tests were designed to confirm the simulator's ability to capture contact dynamics, including collisions with obstacles, wrapping around structures, and adjusting the tether's tension in response. Thus, <a href="#tether-collision-images">Figure 5a</a> illustrates a scenario where the tether remains slack while suspended between two obstacles. In contrast, <a href="#tether-collision-images">Figure 5b</a> shows the tether becoming entangled around both obstacles due to the UAV's trajectory, significantly increasing tension. These interactions influence the overall system behavior, affecting both the UAV's stability and the UGV's traction due to the dynamic forces exerted by the tether. This behavior can be better appreciated in the <a href="https://youtu.be/6LlnhbU-0xM" target="_blank">accompanying video</a>.
 
 The ability to simulate these contact events is essential for realistic modeling of marsupial robotic systems, as tether-environment interactions can introduce significant constraints in real-world applications. Our results demonstrate that the simulator correctly captures these effects, enabling detailed analysis of how tether dynamics impact system performance under various operational conditions.
 
@@ -265,13 +271,13 @@ In the simulated scenarios, we focus on evaluating the fundamental functioning o
 
 - **Scenario 2: Horizontal Mobility Assessment** (<a href="#simulated-scenarios">Figure 6b</a>): The UAV hovers at a fixed altitude while the UGV moves back and forth between two points ten times. This scenario tests the tether's behavior during horizontal displacement of the UGV and examines the system's capability to manage tether slack without compromising the UAV's position stability.
 
-- **Scenario 3: Opposite Direction Coordination** (<a href="#simulated-scenarios">Figure 6c</a>): In this scenario, both the UAV and UGV move simultaneously in opposite directions ten times. The aim is to challenge the system's coordination mechanisms and the winch's ability to adjust the tether length dynamically under increased complexity. This scenario simulates more intrincate movements that may occur in real-world operations where both units need to maneuver independently.
+- **Scenario 3: Opposite Direction Coordination** (<a href="#simulated-scenarios">Figure 6c</a>): In this scenario, both the UAV and UGV move simultaneously in opposite directions ten times. The aim is to challenge the system's coordination mechanisms and the winch's ability to adjust the tether length dynamically under increased complexity. This scenario simulates more intricate movements that may occur in real-world operations where both units need to maneuver independently.
 
 According to <a href="#simulated-test-metrics">Table III </a>, the UGV traveled significant distances in Scenarios 2 and 3, covering 49.99 meters and 50.88 meters, respectively. The UGV consistently adhered to the designated paths, exhibiting smooth and stable movements that reflect reliable ground dynamics.
 
 In contrast, the UAV experienced minor perturbations in its flight path, particularly during complex maneuvers or when operating in close proximity to the UGV. These disturbances are primarily attributed to the complex dynamics of the tether. The interactions among the tether's elements introduce dynamic forces that influence the UAV's stability and control. The most significant perturbations occur when the UAV and UGV are very close to each other or aligned vertically, as the reduced spatial separation amplifies the interaction forces from the tether. This effect is evident in <a href="#simulated-scenarios">Figure 6c</a>, where the UAV's trajectory shows deviations during such configurations.
 
-Notably, Scenario 3 resulted in the UAV traveling the greatest distance among the scenarios, covering 65.21 meters. The discrepancies between the UAV's actual path and the reference trajectory are further illustrated in Fig.~\ref{figure:test_position_ugv_uav}, which displays the UAV's and UGV's positions relative to their targets over time, highlighting slight oscillations due to the tether's influence.
+Notably, Scenario 3 resulted in the UAV traveling the greatest distance among the scenarios, covering 65.21 meters. The discrepancies between the UAV's actual path and the reference trajectory are further illustrated in <a href="#test-position-ugv-uav">Fig. 7</a>, which displays the UAV's and UGV's positions relative to their targets over time, highlighting slight oscillations due to the tether's influence.
 
 <table id="simulated-test-metrics" style="width:80%; margin: auto; border-collapse: collapse;">
   <thead>
@@ -328,12 +334,12 @@ Specifically, the table reports key performance metrics: the simulation time (in
       <img src="images/drone_position_test3.png" alt="Visualization of the UAV position (test 3)" height="300">
     </figure>
   </div>
-  <p><strong>Figure 6:</strong> Visualization of the position of the UGV (left) and UAV (right) on each axis with respect to the reference in Scenario 3 (Opposite Direction Coordination). </p>
+  <p><strong>Figure 7:</strong> Visualization of the position of the UGV (left) and UAV (right) on each axis with respect to the reference in Scenario 3 (Opposite Direction Coordination). </p>
 </div>
 
 Despite these challenges, the UAV successfully reached all predefined target points across the stage, demonstrating the robustness of the control algorithms and the effectiveness of the tether management system. The control system effectively mitigated the disturbances induced by the tether, allowing the UAV to maintain its overall trajectory.
 
-<a href="#test-tether">Fig. 7</a> depicts the tether length adjustments throughout the simulated scenario. The tether length is dynamically adjusted by the winch system to be 5\% greater than the relative distance between the UAV and UGV. This strategy ensures that the tether maintains slightly slack, preventing excessive tightness that might impact the UAV's stability. The tether length closely follows the target length, indicating the winch's responsiveness and the effectiveness of the tether management algorithms in real-time operation.
+<a href="#test-tether">Fig. 8</a> depicts the tether length adjustments throughout the simulated scenario. The tether length is dynamically adjusted by the winch system to be 5% greater than the relative distance between the UAV and UGV. This strategy ensures that the tether maintains slightly slack, preventing excessive tightness that might impact the UAV's stability. The tether length closely follows the target length, indicating the winch's responsiveness and the effectiveness of the tether management algorithms in real-time operation.
 
 <div id="test-tether" align="center">
   <div style="display: flex; justify-content: center; gap: 20px;">
@@ -344,7 +350,7 @@ Despite these challenges, the UAV successfully reached all predefined target poi
       <img src="images/tether_distance_filtered_test3_small.png" alt="Tether distance (zoom)" height="300">
     </figure>
   </div>
-  <p><strong>Figure 7:</strong> Tether length adjustments during Scenario 3, showing the evolution of the tether's actual length, target length, and distance between the UAV and UGV over time. </p>
+  <p><strong>Figure 8:</strong> Tether length adjustments during Scenario 3, showing the evolution of the tether's actual length, target length, and distance between the UAV and UGV over time. </p>
 </div>
 
 Overall, the simulated scenarios confirm that while the tether introduces additional complexity into the UAV's dynamics, the system is capable of maintaining accurate trajectory tracking.
@@ -355,10 +361,10 @@ The computational performance of the simulator was evaluated to assess its real-
 
 <div id="performance-evaluation" align="center">
     <img src="images/performance_evaluation.png" alt="Performance evaluation" width="80%">
-    <p><strong>Figure 8:</strong> Performance comparison between the laptop and desktop configurations. The real-time factor (RTF) is shown for tether element counts ranging from 100 to 700.</p>
+    <p><strong>Figure 9:</strong> Performance comparison between the laptop and desktop configurations. The real-time factor (RTF) is shown for tether element counts ranging from 100 to 700.</p>
 </div>
 
-As shown in <a href="#performance-evaluation">Fig. 8</a>, the desktop PC demonstrated superior performance. The number of tether elements directly influenced computational load. For the laptop, the real-time factor (RTF) decreased from 0.92 (100 elements) to 0.14 (700 elements), while the desktop PC maintained higher RTF values, ranging from 0.99 (100 elements) to 0.19 (700 elements), with a tether element length of 0.15 m in all cases. This divergence underscores the importance of system specifications for simulating high-fidelity tethered systems. Notably, the desktop achieved an RTF of 0.47 with 300 elements while the laptop required element counts below 200 to maintain RTF >0.50.
+As shown in <a href="#performance-evaluation">Fig. 9</a>, the desktop PC demonstrated superior performance. The number of tether elements directly influenced computational load. For the laptop, the real-time factor (RTF) decreased from 0.92 (100 elements) to 0.14 (700 elements), while the desktop PC maintained higher RTF values, ranging from 0.99 (100 elements) to 0.19 (700 elements), with a tether element length of 0.15 m in all cases. This divergence underscores the importance of system specifications for simulating high-fidelity tethered systems. Notably, the desktop achieved an RTF of 0.47 with 300 elements while the laptop required element counts below 200 to maintain RTF >0.50.
 
 These results highlight the simulator's ability to run on mid-tier hardware while showcasing the benefits of higher-end systems for demanding simulations. As the number of tether elements increases, maintaining real-time performance becomes progressively more demanding. While the simulator remains functional across a range of systems, achieving high real-time factors, which is necessary if real-time execution is required, demands sufficient computational resources. Therefore, selecting the appropriate hardware is crucial to balancing simulation accuracy and computational feasibility in real-time applications.
 
@@ -398,11 +404,10 @@ It is recommended to use the provided Docker image to ensure a consistent enviro
     ```
     Once sourced, you can use all the commands described in the following section.
 
-5. Open additional terminal windows in the running container (if needed) using:
+6. Open additional terminal windows in the running container (if needed) using:
     ```bash
-    docker run -it --env DISPLAY=$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix marsupial_image
+    docker exec -it <container_id> bash
     ```
-    Replace ```<container_id>``` with the actual container ID or name.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -484,10 +489,6 @@ The tests carried out are as follows:
 - Test 4. The test performed inside a theatre is replicated. The length of the tether is calculated as a function of the relative distance between the UAV and the UGV. The test is maintained up to the target point 100.
 - Test 5. The test performed inside a theatre is replicated again. In this case, the length of the tether is provided by the test trajectory. The test is maintained up to the target point 100. 
 
-<div align="center">
-  <img src="images/tests_examples_v3.png" alt="theatre simulation" width="795">
-</div>
-
 It is possible to modify the `self.tether_coef` value of the `ugv_theter_trajectory_follower.py` script to adjust the behaviour of the tether. The test0 is included for this purpose. This parameter should be changed between 0 and 1 until a realistic result is achieved. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -540,18 +541,21 @@ You can easily introduce additional scenarios in the simulator by creating or co
 
 ## Cite this work
 
-This simulator has been submitted to a journal and is currently under review. 
-<!-- You can see the details in the following arXiv repository. -->
+This work has been accepted for publication in IEEE Robotics and Automation Practice. If you use this simulator in your research, please cite:
 
-<!-- > J. E. Maese, F. Caballero, and L. Merino. "Physical simulation of Marsupial UAV-UGV Systems Connected by a Hanging Tether using Gazebo", available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776). -->
+```bibtex
+@article{maese2026marsupial,
+  author        = {Maese, Jose E. and Caballero, Fernando and Merino, Luis},
+  title         = {{Physical Simulation of Marsupial {UAV}-{UGV} Systems Connected by a Variable-Length Hanging Tether}},
+  journal       = {IEEE Robotics and Automation Practice},
+  year          = {2026},
+  eprint        = {2412.12776},
+  archivePrefix = {arXiv},
+  note          = {Accepted for publication}
+}
+```
 
-<br>
-
-<!-- <sub>This work was partially supported by the INSERTION PID2021-127648OB-C31 and NORDIC TED2021-132476B-I00 projects, funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR.</sub>
-
-<div align="center">
-  <img src="images/fondos.png" alt="foundings">
-</div> -->
+A preprint is available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -571,7 +575,7 @@ This simulator has been submitted to a journal and is currently under review.
 
 ## Acknowledgements
 
-![Logos](minci.png)
+![Logos](images/fondos.png)
 
-This work was partially supported by the following grants: 1) INSERTION PID2021-127648OB-C31, and 2) RATEC PDC2022-133643-C21 projects, funded by MCIN/AEI/ 10.13039/501100011033 and the "European Union NextGenerationEU / PRTR".
+This work was supported by the grants PICRA 4.0 (PLEC2023-010353), funded by the Spanish Ministry of Science and Innovation and the Spanish Research Agency (MCIN/AEI/10.13039/501100011033); and COBUILD (PID2024-161069OB-C31), funded by the Spanish Ministry of Science, Innovation and Universities, the Spanish Research Agency (MICIU/AEI/10.13039/501100011033) and the European Regional Development Fund (FEDER, UE).
 

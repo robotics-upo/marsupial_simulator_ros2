@@ -4,17 +4,24 @@ import math
 import rclpy
 import numpy as np
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, DurabilityPolicy, HistoryPolicy
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Float64MultiArray, Float64
 import time
+
+_LATCH_QOS = QoSProfile(
+    depth=1,
+    durability=DurabilityPolicy.TRANSIENT_LOCAL,
+    history=HistoryPolicy.KEEP_LAST,
+)
 
 class UGVController(Node):
 
     def __init__(self):
         super().__init__('ugv_controller')
-        self.target_position = Pose()
-        self.current_position = Pose()
-        self.uav_position = Pose()
+        self.target_position = None
+        self.current_position = None
+        self.uav_position = None
         self.target_length = 0.0
 
         self.cable_length = 0.6    
@@ -28,6 +35,7 @@ class UGVController(Node):
         self.winch_position_z = 0.35
 
         self.integral_error = 0.0
+        self.integral_max = 5.0          # anti-windup
         self.previous_error = 0.0
 
         timer_period = 0.02
@@ -38,11 +46,12 @@ class UGVController(Node):
         self.pos = np.array([0, 0, 0, 0], float)
         self.vel = np.array([0, 0, 0, 0, 0], float)
 
-        self.last_time = time.time()
+        self.last_time = None  # None indica primera iteración
 
         self.pose_subscriber = self.create_subscription(Pose, '/ugv_gt_pose', self.pose_callback, 10)
         self.uav_pose_subscriber = self.create_subscription(Pose, '/sjtu_drone/gt_pose', self.uav_pose_callback, 10)
-        self.target_subscriber = self.create_subscription(Pose, '/target_position_ugv', self.target_callback, 10)
+        # TRANSIENT_LOCAL: recibe el último waypoint aunque el nodo arranque tarde
+        self.target_subscriber = self.create_subscription(Pose, '/target_position_ugv', self.target_callback, _LATCH_QOS)
 
         self.pub_pos = self.create_publisher(Float64MultiArray, '/forward_position_controller/commands', 10)
         self.pub_vel = self.create_publisher(Float64MultiArray, '/forward_velocity_controller/commands', 10)
@@ -73,10 +82,20 @@ class UGVController(Node):
         length_error = self.target_length - self.cable_length
 
         current_time = time.time()
-        dt = current_time - self.last_time
+
+        if self.last_time is None:
+            # Primera iteración: inicializar sin integrar ni derivar
+            self.last_time = current_time
+            self.previous_error = length_error
+            return 0.0, length_error
+
+        dt = max(current_time - self.last_time, 1e-3)  # mínimo 1 ms
 
         # PID Control
         self.integral_error += length_error * dt
+        # Anti-windup
+        self.integral_error = max(-self.integral_max, min(self.integral_max, self.integral_error))
+
         derivative_error = (length_error - self.previous_error) / dt
 
         winch_velocity = (self.kp_winch * length_error +
@@ -85,7 +104,7 @@ class UGVController(Node):
 
         winch_velocity = max(min(winch_velocity, self.velocity_winch_limit), -self.velocity_winch_limit)
 
-        self.cable_length += winch_velocity * dt 
+        self.cable_length += winch_velocity * dt
         self.previous_error = length_error
         self.last_time = current_time
 
@@ -94,9 +113,6 @@ class UGVController(Node):
     def control_loop(self):
         if self.current_position is None or self.uav_position is None or self.target_position is None:
             return
-
-        current_time = time.time()
-        self.last_time = current_time
 
         direction_x = self.target_position.position.x - self.current_position.position.x
         direction_y = self.target_position.position.y - self.current_position.position.y
@@ -113,8 +129,10 @@ class UGVController(Node):
             sign = np.sign(direction_x)
             control_xy = self.constant_speed * sign
 
-        if direction_x != 0 and magnitude > self.tolerance:
-            steering_angle = math.atan(direction_y/direction_x)
+        # TODO(precision): asume UGV alineado con +X mundial; convertir a marco
+        # cuerpo con el yaw del UGV y aplicar Ackermann para mayor precisión.
+        if magnitude > self.tolerance:
+            steering_angle = math.atan2(direction_y, direction_x)
         else:
             steering_angle = 0.0
 
@@ -129,12 +147,15 @@ class UGVController(Node):
 
         self.pub_cable_length.publish(cable_length_msg)
 
-        self.get_logger().info(f'Distance: {self.target_length:.3f}, Tether length: L={self.cable_length:.3f}, Error={length_error:.3f}, Winch velocity: {winch_velocity:.3f}')
+        # self.get_logger().info(f'Distance: {self.target_length:.3f}, Tether: L={self.cable_length:.3f}, Error={length_error:.3f}, Winch vel: {winch_velocity:.3f}')
 
 def main(args=None):
     rclpy.init(args=args)
     ugv_controller = UGVController()
-    rclpy.spin(ugv_controller)
+    try:
+        rclpy.spin(ugv_controller)
+    except (KeyboardInterrupt, rclpy.executors.ExternalShutdownException):
+        pass
     ugv_controller.destroy_node()
     rclpy.shutdown()
 

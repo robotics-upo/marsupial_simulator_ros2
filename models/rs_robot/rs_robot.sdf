@@ -768,41 +768,46 @@
     </link>
 
     <!-- Unión revoluta izquierda -->
+    <!-- Rodamiento doble coaxial con joint_derecho: ambos joints deben tener
+         parámetros idénticos para que el tambor gire libremente sin par
+         restaurador. spring_stiffness=0 es crítico: con un resorte no nulo,
+         el tambor tiende a volver a θ=0 → desenrolla cuerda sin comando. -->
     <joint name="joint_izquierdo" type="revolute">
       <parent>box_plano_izquierdo</parent>
       <child>box_central</child>
-      <pose>0 0 0 0 0 1.5708</pose> 
+      <pose>0 0 0 0 0 1.5708</pose>
       <axis>
-        <xyz>0 0 1</xyz> 
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e16</lower>
           <upper>1e16</upper>
         </limit>
         <dynamics>
-          <damping>0.005</damping>
-          <friction>0.02</friction>
-          <spring_reference>0</spring_reference>
+          <damping>0.05</damping>
+          <friction>0.0</friction>
           <spring_stiffness>0</spring_stiffness>
+          <spring_reference>0</spring_reference>
         </dynamics>
       </axis>
     </joint>
 
     <!-- Unión revoluta derecha -->
+    <!-- Rodamiento doble coaxial con joint_izquierdo. Parámetros idénticos. -->
     <joint name="joint_derecho" type="revolute">
       <parent>box_plano_derecho</parent>
       <child>box_central</child>
-      <pose>0 0 0 0 0 1.5708</pose> 
+      <pose>0 0 0 0 0 1.5708</pose>
       <axis>
-        <xyz>0 0 1</xyz> 
+        <xyz>0 0 1</xyz>
         <limit>
           <lower>-1e16</lower>
           <upper>1e16</upper>
         </limit>
         <dynamics>
-          <damping>0.1</damping>
+          <damping>0.05</damping>
           <friction>0.0</friction>
-          <spring_stiffness>0.05</spring_stiffness>
-          <spring_reference>0.0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <spring_reference>0</spring_reference>
         </dynamics>
       </axis>
     </joint>

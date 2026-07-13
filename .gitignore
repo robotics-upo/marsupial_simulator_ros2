@@ -1,3 +1,9 @@
+# Ignore Python cache
+__pycache__/
+
+# Ignore generated graphs
+graphs/
+
 # Ignore Visual Studio Code Folder
 .devcontainer/
 .vscode/
