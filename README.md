@@ -577,5 +577,5 @@ A preprint is available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776).
 
 ![Logos](images/fondos.png)
 
-This work was supported by the grants PICRA 4.0 (PLEC2023-010353), funded by the Spanish Ministry of Science and Innovation and the Spanish Research Agency (MCIN/AEI/10.13039/501100011033); and COBUILD (PID2024-161069OB-C31), funded by the Spanish Ministry of Science, Innovation and Universities, the Spanish Research Agency (MICIU/AEI/10.13039/501100011033) and the European Regional Development Fund (FEDER, UE).
+This work was supported by the grants NORDIC TED2021-132476B-I00, funded by MCIN/AEI/10.13039/501100011033 and the European Union NextGenerationEU/PRTR; and COBUILD (PID2024-161069OB-C31), funded by the Spanish Ministry of Science, Innovation and Universities, the Spanish Research Agency (MICIU/AEI/10.13039/501100011033) and the European Regional Development Fund (FEDER, UE).
 
