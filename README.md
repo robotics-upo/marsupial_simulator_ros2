@@ -18,11 +18,11 @@
 <br>
 
 <div align="center">
-  <a href="https://youtu.be/F91HsqlOhNE"
+  <a href="https://www.youtube.com/watch?v=V7b8kehu9U0"
      style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
     <img src="https://img.shields.io/badge/YouTube-Experiments-red?logo=youtube" alt="YouTube Experiments">
   </a>
-  <a href="https://youtu.be/6LlnhbU-0xM"
+  <a href="https://www.youtube.com/watch?v=2kuzjHIIExs"
      style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
     <img src="https://img.shields.io/badge/YouTube-Collisions-red?logo=youtube" alt="YouTube Collisions">
   </a>
@@ -254,7 +254,7 @@ It is important to note that the region around the winch (highlighted in yellow 
   <p><strong>Figure 5:</strong> Examples of tether-obstacle collisions with varying degrees of tension.</p>
 </div>
 
-Beyond comparing the simulated tether to a theoretical catenary, we also conducted experiments to examine how it interacts with the environment. These tests were designed to confirm the simulator's ability to capture contact dynamics, including collisions with obstacles, wrapping around structures, and adjusting the tether's tension in response. Thus, <a href="#tether-collision-images">Figure 5a</a> illustrates a scenario where the tether remains slack while suspended between two obstacles. In contrast, <a href="#tether-collision-images">Figure 5b</a> shows the tether becoming entangled around both obstacles due to the UAV's trajectory, significantly increasing tension. These interactions influence the overall system behavior, affecting both the UAV's stability and the UGV's traction due to the dynamic forces exerted by the tether. This behavior can be better appreciated in the <a href="https://youtu.be/6LlnhbU-0xM" target="_blank">accompanying video</a>.
+Beyond comparing the simulated tether to a theoretical catenary, we also conducted experiments to examine how it interacts with the environment. These tests were designed to confirm the simulator's ability to capture contact dynamics, including collisions with obstacles, wrapping around structures, and adjusting the tether's tension in response. Thus, <a href="#tether-collision-images">Figure 5a</a> illustrates a scenario where the tether remains slack while suspended between two obstacles. In contrast, <a href="#tether-collision-images">Figure 5b</a> shows the tether becoming entangled around both obstacles due to the UAV's trajectory, significantly increasing tension. These interactions influence the overall system behavior, affecting both the UAV's stability and the UGV's traction due to the dynamic forces exerted by the tether. This behavior can be better appreciated in the <a href="https://www.youtube.com/watch?v=2kuzjHIIExs" target="_blank">accompanying video</a>.
 
 The ability to simulate these contact events is essential for realistic modeling of marsupial robotic systems, as tether-environment interactions can introduce significant constraints in real-world applications. Our results demonstrate that the simulator correctly captures these effects, enabling detailed analysis of how tether dynamics impact system performance under various operational conditions.
 
