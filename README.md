@@ -18,22 +18,10 @@
 <br>
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=V7b8kehu9U0"
-     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/YouTube-Experiments-red?logo=youtube" alt="YouTube Experiments">
-  </a>
-  <a href="https://www.youtube.com/watch?v=2kuzjHIIExs"
-     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/YouTube-Collisions-red?logo=youtube" alt="YouTube Collisions">
-  </a>
-  <a href="https://ieeexplore.ieee.org/document/11613150"
-     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/IEEE%20Xplore-Paper-blue?logo=ieee" alt="IEEE Xplore Paper">
-  </a>
-  <a href="https://robotics-upo.github.io/marsupial_simulator_ros2/"
-     style="display: inline-block; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/Project-Website-green?logo=googlechrome&logoColor=white" alt="Project Website">
-  </a>
+  <a href="https://www.youtube.com/watch?v=V7b8kehu9U0"><img src="https://img.shields.io/badge/YouTube-Experiments-red?logo=youtube" alt="YouTube Experiments"></a>
+  <a href="https://www.youtube.com/watch?v=2kuzjHIIExs"><img src="https://img.shields.io/badge/YouTube-Collisions-red?logo=youtube" alt="YouTube Collisions"></a>
+  <a href="https://ieeexplore.ieee.org/document/11613150"><img src="https://img.shields.io/badge/IEEE%20Xplore-Paper-blue?logo=ieee" alt="IEEE Xplore Paper"></a>
+  <a href="https://robotics-upo.github.io/marsupial_simulator_ros2/"><img src="https://img.shields.io/badge/Project-Website-green?logo=googlechrome&logoColor=white" alt="Project Website"></a>
 </div>
 
 
