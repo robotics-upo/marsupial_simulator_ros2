@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marsupial Simulator | Physical Simulation of Marsupial UAV-UGV Systems Connected by a Variable-Length Hanging Tether</title>
+    <meta name="description"
+        content="A ROS 2 / Gazebo simulation framework modeling the dynamics of a variable-length hanging tether connecting a UAV to a UGV, validated against real-world experiments. Published in IEEE Robotics and Automation Practice (RA-P).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Marsupial Simulator</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#abstract">Abstract</a>
+                <a href="#simulator">Simulator</a>
+                <a href="#validation">Validation</a>
+                <a href="#performance">Performance</a>
+                <a href="#videos">Videos</a>
+                <a href="#citation">Citation</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-animated">
+        <div class="hero-content">
+            <a href="https://ieeexplore.ieee.org/document/11613150" target="_blank" class="hero-badge" style="display:inline-flex;
+                align-items:center; padding:6px 16px; border-radius:999px; font-size:0.8rem; font-weight:600;
+                letter-spacing:0.04em; text-transform:uppercase; background:var(--accent-soft); color:var(--accent);
+                border:1px solid var(--border); text-decoration:none; margin-bottom:20px;">
+                Published in IEEE Robotics and Automation Practice
+            </a>
+            <h1 class="hero-title">Marsupial Simulator</h1>
+            <p class="hero-subtitle">Physical Simulation of Marsupial UAV-UGV Systems<br>Connected by a Variable-Length
+                Hanging Tether</p>
+
+            <div class="hero-meta">
+                <div class="hero-authors">
+                    <a href="https://scholar.google.com/citations?user=_csNaiYAAAAJ" target="_blank">José E. Maese</a>
+                    <a href="https://scholar.google.es/citations?user=nb2teTwAAAAJ&hl=es" target="_blank">Fernando
+                        Caballero</a>
+                    <a href="https://scholar.google.com/citations?user=BNdMkI8AAAAJ" target="_blank">Luis Merino</a>
+                </div>
+                <div class="hero-affiliation">
+                    <a href="https://robotics.upo.es/" target="_blank">Service Robotics Laboratory</a> · Universidad
+                    Pablo de Olavide
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://ieeexplore.ieee.org/document/11613150" class="btn btn-primary" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                    Paper
+                </a>
+                <a href="https://github.com/robotics-upo/marsupial_simulator_ros2" class="btn btn-secondary"
+                    target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Code
+                </a>
+                <a href="https://www.youtube.com/watch?v=V7b8kehu9U0" class="btn btn-secondary" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                    Video
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Abstract Section with Image Carousel -->
+    <section id="abstract" class="section" data-reveal>
+        <div class="container abstract-layout">
+            <!-- Image Carousel -->
+            <div class="abstract-carousel">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active" data-caption="Real vs. simulated marsupial system">
+                            <img src="media/real_test_gif.gif" alt="Real and simulated marsupial system side by side">
+                        </div>
+                        <div class="carousel-slide" data-caption="UAV, UGV, winch and tether models in Gazebo">
+                            <img src="media/marsupial_models.png" alt="Gazebo models of the marsupial system">
+                        </div>
+                        <div class="carousel-slide" data-caption="Tether-obstacle interaction">
+                            <img src="media/tether_obstacles.png" alt="Tether interacting with obstacles in Gazebo">
+                        </div>
+                        <div class="carousel-slide" data-caption="Collision with a hanging tether">
+                            <img src="media/collision_3.png" alt="Collision with a hanging tether">
+                        </div>
+                        <div class="carousel-slide" data-caption="Collision with a taut tether">
+                            <img src="media/collision_4.png" alt="Collision with a taut tether">
+                        </div>
+                        <div class="carousel-slide" data-caption="Theatre scenario replicating a real experiment">
+                            <img src="media/theatre.png" alt="Theatre simulation scenario">
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Previous image">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Next image">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                        <span class="carousel-dot" data-index="4"></span>
+                        <span class="carousel-dot" data-index="5"></span>
+                    </div>
+                </div>
+                <span class="carousel-caption" id="carouselCaption">Real vs. simulated marsupial system</span>
+            </div>
+
+            <!-- Abstract Text -->
+            <div class="abstract-content">
+                <h2 class="section-title">Abstract</h2>
+                <p class="abstract-text">
+                    This work presents a simulation framework that models the dynamics of a
+                    <strong>hanging tether with adjustable length</strong> connecting a UAV to a UGV, incorporating
+                    the interaction between both robots and a <strong>winch</strong>. Extensive experiments,
+                    including comparisons with <strong>real-world deployments</strong>, show that the simulation
+                    closely reproduces the complex tether dynamics — particularly in <strong>constrained
+                    environments</strong> — providing a validated tool for studying tethered robotic systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section id="simulator" class="section section-alt" data-reveal>
+        <div class="container">
+            <h2 class="section-title">Simulator</h2>
+            <p class="results-intro" style="margin-bottom: 2.5rem;">
+                The marsupial UAV-UGV simulator is built on <strong>ROS 2 Humble</strong> and
+                <strong>Gazebo</strong>, integrating multiple core components to simulate tethered robot behavior.
+                It supports both manual and autonomous operation, and is modular and easily customizable, allowing
+                modifications to the UAV, UGV, and tether models.
+            </p>
+
+            <div class="images-row images-row-wide" style="margin-bottom: 3rem;">
+                <figure>
+                    <img src="media/simulator_structure_v2.png" alt="Architecture diagram of the marsupial simulator">
+                    <figcaption>Architecture of the simulator: core modules (blue), base simulator modules (yellow),
+                        input data (green) and output metrics (purple).</figcaption>
+                </figure>
+            </div>
+
+            <!-- Pipeline -->
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <h4>Model Initialization</h4>
+                    <p>Gazebo spawns the UGV, the UAV on its landing platform, and a tether coiled around the winch.
+                        The tether is attached to both robots and ROS 2 modules manage the system's operation.</p>
+                </div>
+
+                <div class="pipeline-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <div class="pipeline-step">
+                    <h4>Trajectory Tracking</h4>
+                    <p>Missions are specified via YAML waypoint files with reference tether lengths, or via real-time
+                        ROS messages. Custom trajectory-tracking algorithms and control modules are supported.</p>
+                </div>
+
+                <div class="pipeline-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <div class="pipeline-step">
+                    <h4>Controllers</h4>
+                    <p>Each robot has a dedicated controller that executes the assigned movements. The UGV controller
+                        also drives the winch, adjusting the tether length to maintain the proper slack.</p>
+                </div>
+
+                <div class="pipeline-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <div class="pipeline-step">
+                    <h4>Evaluation &amp; Recording</h4>
+                    <p>An evaluation module collects ROS 2 topic data — robot poses and tether length variations — and
+                        compiles metrics on trajectory accuracy, tether behavior, and system stability.</p>
+                </div>
+            </div>
+
+            <!-- Models -->
+            <h3 class="subsection-title">Models</h3>
+            <div class="features-grid" style="margin-bottom: 3rem;">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </div>
+                    <h4>UAV</h4>
+                    <p>Quadrotor with ROS 2-compatible position and velocity control, taking off from and landing on
+                        the platform mounted on the UGV.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="6" width="15" height="10" rx="1"></rect>
+                            <path d="M16 10h4l3 3v3h-7z"></path>
+                            <circle cx="6" cy="18.5" r="2"></circle>
+                            <circle cx="18" cy="18.5" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h4>UGV &amp; Winch</h4>
+                    <p>Holonomic ground vehicle with an integrated winch that dynamically releases and retracts the
+                        tether during operation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 6 C 6 18, 18 18, 22 6"></path>
+                            <circle cx="2" cy="6" r="1.5"></circle>
+                            <circle cx="22" cy="6" r="1.5"></circle>
+                        </svg>
+                    </div>
+                    <h4>Tether</h4>
+                    <p>Flexible, multi-segmented tether with dynamic length adjustment. Length, mass, stiffness and
+                        damping are fully configurable via a Jinja template.</p>
+                </div>
+            </div>
+
+            <!-- Tether Parameters Table -->
+            <div class="table-container" data-reveal style="margin-top: 0;">
+                <div class="table-wrapper">
+                    <table class="results-table">
+                        <caption>Default parameters of the tether model. All values can be customized through the
+                            <code>tether.sdf.jinja</code> template.</caption>
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Value</th>
+                                <th>Units</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3"><strong><em>Common Parameters</em></strong></td>
+                            </tr>
+                            <tr>
+                                <td>Radius of each section</td>
+                                <td>0.004</td>
+                                <td>m</td>
+                            </tr>
+                            <tr>
+                                <td>Radius of the joint</td>
+                                <td>0.009</td>
+                                <td>m</td>
+                            </tr>
+                            <tr>
+                                <td>Mass of each section</td>
+                                <td>0.01</td>
+                                <td>kg</td>
+                            </tr>
+                            <tr>
+                                <td>Damping</td>
+                                <td>0.05</td>
+                                <td>Ns/m</td>
+                            </tr>
+                            <tr>
+                                <td>Spring stiffness</td>
+                                <td>0.01</td>
+                                <td>N/m</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong><em>Coiled Tether</em></strong></td>
+                            </tr>
+                            <tr>
+                                <td>Number of elements</td>
+                                <td>125</td>
+                                <td>–</td>
+                            </tr>
+                            <tr>
+                                <td>Element length</td>
+                                <td>0.15</td>
+                                <td>m</td>
+                            </tr>
+                            <tr>
+                                <td>Helix radius</td>
+                                <td>0.14</td>
+                                <td>m</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong><em>Uncoiled Tether</em></strong></td>
+                            </tr>
+                            <tr>
+                                <td>Number of elements</td>
+                                <td>10</td>
+                                <td>–</td>
+                            </tr>
+                            <tr>
+                                <td>Element length</td>
+                                <td>0.05</td>
+                                <td>m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validation Section -->
+    <section id="validation" class="section" data-reveal>
+        <div class="container">
+            <h2 class="section-title">Validation</h2>
+
+            <!-- Tether Model Evaluation -->
+            <h3 class="subsection-title" style="margin-top: 1rem;">Tether Model Evaluation</h3>
+            <p class="results-intro">
+                To validate the simulated tether against a real catenary, the UAV and UGV were placed 5, 10 and 15
+                meters apart with 20% tether slack, and the tether was simulated with four different element lengths.
+                The averaged error between the simulated tether elements and the theoretical catenary curve remains
+                <strong>below 1% of the tether length</strong> in all cases.
+            </p>
+
+            <div class="table-container" data-reveal style="margin-top: 1rem;">
+                <div class="table-wrapper">
+                    <table class="results-table">
+                        <caption>Averaged position error between the simulated tether and the theoretical catenary
+                            for UAV-UGV separations of 5, 10 and 15 m (↓ lower is better).</caption>
+                        <thead>
+                            <tr>
+                                <th>Element Length (m)</th>
+                                <th>err<sub>5</sub> ↓ (%)</th>
+                                <th>err<sub>10</sub> ↓ (%)</th>
+                                <th>err<sub>15</sub> ↓ (%)</th>
+                                <th>Mean ↓ (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>0.05</strong></td>
+                                <td>0.942</td>
+                                <td>0.268</td>
+                                <td>0.269</td>
+                                <td>0.493</td>
+                            </tr>
+                            <tr>
+                                <td><strong>0.10</strong></td>
+                                <td><strong>0.332</strong></td>
+                                <td><strong>0.214</strong></td>
+                                <td><strong>0.232</strong></td>
+                                <td><strong>0.259</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>0.15</strong></td>
+                                <td>0.675</td>
+                                <td>0.323</td>
+                                <td>0.292</td>
+                                <td>0.430</td>
+                            </tr>
+                            <tr>
+                                <td><strong>0.20</strong></td>
+                                <td>1.600</td>
+                                <td>0.490</td>
+                                <td>0.552</td>
+                                <td>0.881</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="results-intro" style="margin-top: 2rem;">
+                Beyond the catenary comparison, the tether interacts with the environment through Gazebo's physics
+                engine: it collides with obstacles, wraps around structures, and adjusts its tension in response,
+                affecting both the UAV's stability and the UGV's traction.
+            </p>
+
+            <div class="images-row">
+                <figure>
+                    <img src="media/collision_3.png" alt="Collision with a hanging tether">
+                    <figcaption>Collision with a hanging tether</figcaption>
+                </figure>
+                <figure>
+                    <img src="media/collision_4.png" alt="Collision with a taut tether">
+                    <figcaption>Collision with a taut tether</figcaption>
+                </figure>
+            </div>
+
+            <!-- Simulated Scenarios -->
+            <h3 class="subsection-title">Simulated Scenarios</h3>
+            <p class="results-intro">
+                Three predefined scenarios evaluate the fundamental functioning of the framework and the dynamics of
+                the UAV and UGV when following predefined trajectories, each repeated ten times.
+            </p>
+
+            <div class="images-row images-row-wide" style="margin-bottom: 2.5rem;">
+                <figure>
+                    <img src="media/tests_examples_v3.png" alt="Examples of the simulated validation scenarios">
+                    <figcaption>Examples of the simulated scenarios used for validation.</figcaption>
+                </figure>
+            </div>
+
+            <div class="features-grid" style="margin-bottom: 2.5rem;">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>1 · Vertical Stability</h4>
+                    <p>The UGV remains stationary while the UAV performs ten consecutive ascents and descents,
+                        evaluating the winch's ability to smoothly release and retract the tether.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="17 11 21 7 17 3"></polyline>
+                            <line x1="21" y1="7" x2="9" y2="7"></line>
+                            <polyline points="7 13 3 17 7 21"></polyline>
+                            <line x1="15" y1="17" x2="3" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h4>2 · Horizontal Mobility</h4>
+                    <p>The UAV hovers at a fixed altitude while the UGV moves back and forth between two points,
+                        testing tether slack management during horizontal displacement.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 3 21 3 21 8"></polyline>
+                            <line x1="4" y1="20" x2="21" y2="3"></line>
+                            <polyline points="8 21 3 21 3 16"></polyline>
+                            <line x1="15" y1="9" x2="21" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h4>3 · Opposite Directions</h4>
+                    <p>UAV and UGV move simultaneously in opposite directions, challenging the coordination
+                        mechanisms and the winch's dynamic tether-length adjustment.</p>
+                </div>
+            </div>
+
+            <div class="table-container" data-reveal style="margin-top: 0;">
+                <div class="table-wrapper">
+                    <table class="results-table">
+                        <caption>Key metrics of the simulated scenarios: simulation time, targets reached, distance
+                            traveled by each robot, and tether released/collected by the winch.</caption>
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Time (s)</th>
+                                <th>Targets</th>
+                                <th>Dist. UAV (m)</th>
+                                <th>Dist. UGV (m)</th>
+                                <th>Tether Rel. (m)</th>
+                                <th>Tether Col. (m)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1</strong></td>
+                                <td>504</td>
+                                <td>20</td>
+                                <td>45.50</td>
+                                <td>0.25</td>
+                                <td>23.64</td>
+                                <td>22.08</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>765</td>
+                                <td>20</td>
+                                <td>6.99</td>
+                                <td>49.99</td>
+                                <td>14.09</td>
+                                <td>11.65</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>803</td>
+                                <td>20</td>
+                                <td>65.21</td>
+                                <td>50.88</td>
+                                <td>40.11</td>
+                                <td>37.68</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Toggle: positions vs tether length -->
+            <p class="results-intro" style="margin-top: 3rem; margin-bottom: 1.5rem;">
+                Detailed results for <strong>Scenario 3</strong> (Opposite Direction Coordination): robot positions
+                with respect to their references, and tether length adjustments performed by the winch.
+            </p>
+
+            <div class="toggle-container" data-reveal>
+                <div class="segmented-toggle" id="resultsToggle">
+                    <input type="checkbox" id="resultsViewToggle">
+                    <span class="segment-option active-text" data-value="positions">Robot Positions</span>
+                    <span class="segment-option" data-value="tether">Tether Length</span>
+                    <div class="segment-indicator" id="resultsIndicator"></div>
+                </div>
+            </div>
+
+            <div class="results-panels">
+                <!-- Positions Panel -->
+                <div class="results-panel active" id="panel-positions">
+                    <div class="images-row images-row-quad">
+                        <figure>
+                            <img src="media/ugv_position_test3.png" alt="UGV position vs. reference in Scenario 3">
+                            <figcaption>UGV position on each axis vs. reference</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="media/drone_position_test3.png" alt="UAV position vs. reference in Scenario 3">
+                            <figcaption>UAV position on each axis vs. reference</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Tether Panel -->
+                <div class="results-panel" id="panel-tether">
+                    <div class="images-row images-row-quad">
+                        <figure>
+                            <img src="media/tether_distance_test3_small.png"
+                                alt="Tether length evolution in Scenario 3">
+                            <figcaption>Tether length vs. target length and UAV-UGV distance</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="media/tether_distance_filtered_test3_small.png"
+                                alt="Filtered tether length evolution in Scenario 3">
+                            <figcaption>Detail of the tether length adjustment</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <p class="results-intro" style="margin-top: 1.5rem;">
+                The winch keeps the tether length 5% greater than the UAV-UGV distance, maintaining a slight slack.
+                Despite the dynamic forces introduced by the tether, the UAV successfully reached
+                <strong>all predefined target points</strong>, demonstrating the robustness of the control algorithms
+                and the tether management system.
+            </p>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section section-alt" data-reveal>
+        <div class="container">
+            <h2 class="section-title">Performance</h2>
+
+            <p class="results-intro">
+                Computational performance was evaluated on a laptop (Intel i7-13620H, 32 GB RAM, RTX 4060) and a
+                desktop PC (Intel i9-12900F, 64 GB RAM, RTX 3060), averaging 10 runs per configuration. The number
+                of tether elements directly drives the computational load: the desktop maintains a real-time factor
+                from 0.99 (100 elements) down to 0.19 (700 elements), showing that the simulator runs on mid-tier
+                hardware while benefiting from higher-end systems for demanding configurations.
+            </p>
+
+            <div class="images-row images-row-wide">
+                <figure>
+                    <img src="media/performance_evaluation.png"
+                        alt="Real-time factor comparison between laptop and desktop configurations">
+                    <figcaption>Real-time factor (RTF) for tether element counts ranging from 100 to 700.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section" data-reveal>
+        <div class="container">
+            <h2 class="section-title">Videos</h2>
+            <p class="results-intro">
+                Side-by-side comparison with real-world experiments, and a closer look at tether-obstacle collisions.
+            </p>
+
+            <div class="video-grid">
+                <figure class="video-item">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube-nocookie.com/embed/V7b8kehu9U0"
+                            title="Marsupial simulator — experiments" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <figcaption>Validation experiments</figcaption>
+                </figure>
+                <figure class="video-item">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube-nocookie.com/embed/2kuzjHIIExs"
+                            title="Marsupial simulator — tether collisions" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <figcaption>Tether-obstacle collisions</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section id="citation" class="section section-alt" data-reveal>
+        <div class="container">
+            <h2 class="section-title">Citation</h2>
+
+            <p class="code-intro" style="text-align: left;">
+                If you use this simulator in your research, please consider citing our
+                <a href="https://ieeexplore.ieee.org/document/11613150" target="_blank">IEEE RA-P paper</a>:
+            </p>
+
+            <div class="code-block citation-block" style="text-align: left;">
+                <div class="code-header">
+                    <span>BibTeX</span>
+                    <button class="copy-btn" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-text">Copy</span>
+                    </button>
+                </div>
+                <pre><code class="copy-content cite-content">@article{maese2026marsupial,
+    author  = {Maese, Jose E. and Caballero, Fernando and Merino, Luis},
+    title   = {{Physical Simulation of Marsupial {UAV}-{UGV} Systems Connected by a Variable-Length Hanging Tether}},
+    journal = {IEEE Robotics and Automation Practice},
+    year    = {2026}
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <strong>Marsupial Simulator</strong>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/robotics-upo/marsupial_simulator_ros2" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Code
+                    </a>
+                    <a href="https://ieeexplore.ieee.org/document/11613150" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        Paper
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=V7b8kehu9U0" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                        Video
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-funding">
+                <span class="footer-funding-label">Funding</span>
+                <ul class="funding-list">
+                    <li><strong>NORDIC</strong> (TED2021-132476B-I00), funded by MCIN/AEI/10.13039/501100011033 and
+                        the European Union NextGenerationEU/PRTR.</li>
+                    <li><strong>COBUILD</strong> (PID2024-161069OB-C31), funded by the Spanish Ministry of Science,
+                        Innovation and Universities, the Spanish Research Agency (MICIU/AEI/10.13039/501100011033) and
+                        the European Regional Development Fund (FEDER, UE).</li>
+                </ul>
+                <img src="media/fondos.png" alt="Funding logos">
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Service Robotics Laboratory, Universidad Pablo de Olavide
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <img id="lightboxImg" src="" alt="Enlarged view">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

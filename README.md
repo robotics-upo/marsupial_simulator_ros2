@@ -5,14 +5,14 @@
   </a> -->
 
   <h3 align="center">
-    <a href="https://arxiv.org/abs/2412.12776" style="text-decoration: none; color: inherit;">
+    <a href="https://ieeexplore.ieee.org/document/11613150" style="text-decoration: none; color: inherit;">
       Physical Simulation of Marsupial UAV-UGV Systems Connected by a Variable-Length Hanging Tether
     </a>
   </h3>
 </div>
 
 <div align="center">
-  <h4>Accepted at <a href="https://www.ieee-ras.org/publications/ra-p">IEEE Robotics and Automation Practice (RA-P)</a></h4>
+  <h4>Published in <a href="https://www.ieee-ras.org/publications/ra-p">IEEE Robotics and Automation Practice (RA-P)</a></h4>
 </div>
 
 <br>
@@ -26,9 +26,13 @@
      style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
     <img src="https://img.shields.io/badge/YouTube-Collisions-red?logo=youtube" alt="YouTube Collisions">
   </a>
-  <a href="https://arxiv.org/abs/2412.12776"
+  <a href="https://ieeexplore.ieee.org/document/11613150"
+     style="display: inline-block; margin-right: 10px; text-decoration: none; vertical-align: middle;">
+    <img src="https://img.shields.io/badge/IEEE%20Xplore-Paper-blue?logo=ieee" alt="IEEE Xplore Paper">
+  </a>
+  <a href="https://robotics-upo.github.io/marsupial_simulator_ros2/"
      style="display: inline-block; text-decoration: none; vertical-align: middle;">
-    <img src="https://img.shields.io/badge/arXiv-2412.12776-blue?logo=arxiv" alt="arXiv Paper">
+    <img src="https://img.shields.io/badge/Project-Website-green?logo=googlechrome&logoColor=white" alt="Project Website">
   </a>
 </div>
 
@@ -541,21 +545,18 @@ You can easily introduce additional scenarios in the simulator by creating or co
 
 ## Cite this work
 
-This work has been accepted for publication in IEEE Robotics and Automation Practice. If you use this simulator in your research, please cite:
+This work has been published in IEEE Robotics and Automation Practice. If you use this simulator in your research, please cite:
 
 ```bibtex
 @article{maese2026marsupial,
-  author        = {Maese, Jose E. and Caballero, Fernando and Merino, Luis},
-  title         = {{Physical Simulation of Marsupial {UAV}-{UGV} Systems Connected by a Variable-Length Hanging Tether}},
-  journal       = {IEEE Robotics and Automation Practice},
-  year          = {2026},
-  eprint        = {2412.12776},
-  archivePrefix = {arXiv},
-  note          = {Accepted for publication}
+  author  = {Maese, Jose E. and Caballero, Fernando and Merino, Luis},
+  title   = {{Physical Simulation of Marsupial {UAV}-{UGV} Systems Connected by a Variable-Length Hanging Tether}},
+  journal = {IEEE Robotics and Automation Practice},
+  year    = {2026}
 }
 ```
 
-A preprint is available on [arXiv:2412.12776](https://arxiv.org/abs/2412.12776).
+The paper is available on [IEEE Xplore](https://ieeexplore.ieee.org/document/11613150).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
